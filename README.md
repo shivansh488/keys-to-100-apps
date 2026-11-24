@@ -22,10 +22,6 @@ Then, in a fresh session so it has not seen the first answers being written:
 
 `data/live/` keeps new runs apart from the published ones.
 
-## How the published run worked
-Claude Code subagents (Sonnet research, Opus verify) ran `prompts/pass1_research.md` and `prompts/pass2_verify.md` against `prompts/schema.md`.
-Pass 0 rules -> pass 1 research -> quote check -> pass 2 adversarial verify -> score, Composio cross-check, browser disputes -> `data/overrides.json`.
-
 ## Honesty notes
 - Gold and holdout labels were read in a browser by the supervising AI, not by a person. `data/human_checks.csv` is the human queue: fill `status` (done), `result`, `checked_by`, then rebuild the page.
 - Some pass 2 gains come from rules clarified after the gold was written. See the page.
