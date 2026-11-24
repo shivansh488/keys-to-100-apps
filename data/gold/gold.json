@@ -1,0 +1,452 @@
+{
+ "1": {
+  "must": [
+   "oauth2"
+  ],
+  "may": [
+   "other"
+  ],
+  "access": [
+   "self_serve_free"
+  ],
+  "mcp": [
+   "official"
+  ],
+  "verdict": [
+   "build_now"
+  ],
+  "urls": [
+   "https://developer.salesforce.com/docs/platform/api-rest/guide/intro-oauth-and-connected-apps.html",
+   "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/hosted-mcp-servers-overview.html"
+  ],
+  "note": "Developer Edition signup page rendered blank in the browser; free tier not re-confirmed, so access here is the weakest label."
+ },
+ "3": {
+  "must": [
+   "oauth2",
+   "static"
+  ],
+  "may": [],
+  "access": [
+   "self_serve_free"
+  ],
+  "mcp": [
+   "official"
+  ],
+  "verdict": [
+   "build_now"
+  ],
+  "urls": [
+   "https://pipedrive.readme.io/docs/core-api-concepts-authentication",
+   "https://pipedrive.readme.io/docs/developer-sandbox-account",
+   "https://www.pipedrive.com/en/features/mcp-server"
+  ],
+  "note": ""
+ },
+ "11": {
+  "must": [
+   "oauth2"
+  ],
+  "may": [],
+  "access": [
+   "self_serve_trial"
+  ],
+  "mcp": [
+   "official"
+  ],
+  "verdict": [
+   "build_now"
+  ],
+  "urls": [
+   "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+   "https://developer.zendesk.com/documentation/api-basics/getting-started/getting-a-trial-or-sponsored-account-for-development/",
+   "https://support.zendesk.com/hc/en-us/articles/11458059060250-Zendesk-Bridge-FAQ-EAP"
+  ],
+  "note": "API tokens are now marked deprecated. MCP server is early access by enrolment (from 2026-11-10), known from search text; the support page itself was behind a sign-in."
+ },
+ "13": {
+  "must": [
+   "static"
+  ],
+  "may": [
+   "basic",
+   "oauth2"
+  ],
+  "access": [
+   "self_serve_trial",
+   "self_serve_free"
+  ],
+  "mcp": [
+   "official"
+  ],
+  "verdict": [
+   "build_now"
+  ],
+  "urls": [
+   "https://developers.freshdesk.com/api/",
+   "https://www.freshworks.com/freshdesk/pricing/",
+   "https://support.freshdesk.com/support/solutions/articles/50000012670"
+  ],
+  "note": "Pricing page only describes a 14-day trial; a legacy free plan could not be ruled out."
+ },
+ "28": {
+  "must": [
+   "static"
+  ],
+  "may": [
+   "oauth2"
+  ],
+  "access": [
+   "self_serve_free"
+  ],
+  "mcp": [
+   "official"
+  ],
+  "verdict": [
+   "build_now",
+   "build_with_caveat"
+  ],
+  "urls": [
+   "https://developers.facebook.com/documentation/business-messaging/whatsapp/get-started",
+   "https://developers.facebook.com/blog/post/2026/09/15/whatsapp-business-messaging-mcp-ai-agent/"
+  ],
+  "note": "MCP is for setup/testing, gradual rollout."
+ },
+ "30": {
+  "must": [
+   "static",
+   "other"
+  ],
+  "may": [
+   "basic",
+   "oauth2"
+  ],
+  "access": [
+   "self_serve_trial",
+   "self_serve_free"
+  ],
+  "mcp": [
+   "official"
+  ],
+  "verdict": [
+   "build_now"
+  ],
+  "urls": [
+   "https://developer.vonage.com/en/getting-started/concepts/authentication",
+   "https://developer.vonage.com/en/mcp-server/overview"
+  ],
+  "note": "JWT is 'other'. Free account confirmed; whether credit-limited was not."
+ },
+ "33": {
+  "must": [
+   "oauth2"
+  ],
+  "may": [],
+  "access": [
+   "admin_or_app_approval"
+  ],
+  "mcp": [
+   "none_found",
+   "community"
+  ],
+  "verdict": [
+   "needs_outreach"
+  ],
+  "urls": [
+   "https://learn.microsoft.com/en-us/linkedin/marketing/increasing-access",
+   "https://learn.microsoft.com/en-us/linkedin/shared/authentication/authentication"
+  ],
+  "note": ""
+ },
+ "38": {
+  "must": [
+   "oauth2"
+  ],
+  "may": [
+   "static",
+   "other"
+  ],
+  "access": [
+   "admin_or_app_approval"
+  ],
+  "mcp": [
+   "official"
+  ],
+  "verdict": [
+   "needs_outreach"
+  ],
+  "urls": [
+   "https://developers.pinterest.com/docs/getting-started/connect-app/",
+   "https://developers.pinterest.com/docs/key-concepts/access-tiers/",
+   "https://developers.pinterest.com/about-pinterest-mcp/"
+  ],
+  "note": ""
+ },
+ "47": {
+  "must": [
+   "static",
+   "oauth2"
+  ],
+  "may": [],
+  "access": [
+   "paid_plan"
+  ],
+  "mcp": [
+   "none_found",
+   "community"
+  ],
+  "verdict": [
+   "build_with_caveat"
+  ],
+  "urls": [
+   "https://docs.ecwid.com/llms-full.txt"
+  ],
+  "note": "Only stores on paid plans get API; free dev upgrade by email. Docs-search MCP is not a product MCP."
+ },
+ "48": {
+  "must": [
+   "oauth2"
+  ],
+  "may": [
+   "static"
+  ],
+  "access": [
+   "self_serve_free"
+  ],
+  "mcp": [
+   "official"
+  ],
+  "verdict": [
+   "build_now"
+  ],
+  "urls": [
+   "https://gumroad.com/api",
+   "https://gumroad.com/mcp"
+  ],
+  "note": ""
+ },
+ "54": {
+  "must": [
+   "static"
+  ],
+  "may": [],
+  "access": [
+   "self_serve_trial"
+  ],
+  "mcp": [
+   "official"
+  ],
+  "verdict": [
+   "build_now"
+  ],
+  "urls": [
+   "https://docs.mrscraper.com/docs/getting-started/mcp-server",
+   "https://mrscraper.com/pricing"
+  ],
+  "note": "7-day / 1,000-token trial, card required."
+ },
+ "60": {
+  "must": [
+   "static"
+  ],
+  "may": [
+   "oauth2"
+  ],
+  "access": [
+   "self_serve_free"
+  ],
+  "mcp": [
+   "official"
+  ],
+  "verdict": [
+   "build_now"
+  ],
+  "urls": [
+   "https://developers.clay.com/public-api/authentication.md",
+   "https://university.clay.com/docs/clay-api-cli"
+  ],
+  "note": "Public API is now on all plans incl. free: contradicts older 'Enterprise only' lore."
+ },
+ "61": {
+  "must": [
+   "oauth2",
+   "static"
+  ],
+  "may": [
+   "other",
+   "basic"
+  ],
+  "access": [
+   "self_serve_free"
+  ],
+  "mcp": [
+   "official"
+  ],
+  "verdict": [
+   "build_now"
+  ],
+  "urls": [
+   "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api"
+  ],
+  "note": ""
+ },
+ "62": {
+  "must": [
+   "static"
+  ],
+  "may": [
+   "oauth2",
+   "other"
+  ],
+  "access": [
+   "self_serve_free"
+  ],
+  "mcp": [
+   "official"
+  ],
+  "verdict": [
+   "build_now"
+  ],
+  "urls": [
+   "https://vercel.com/docs/rest-api",
+   "https://vercel.com/docs/agent-resources/vercel-mcp"
+  ],
+  "note": ""
+ },
+ "79": {
+  "must": [
+   "static",
+   "oauth2"
+  ],
+  "may": [],
+  "access": [
+   "paid_plan",
+   "self_serve_trial"
+  ],
+  "mcp": [
+   "official"
+  ],
+  "verdict": [
+   "build_with_caveat"
+  ],
+  "urls": [
+   "https://developers.smartsheet.com/api/smartsheet/introduction",
+   "https://developers.smartsheet.com/ai-mcp/smartsheet/mcp-server",
+   "https://www.smartsheet.com/pricing"
+  ],
+  "note": "API needs Business+; 30-day trial exists, whether it carries API not testable without sign-up."
+ },
+ "80": {
+  "must": [
+   "static",
+   "oauth2"
+  ],
+  "may": [],
+  "access": [
+   "self_serve_free"
+  ],
+  "mcp": [
+   "official"
+  ],
+  "verdict": [
+   "build_now"
+  ],
+  "urls": [
+   "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+   "https://www.getharvest.com/pricing",
+   "https://support.getharvest.com/hc/en-us/articles/46293697226381-Harvest-MCP"
+  ],
+  "note": ""
+ },
+ "81": {
+  "must": [
+   "static"
+  ],
+  "may": [
+   "basic",
+   "oauth2",
+   "other"
+  ],
+  "access": [
+   "self_serve_free"
+  ],
+  "mcp": [
+   "official"
+  ],
+  "verdict": [
+   "build_now"
+  ],
+  "urls": [
+   "https://docs.stripe.com/api/authentication",
+   "https://docs.stripe.com/mcp"
+  ],
+  "note": ""
+ },
+ "83": {
+  "must": [
+   "static",
+   "other"
+  ],
+  "may": [
+   "oauth2"
+  ],
+  "access": [
+   "self_serve_free"
+  ],
+  "mcp": [
+   "official"
+  ],
+  "verdict": [
+   "build_now"
+  ],
+  "urls": [
+   "https://developers.binance.com/en/docs/products/spot/rest-api",
+   "https://testnet.binance.vision/",
+   "https://developers.binance.com/en/docs/agent-native/mcp-server"
+  ],
+  "note": ""
+ },
+ "95": {
+  "must": [
+   "static"
+  ],
+  "may": [],
+  "access": [
+   "self_serve_trial"
+  ],
+  "mcp": [
+   "official"
+  ],
+  "verdict": [
+   "build_now"
+  ],
+  "urls": [
+   "https://docs.reducto.ai/quickstart",
+   "https://reducto.ai/pricing",
+   "https://docs.reducto.ai/mcp-server/index.md"
+  ],
+  "note": "$150 one-off free usage = credit-limited trial under our schema."
+ },
+ "98": {
+  "must": [
+   "none"
+  ],
+  "may": [],
+  "access": [
+   "no_api",
+   "self_serve_free"
+  ],
+  "mcp": [
+   "none_found",
+   "community"
+  ],
+  "verdict": [
+   "build_with_caveat",
+   "not_buildable"
+  ],
+  "urls": [
+   "https://github.com/mermaid-js/mermaid-cli"
+  ],
+  "note": "Local CLI; wrapping is realistic."
+ }
+}
