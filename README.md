@@ -4,18 +4,23 @@ Research agent for the Composio AI Product Ops take-home: which of 100 apps can 
 Live case study: https://shivansh488.github.io/keys-to-100-apps/ (source: `docs/index.html`). `site/data.json` and `site/data.csv` hold every row with evidence.
 
 ## Run
-Python 3.11+ and curl. Steps 1 to 4 need no keys.
+Scripts (Python 3.11+ and curl, nothing to install):
 
-    python3 pipeline/make_apps.py                   # 1. the 100 apps
-    python3 pipeline/pass0_baseline.py              # 2. rule-based baseline
-    python3 pipeline/check_evidence.py data/pass2   # 3. reload every cited page, match the quote
-    python3 pipeline/score.py; python3 pipeline/holdout.py; python3 pipeline/cross_composio.py   # 4. accuracy
-    pip install anthropic                           # 5. LLM passes (ANTHROPIC_API_KEY or `ant auth login`)
-    python3 run_agent.py research --ids 11,12
-    python3 run_agent.py verify   --ids 11,12
-    python3 pipeline/finalize.py && python3 pipeline/build_page.py   # 6. rebuild the page
+    python3 pipeline/make_apps.py                   # the 100 apps
+    python3 pipeline/pass0_baseline.py              # rule-based baseline
+    python3 pipeline/check_evidence.py data/pass2   # reload every cited page, match the quote
+    python3 pipeline/score.py; python3 pipeline/holdout.py; python3 pipeline/cross_composio.py   # accuracy
+    python3 pipeline/finalize.py && python3 pipeline/build_page.py   # rebuild the page
 
-`run_agent.py` writes to `data/live/` and never overwrites the published run. It compiles but has not been run: no API key was available when this was built.
+Research agent: open this repo in Claude Code and ask, one category at a time:
+
+    Follow prompts/pass1_research.md and prompts/schema.md for ids 11-20. Write to data/live/pass1/cat02.json.
+
+Then, in a fresh session so it has not seen the first answers being written:
+
+    Follow prompts/pass2_verify.md for ids 11-20, reading data/live/pass1/cat02.json. Write to data/live/pass2/cat02.json.
+
+`data/live/` keeps new runs apart from the published ones.
 
 ## How the published run worked
 Claude Code subagents (Sonnet research, Opus verify) ran `prompts/pass1_research.md` and `prompts/pass2_verify.md` against `prompts/schema.md`.
