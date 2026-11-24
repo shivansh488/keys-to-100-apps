@@ -1,0 +1,13 @@
+id,app,question,open_this,why_it_matters,status,result,checked_by
+70,Sentry,Does a token on the free Developer plan get a 200 from the API?,https://sentry.io/pricing/,access flips to free,pending,,
+29,Aircall,Are API keys issued during the 7-day trial?,https://aircall.io/pricing/,verdict flips to caveat,pending,,
+54,MrScraper,Is the first signup a card-required trial or a no-card free plan? Vendor pages conflict.,https://mrscraper.com/pricing,gold label depends on it,pending,,
+60,Clay,Do API keys work on the free plan? Pricing FAQ conflicts with docs.,https://university.clay.com/docs/clay-api-cli,verdict depends on it,pending,,
+50,fanbasis,Is commasdocs.com the vendor's docs and does sandbox signup issue a key?,https://commasdocs.com/,verdict depends on it,pending,,
+84,Paygent Connect,Is gopaygent.com the company the brief means?,https://www.gopaygent.com/,whole row depends on it,pending,,
+85,iPayX,Does /developers issue a key without payment?,https://www.ipayx.ai/docs,access flips to free,pending,,
+49,Amazon Selling Partner,Does identity verification block a sandbox token?,https://developer-docs.amazon.com/sp-api,verdict flips to build now,pending,,
+1,Salesforce,Is Developer Edition signup still free? Page rendered blank for the agent.,https://developer.salesforce.com/signup,gold label depends on it,pending,,
+11,Zendesk,Can a trial account enrol in the MCP early access?,https://support.zendesk.com/hc/en-us/articles/11458059060250-Zendesk-Bridge-FAQ-EAP,MCP label depends on it,pending,,
+13,Freshdesk,Is there still a permanent free plan with API?,https://www.freshworks.com/freshdesk/pricing/,trial vs free,pending,,
+9,Copper,Did the MCP beta launch and which plan carries the API?,https://www.copper.com/pricing,MCP and access labels,pending,,

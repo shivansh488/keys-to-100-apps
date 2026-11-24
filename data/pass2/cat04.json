@@ -1,0 +1,916 @@
+[
+ {
+  "id": 31,
+  "app": "Google Ads",
+  "one_liner": "Search, display, video and Performance Max advertising platform with a programmatic campaign management and reporting API.",
+  "auth": [
+   "oauth2",
+   "other"
+  ],
+  "auth_notes": "OAuth 2.0 user flow or Google Cloud service account. Developer token sunset 2026-09-09; access level now tied to Cloud project.",
+  "access": "self_serve_free",
+  "prod_gate": "app_review",
+  "access_notes": "Enabling API grants Test access (test accounts). Explorer: mostly automated, 2,880 production ops/day. Basic: brand verification, minutes; Standard: 10 business days.",
+  "api_types": [
+   "rest",
+   "grpc",
+   "sdk"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": null,
+  "mcp": "official",
+  "mcp_url": "https://developers.google.com/google-ads/api/docs/developer-toolkit/mcp-server",
+  "mcp_notes": "Self-hosted Python server; read plus asset/label mutations; stdio or Cloud Run.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "Production needs Explorer (automated) or Basic/Standard review; some services restricted until Basic.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://developers.google.com/google-ads/api/docs/oauth/overview",
+    "match": "utilizes the OAuth 2.0 protocol for authentication and authorization"
+   },
+   {
+    "field": "access",
+    "url": "https://developers.google.com/google-ads/api/docs/get-started/dev-token",
+    "match": "enabling the API grants Test access"
+   },
+   {
+    "field": "api",
+    "url": "https://developers.google.com/google-ads/api/docs/start",
+    "match": "Install a client library or call REST"
+   },
+   {
+    "field": "mcp",
+    "url": "https://developers.google.com/google-ads/api/docs/developer-toolkit/mcp-server",
+    "match": "provides a standardized bridge to the Google Ads API"
+   }
+  ],
+  "confidence": {
+   "auth": 0.9,
+   "access": 0.9,
+   "api": 0.9,
+   "mcp": 0.9
+  },
+  "needs_browser": false,
+  "open_questions": [
+   "Whether Explorer approval is granted automatically for a brand-new Cloud project.",
+   "OpenAPI spec not located."
+  ],
+  "changes": [
+   {
+    "field": "access_notes",
+    "from": "Enabling API in a Cloud project gives Test access (test accounts); Explorer auto-review for production, 2,880 ops/day. Basic/Standard need review.",
+    "to": "Enabling API grants Test access (test accounts). Explorer: mostly automated, 2,880 production ops/day. Basic: brand verification, minutes; Standard: 10 business days.",
+    "why": "Basic review now automated after brand verification; only Standard is 10 days.",
+    "url": "https://developers.google.com/google-ads/api/docs/api-policy/developer-token"
+   }
+  ],
+  "unresolved": [
+   "openapi_public: no OpenAPI document found; a human should confirm whether Google publishes one beyond protos."
+  ]
+ },
+ {
+  "id": 32,
+  "app": "Meta Ads",
+  "one_liner": "Facebook and Instagram advertising platform exposing the Marketing API for campaign management and insights.",
+  "auth": [
+   "oauth2",
+   "token"
+  ],
+  "auth_notes": "OAuth user tokens via app (ads_management/ads_read); system user tokens via Business Manager for server use.",
+  "access": "self_serve_free",
+  "prod_gate": "app_review",
+  "access_notes": "Meta developer app gets Limited access tier automatically (dev rate limits, own accounts); Full access needs App Review and 500 calls/15 days.",
+  "api_types": [
+   "rest",
+   "sdk"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": null,
+  "mcp": "official",
+  "mcp_url": "https://mcp.facebook.com/ads",
+  "mcp_notes": "Meta-hosted remote server; reporting, ad/catalog create and edit; seven tool categories.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "Serving other advertisers needs Advanced access via App Review; needs an existing ad account.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization",
+    "match": "Your app gets access when they click"
+   },
+   {
+    "field": "access",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization",
+    "match": "Automatically granted when you add the Marketing API product"
+   },
+   {
+    "field": "api",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started",
+    "match": "To manage your ads through the Marketing API"
+   },
+   {
+    "field": "mcp",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-overview",
+    "match": "lets you manage Meta ads directly from an AI agent"
+   }
+  ],
+  "confidence": {
+   "auth": 0.85,
+   "access": 0.8,
+   "api": 0.85,
+   "mcp": 0.9
+  },
+  "needs_browser": false,
+  "open_questions": [
+   "Business verification requirements for Advanced access not read.",
+   "OpenAPI spec not located."
+  ],
+  "changes": [
+   {
+    "field": "evidence.auth",
+    "from": "https://developers.facebook.com/docs/marketing-api/overview/authorization",
+    "to": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization",
+    "why": "Pass 1 evidence not machine-checkable",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization"
+   },
+   {
+    "field": "evidence.access",
+    "from": "https://developers.facebook.com/docs/marketing-api/overview/authorization",
+    "to": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization",
+    "why": "Pass 1 evidence not machine-checkable",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started/authorization"
+   },
+   {
+    "field": "evidence.api",
+    "from": "https://developers.facebook.com/docs/marketing-api/get-started",
+    "to": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started",
+    "why": "Pass 1 evidence not machine-checkable",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/marketing-api/get-started"
+   },
+   {
+    "field": "evidence.mcp",
+    "from": "https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-overview",
+    "to": "https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-overview",
+    "why": "Pass 1 evidence not machine-checkable",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-overview"
+   },
+   {
+    "field": "mcp_notes",
+    "from": "Meta-hosted ads MCP server, open beta since 2026-04-29; 29 tools.",
+    "to": "Meta-hosted remote server; reporting, ad/catalog create and edit; seven tool categories.",
+    "why": "Tool count and beta date not on vendor overview page.",
+    "url": "https://developers.facebook.com/documentation/ads-commerce/ads-ai-connectors/ads-mcp-server/ads-mcp-server-overview"
+   }
+  ],
+  "unresolved": [
+   "access: a human with a Meta account should confirm no business verification is asked before the first own-account call.",
+   "evidence: developers.facebook.com returned 400 to the pass 1 checker but 200 here; re-run the check on the new URLs."
+  ]
+ },
+ {
+  "id": 33,
+  "app": "LinkedIn Ads",
+  "one_liner": "LinkedIn Marketing Solutions API for ad campaigns, creatives, analytics, lead sync and matched audiences.",
+  "auth": [
+   "oauth2"
+  ],
+  "auth_notes": "OAuth 2.0 three-legged member flow; two-legged client credentials for some products. Token generator in developer portal.",
+  "access": "admin_or_app_approval",
+  "prod_gate": "app_review",
+  "access_notes": "Advertising API product must be approved by LinkedIn; starts in Development tier (edit up to 5 ad accounts), separate Standard tier application.",
+  "api_types": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": null,
+  "mcp": "community",
+  "mcp_url": "",
+  "mcp_notes": "No LinkedIn-published MCP found; third-party servers e.g. linkedin-ads-mcp on PyPI.",
+  "verdict": "needs_outreach",
+  "main_blocker": "app_review",
+  "blocker_notes": "Advertising API access form must be approved before use; Standard tier needed for many ad accounts.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://learn.microsoft.com/en-us/linkedin/shared/authentication/getting-access",
+    "match": "The LinkedIn API uses OAuth 2.0 for user authorization"
+   },
+   {
+    "field": "access",
+    "url": "https://learn.microsoft.com/en-us/linkedin/shared/authentication/getting-access",
+    "match": "using Advertising API permissions must be approved"
+   },
+   {
+    "field": "api",
+    "url": "https://learn.microsoft.com/en-us/linkedin/marketing/overview",
+    "match": "scalable ads management with Ad Campaigns and Creatives APIs"
+   },
+   {
+    "field": "mcp",
+    "url": "https://pypi.org/project/linkedin-ads-mcp/",
+    "match": "MCP server for the LinkedIn Marketing API"
+   }
+  ],
+  "confidence": {
+   "auth": 0.9,
+   "access": 0.9,
+   "api": 0.85,
+   "mcp": 0.7
+  },
+  "needs_browser": false,
+  "open_questions": [
+   "Approval turnaround and rejection criteria not documented.",
+   "OpenAPI spec not found."
+  ],
+  "changes": [
+   {
+    "field": "verdict",
+    "from": "build_with_caveat",
+    "to": "needs_outreach",
+    "why": "Access is admin_or_app_approval; LinkedIn must approve the app before any Advertising API call.",
+    "url": "https://learn.microsoft.com/en-us/linkedin/shared/authentication/getting-access"
+   },
+   {
+    "field": "evidence.mcp",
+    "from": "https://learn.microsoft.com/en-us/linkedin/marketing/overview",
+    "to": "https://pypi.org/project/linkedin-ads-mcp/",
+    "why": "Pass 1 had no snippet; cites a third-party server",
+    "url": "https://pypi.org/project/linkedin-ads-mcp/"
+   },
+   {
+    "field": "mcp_notes",
+    "from": "No LinkedIn-published ads MCP found; third-party servers only.",
+    "to": "No LinkedIn-published MCP found; third-party servers e.g. linkedin-ads-mcp on PyPI.",
+    "why": "Community server page fetched rather than inferred from search.",
+    "url": "https://pypi.org/project/linkedin-ads-mcp/"
+   }
+  ],
+  "unresolved": [
+   "access: a human should submit the Advertising API form to learn whether Development tier is granted instantly or after review."
+  ]
+ },
+ {
+  "id": 34,
+  "app": "GoHighLevel",
+  "one_liner": "All-in-one CRM, funnel, email/SMS marketing and automation platform for agencies, with REST API and MCP.",
+  "auth": [
+   "oauth2",
+   "token"
+  ],
+  "auth_notes": "OAuth 2.0 marketplace apps (daily-expiring tokens) or static Private Integration Tokens with chosen scopes. v1 API keys end-of-life.",
+  "access": "self_serve_trial",
+  "prod_gate": "app_review",
+  "access_notes": "Free developer sandbox issues PITs, lasts up to 6 months (reactivation on request); also 14-day trial. Paid API on all plans from Starter $97/mo.",
+  "api_types": [
+   "rest",
+   "sdk",
+   "cli"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": true,
+  "mcp": "official",
+  "mcp_url": "https://services.leadconnectorhq.com/mcp/anthropic/v2",
+  "mcp_notes": "Vendor-hosted MCP, 700+ actions across 38 features; per-client URLs.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "Sandbox expires after 6 months; production needs a paid plan from $97/month; some endpoints Founder plan only.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://marketplace.gohighlevel.com/docs/llms.txt",
+    "match": "a static token created in the Sub-Account or Agency settings"
+   },
+   {
+    "field": "access",
+    "url": "https://marketplace.gohighlevel.com/docs/oauth/SandboxAccount.md",
+    "match": "The Sandbox account is provisioned"
+   },
+   {
+    "field": "api",
+    "url": "https://marketplace.gohighlevel.com/docs/llms.txt",
+    "match": "generated from the OpenAPI specs at build time"
+   },
+   {
+    "field": "mcp",
+    "url": "https://marketplace.gohighlevel.com/docs/other/mcp",
+    "match": "More than 700 actions across 38 HighLevel features"
+   },
+   {
+    "field": "access",
+    "url": "https://help.gohighlevel.com/support/solutions/articles/48001060529-highlevel-api-documentation",
+    "match": "API access is available across HighLevel subscription plans"
+   }
+  ],
+  "confidence": {
+   "auth": 0.9,
+   "access": 0.85,
+   "api": 0.9,
+   "mcp": 0.95
+  },
+  "needs_browser": false,
+  "open_questions": [
+   "Whether sandbox reactivation after 6 months is routinely granted (would make it self_serve_free)."
+  ],
+  "changes": [
+   {
+    "field": "prod_gate",
+    "from": "none",
+    "to": "app_review",
+    "why": "Private apps capped at 5 agencies; beyond that go public (reviewed) or pass security review.",
+    "url": "https://marketplace.gohighlevel.com/docs/MarketplacePolicies/PrivateAppInstallLimits.md"
+   },
+   {
+    "field": "access_notes",
+    "from": "14-day free trial on any plan (Starter $97/mo, Unlimited $297/mo lists API access); PIT created from account settings.",
+    "to": "Free developer sandbox issues PITs, lasts up to 6 months (reactivation on request); also 14-day trial. Paid API on all plans from Starter $97/mo.",
+    "why": "Developer sandbox supports PITs without paid plan; help centre confirms API on every plan.",
+    "url": "https://marketplace.gohighlevel.com/docs/oauth/SandboxPIT.md"
+   },
+   {
+    "field": "blocker_notes",
+    "from": "Credential needs trial account, then a paid plan from $97/month to keep it.",
+    "to": "Sandbox expires after 6 months; production needs a paid plan from $97/month; some endpoints Founder plan only.",
+    "why": "Sandbox exists; some endpoints plan-restricted.",
+    "url": "https://help.gohighlevel.com/support/solutions/articles/48001060529-highlevel-api-documentation"
+   },
+   {
+    "field": "evidence.access",
+    "from": "https://www.gohighlevel.com/pricing",
+    "to": "https://marketplace.gohighlevel.com/docs/oauth/SandboxAccount.md",
+    "why": "Sandbox is the first-credential route",
+    "url": "https://marketplace.gohighlevel.com/docs/oauth/SandboxAccount.md"
+   }
+  ],
+  "unresolved": [
+   "access: trial vs free hinges on whether sandbox reactivation is automatic; a human should ask HighLevel developer support."
+  ]
+ },
+ {
+  "id": 35,
+  "app": "Mailchimp",
+  "one_liner": "Email marketing and audience platform with Marketing API and separate Transactional (Mandrill) API.",
+  "auth": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "Account API key as Bearer or basic password; OAuth 2 registered apps for other users' accounts. Transactional uses its own API key.",
+  "access": "self_serve_free",
+  "prod_gate": "none",
+  "access_notes": "Free plan: 250 contacts, 500 sends/month. API key created in account settings; new keys expire after one year. API features depend on plan.",
+  "api_types": [
+   "rest",
+   "sdk",
+   "cli"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": true,
+  "mcp": "official",
+  "mcp_url": "https://mandrillapp.com/mcp",
+  "mcp_notes": "Transactional API only; Claude campaign connector separate (Standard/Premium); none wraps Marketing API.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "Plan level affects API capability; free-plan API access inferred, not stated explicitly.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://mailchimp.com/developer/marketing/api/root/",
+    "match": "Authorization using a Mailchimp API key"
+   },
+   {
+    "field": "access",
+    "url": "https://mailchimp.com/developer/marketing/build/get-started/create-an-account.md",
+    "match": "have an account and are logged in, you can"
+   },
+   {
+    "field": "api",
+    "url": "https://mailchimp.com/developer/marketing/api/root/",
+    "match": "Get links to all other resources available in the API"
+   },
+   {
+    "field": "mcp",
+    "url": "https://mailchimp.com/developer/transactional/guides/how-to-use-mailchimps-transactional-messaging-mcp.md",
+    "match": "Our MCP mirrors what our API can already do"
+   },
+   {
+    "field": "mcp",
+    "url": "https://mailchimp.com/resources/connect-mailchimp-to-claude/",
+    "match": "The Mailchimp Connector in Claude gives you"
+   }
+  ],
+  "confidence": {
+   "auth": 0.9,
+   "access": 0.7,
+   "api": 0.9,
+   "mcp": 0.85
+  },
+  "needs_browser": false,
+  "open_questions": [
+   "Docs say API capability depends on plan; free-plan limits not itemised."
+  ],
+  "changes": [
+   {
+    "field": "mcp",
+    "from": "community",
+    "to": "official",
+    "why": "Vendor documents a Transactional MCP that calls the API, plus a Claude campaign connector.",
+    "url": "https://mailchimp.com/developer/transactional/guides/how-to-use-mailchimps-transactional-messaging-mcp.md"
+   },
+   {
+    "field": "mcp_url",
+    "from": "https://mailchimp.com/developer/_mcp/server",
+    "to": "https://mandrillapp.com/mcp",
+    "why": "Pass 1 URL is the docs-search server, not the product MCP.",
+    "url": "https://mailchimp.com/developer/transactional/guides/how-to-use-mailchimps-transactional-messaging-mcp.md"
+   },
+   {
+    "field": "mcp_notes",
+    "from": "Official server is docs-search only; account-acting servers are community.",
+    "to": "Transactional API only; Claude campaign connector separate (Standard/Premium); none wraps Marketing API.",
+    "why": "Scope of each official server differs.",
+    "url": "https://mailchimp.com/solutions/ai-tools/"
+   },
+   {
+    "field": "evidence.mcp",
+    "from": "https://mailchimp.com/developer/marketing/build/ai-tools/mcp-server",
+    "to": "https://mailchimp.com/developer/transactional/guides/how-to-use-mailchimps-transactional-messaging-mcp.md",
+    "why": "Replaces docs-only server page",
+    "url": "https://mailchimp.com/developer/transactional/guides/how-to-use-mailchimps-transactional-messaging-mcp.md"
+   },
+   {
+    "field": "access_notes",
+    "from": "Free plan exists (under 500 contacts); API key created in account settings. API feature limits by plan level not itemised.",
+    "to": "Free plan: 250 contacts, 500 sends/month. API key created in account settings; new keys expire after one year. API features depend on plan.",
+    "why": "Free plan cut to 250 contacts; keys created since 2026-06-22 expire yearly.",
+    "url": "https://mailchimp.com/help/about-mailchimp-pricing-plans/"
+   },
+   {
+    "field": "openapi_public",
+    "from": null,
+    "to": true,
+    "why": "Swagger 2.0 spec public in Mailchimp's client codegen repository.",
+    "url": "https://github.com/mailchimp/mailchimp-client-lib-codegen"
+   }
+  ],
+  "unresolved": [
+   "access: a human should create a key on a Free account and confirm Marketing API calls succeed.",
+   "mcp: judgement call whether Transactional MCP counts for the Marketing API record; the Claude connector URL is listed only on claude.com."
+  ]
+ },
+ {
+  "id": 36,
+  "app": "Klaviyo",
+  "one_liner": "Ecommerce-focused email, SMS and customer data marketing platform with a versioned JSON:API REST API.",
+  "auth": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "Private API keys for own account (Owner/Admin/Manager); OAuth required for marketplace apps; public key for client endpoints.",
+  "access": "self_serve_free",
+  "prod_gate": "none",
+  "access_notes": "New accounts, including linked test accounts, start on the free plan; API key created in account settings.",
+  "api_types": [
+   "rest",
+   "sdk",
+   "cli"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": true,
+  "mcp": "official",
+  "mcp_url": "https://mcp.klaviyo.com/mcp",
+  "mcp_notes": "Remote-hosted official MCP; read-only and toolset query params; Owner/Admin/Manager only.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "Some features need paid plan or account verification.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://developers.klaviyo.com/en/docs/authenticate_",
+    "match": "All /api endpoints use API private keys to authenticate requests"
+   },
+   {
+    "field": "access",
+    "url": "https://developers.klaviyo.com/en/docs/create_a_test_account",
+    "match": "New test accounts start on the free plan"
+   },
+   {
+    "field": "api",
+    "url": "https://developers.klaviyo.com/llms.txt",
+    "match": "Every endpoint is served from https://a.klaviyo.com"
+   },
+   {
+    "field": "mcp",
+    "url": "https://developers.klaviyo.com/en/docs/klaviyo_mcp_server",
+    "match": "The Klaviyo Model Context Protocol (MCP) server seamlessly integrates"
+   }
+  ],
+  "confidence": {
+   "auth": 0.95,
+   "access": 0.85,
+   "api": 0.9,
+   "mcp": 0.9
+  },
+  "needs_browser": false,
+  "open_questions": [],
+  "changes": [
+   {
+    "field": "prod_gate",
+    "from": "unknown",
+    "to": "none",
+    "why": "Unlisted OAuth apps can share install URL with customers; review only for Marketplace listing.",
+    "url": "https://developers.klaviyo.com/en/docs/set_up_oauth.md"
+   }
+  ],
+  "unresolved": []
+ },
+ {
+  "id": 37,
+  "app": "systeme.io",
+  "one_liner": "All-in-one funnel, email marketing, course and affiliate platform for solo entrepreneurs.",
+  "auth": [
+   "api_key"
+  ],
+  "auth_notes": "Single API key in X-API-Key header; MCP uses separate MCP key (X-MCP-Key header or mcpKey query parameter).",
+  "access": "self_serve_free",
+  "prod_gate": "none",
+  "access_notes": "Free plan never expires, no card; MCP keys confirmed on Free. API keys sit in same settings page; Free API access not explicitly stated.",
+  "api_types": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": true,
+  "mcp": "official",
+  "mcp_url": "https://mcp.systeme.io/mcp",
+  "mcp_notes": "Initial release, no OAuth; contacts, newsletters, funnels, courses, products, automations; all plans.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "Only API-key auth; no OAuth for multi-tenant apps.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://developer.systeme.io/reference/api.md",
+    "match": "your only option right now is to attach"
+   },
+   {
+    "field": "access",
+    "url": "https://systeme.io/pricing",
+    "match": "The free plan never expires and does not require"
+   },
+   {
+    "field": "api",
+    "url": "https://developer.systeme.io/llms.txt",
+    "match": "Retrieves the collection of Contact resources"
+   },
+   {
+    "field": "mcp",
+    "url": "https://developer.systeme.io/docs/mcp-server.md",
+    "match": "MCP server acts as a bridge between your Systeme.io account"
+   },
+   {
+    "field": "access",
+    "url": "https://systeme.io/mcp",
+    "match": "feature included in all systeme.io plans"
+   }
+  ],
+  "confidence": {
+   "auth": 0.9,
+   "access": 0.75,
+   "api": 0.9,
+   "mcp": 0.95
+  },
+  "needs_browser": false,
+  "open_questions": [
+   "Is the public API key (not MCP key) available on the Free plan? Pricing table values render via JS."
+  ],
+  "changes": [
+   {
+    "field": "mcp_url",
+    "from": "",
+    "to": "https://mcp.systeme.io/mcp",
+    "why": "Endpoint URL given in vendor help article.",
+    "url": "https://help.systeme.io/article/11230-how-to-connect-your-systemeio-account-with-claude-using-mcp-keys"
+   },
+   {
+    "field": "mcp_notes",
+    "from": "Initial release; contacts, tags, newsletters only. Endpoint URL not shown in docs read.",
+    "to": "Initial release, no OAuth; contacts, newsletters, funnels, courses, products, automations; all plans.",
+    "why": "Help centre lists far wider tools than developer docs page.",
+    "url": "https://help.systeme.io/article/9489-how-to-use-systeme-ios-mcp"
+   },
+   {
+    "field": "access_notes",
+    "from": "Free plan never expires, no credit card; keys under profile settings 'MCP & API keys'. Free-plan API access not explicitly confirmed.",
+    "to": "Free plan never expires, no card; MCP keys confirmed on Free. API keys sit in same settings page; Free API access not explicitly stated.",
+    "why": "Vendor confirms MCP on all plans including Free.",
+    "url": "https://systeme.io/mcp"
+   },
+   {
+    "field": "openapi_public",
+    "from": null,
+    "to": true,
+    "why": "Reference .md pages embed OpenAPI 3.1 definitions per operation.",
+    "url": "https://developer.systeme.io/reference/api_automationrules_get_collection.md"
+   }
+  ],
+  "unresolved": [
+   "access: pricing row 'API requests per minute' has no values in HTML; a human should open the pricing page or a Free account."
+  ]
+ },
+ {
+  "id": 38,
+  "app": "Pinterest",
+  "one_liner": "Visual discovery platform with API v5 for pins, boards, ads, catalogs and analytics.",
+  "auth": [
+   "oauth2",
+   "token"
+  ],
+  "auth_notes": "OAuth 2.0 auth code and client credentials; 24-hour test tokens generated in My apps after Trial approval.",
+  "access": "admin_or_app_approval",
+  "prod_gate": "app_review",
+  "access_notes": "App registration requires business account; Trial access request reviewed by Pinterest; Standard upgrade needs demo video review.",
+  "api_types": [
+   "rest",
+   "sdk"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": true,
+  "mcp": "official",
+  "mcp_url": "https://api.pinterest.com/mcp",
+  "mcp_notes": "Closed alpha for approved partners; public launch pending; github.com/pinterest/mcp-server still 404.",
+  "verdict": "needs_outreach",
+  "main_blocker": "app_review",
+  "blocker_notes": "No credential until Pinterest approves Trial access; Standard needs separate review.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://developers.pinterest.com/docs/getting-started/connect-app/",
+    "match": "Build a working authentication flow based on OAuth 2"
+   },
+   {
+    "field": "access",
+    "url": "https://developers.pinterest.com/docs/getting-started/connect-app/",
+    "match": "Application requests are reviewed by Pinterest"
+   },
+   {
+    "field": "api",
+    "url": "https://developers.pinterest.com/docs/getting-started/connect-app/",
+    "match": "Our sandbox environment allows you to make test calls"
+   },
+   {
+    "field": "mcp",
+    "url": "https://business.pinterest.com/blog/pinterest-ai-for-marketers/",
+    "match": "starting with a small group of alpha partners"
+   }
+  ],
+  "confidence": {
+   "auth": 0.9,
+   "access": 0.9,
+   "api": 0.85,
+   "mcp": 0.6
+  },
+  "needs_browser": false,
+  "open_questions": [
+   "Review turnaround for Trial access not stated.",
+   "Apps registered after 2026-09-14 may hit PINNER_DATA_ACCESS_DENIED on non-business data."
+  ],
+  "changes": [
+   {
+    "field": "verdict",
+    "from": "build_with_caveat",
+    "to": "needs_outreach",
+    "why": "Access is admin_or_app_approval; Pinterest reviews every trial request before credentials.",
+    "url": "https://developers.pinterest.com/docs/getting-started/connect-app/"
+   },
+   {
+    "field": "mcp",
+    "from": "none_found",
+    "to": "official",
+    "why": "Vendor MCP live with alpha partners since June 2026; limited access still counts.",
+    "url": "https://business.pinterest.com/blog/pinterest-ai-for-marketers/"
+   },
+   {
+    "field": "mcp_url",
+    "from": "",
+    "to": "https://api.pinterest.com/mcp",
+    "why": "Endpoint shown on Pinterest's MCP page.",
+    "url": "https://developers.pinterest.com/about-pinterest-mcp/"
+   },
+   {
+    "field": "mcp_notes",
+    "from": "Official MCP announced, sign-up for launch; github.com/pinterest/mcp-server returns 404.",
+    "to": "Closed alpha for approved partners; public launch pending; github.com/pinterest/mcp-server still 404.",
+    "why": "Vendor page says sign up for launch updates.",
+    "url": "https://developers.pinterest.com/about-pinterest-mcp/"
+   },
+   {
+    "field": "evidence.mcp",
+    "from": "https://developers.pinterest.com/about-pinterest-mcp/",
+    "to": "https://business.pinterest.com/blog/pinterest-ai-for-marketers/",
+    "why": "Pass 1 had no snippet",
+    "url": "https://business.pinterest.com/blog/pinterest-ai-for-marketers/"
+   }
+  ],
+  "unresolved": [
+   "mcp: official (closed alpha) vs none_found; a human should ask Pinterest whether api.pinterest.com/mcp accepts non-partner apps."
+  ]
+ },
+ {
+  "id": 39,
+  "app": "Threads (Meta)",
+  "one_liner": "Meta's Threads social network API for publishing posts, reading replies, profiles and insights.",
+  "auth": [
+   "oauth2"
+  ],
+  "auth_notes": "Threads user tokens via OAuth: 1-hour, exchangeable for 60-day refreshable. App tokens via client_credentials for e.g. oEmbed.",
+  "access": "self_serve_free",
+  "prod_gate": "app_review",
+  "access_notes": "Create Meta app with Threads use case; app-role testers can grant permissions without review. Other users need App Review and published app.",
+  "api_types": [
+   "rest"
+  ],
+  "api_breadth": "medium",
+  "openapi_public": null,
+  "mcp": "community",
+  "mcp_url": "",
+  "mcp_notes": "Community only; Meta's MCP list covers Ads, developer apps and WhatsApp, not Threads.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "Permissions for non-tester users require App Review; per-user token expiry management.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://developers.facebook.com/documentation/threads/get-started",
+    "match": "API authentication is handled by Threads user access tokens"
+   },
+   {
+    "field": "access",
+    "url": "https://developers.facebook.com/documentation/threads/get-started",
+    "match": "create an app and pick the Threads use case"
+   },
+   {
+    "field": "api",
+    "url": "https://developers.facebook.com/documentation/threads",
+    "match": "Use the Threads API to create and publish posts"
+   },
+   {
+    "field": "mcp",
+    "url": "https://github.com/quinnjr/threads-mcp",
+    "match": "Production-ready Model Context Protocol server for Threads.com API"
+   }
+  ],
+  "confidence": {
+   "auth": 0.9,
+   "access": 0.85,
+   "api": 0.8,
+   "mcp": 0.85
+  },
+  "needs_browser": false,
+  "open_questions": [
+   "Endpoint count estimated from guide list, not counted."
+  ],
+  "changes": [
+   {
+    "field": "evidence.auth",
+    "from": "https://developers.facebook.com/docs/threads/get-started",
+    "to": "https://developers.facebook.com/documentation/threads/get-started",
+    "why": "Pass 1 evidence not machine-checkable",
+    "url": "https://developers.facebook.com/documentation/threads/get-started"
+   },
+   {
+    "field": "evidence.access",
+    "from": "https://developers.facebook.com/docs/threads/get-started",
+    "to": "https://developers.facebook.com/documentation/threads/get-started",
+    "why": "Pass 1 evidence not machine-checkable",
+    "url": "https://developers.facebook.com/documentation/threads/get-started"
+   },
+   {
+    "field": "evidence.api",
+    "from": "https://developers.facebook.com/docs/threads",
+    "to": "https://developers.facebook.com/documentation/threads",
+    "why": "Pass 1 evidence not machine-checkable",
+    "url": "https://developers.facebook.com/documentation/threads"
+   },
+   {
+    "field": "evidence.mcp",
+    "from": "https://developers.facebook.com/docs/threads",
+    "to": "https://github.com/quinnjr/threads-mcp",
+    "why": "Pass 1 evidence not machine-checkable",
+    "url": "https://github.com/quinnjr/threads-mcp"
+   },
+   {
+    "field": "mcp_notes",
+    "from": "No Meta-published Threads MCP found; several community servers wrap the API.",
+    "to": "Community only; Meta's MCP list covers Ads, developer apps and WhatsApp, not Threads.",
+    "why": "Meta's MCP index lists no Threads server.",
+    "url": "https://developers.facebook.com/documentation/mcp"
+   },
+   {
+    "field": "auth_notes",
+    "from": "Threads user access tokens via OAuth authorization window; short-lived 1 hour, long-lived 60 days, refreshable.",
+    "to": "Threads user tokens via OAuth: 1-hour, exchangeable for 60-day refreshable. App tokens via client_credentials for e.g. oEmbed.",
+    "why": "App access tokens now documented for some endpoints.",
+    "url": "https://developers.facebook.com/documentation/threads/get-started/app-access-tokens"
+   }
+  ],
+  "unresolved": [
+   "evidence: developers.facebook.com returned 400 to the pass 1 checker but 200 here; re-run the check on the new URLs."
+  ]
+ },
+ {
+  "id": 40,
+  "app": "SendGrid",
+  "one_liner": "Twilio's email delivery and marketing campaigns service with Web API v3 and SMTP relay.",
+  "auth": [
+   "api_key"
+  ],
+  "auth_notes": "API keys with scoped permissions sent as Bearer token; subuser on-behalf-of header supported.",
+  "access": "self_serve_trial",
+  "prod_gate": "none",
+  "access_notes": "60-day free trial, once only: 100 emails/day; paid plan required afterwards to send. Account verification steps and sender verification needed.",
+  "api_types": [
+   "rest",
+   "sdk"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": true,
+  "mcp": "none_found",
+  "mcp_url": "",
+  "mcp_notes": "docs-only vendor MCP (public beta); twilio-labs/mcp omits SendGrid; community servers exist.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "Trial ends after 60 days; verification steps before account use.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/authentication",
+    "match": "include an Authorization header with the value Bearer"
+   },
+   {
+    "field": "access",
+    "url": "https://www.twilio.com/en-us/sendgrid/email-api",
+    "match": "Send 100 emails per day for 60 days"
+   },
+   {
+    "field": "api",
+    "url": "https://www.twilio.com/docs/sendgrid/api-reference",
+    "match": "Retrieve an authenticated domain"
+   },
+   {
+    "field": "mcp",
+    "url": "https://www.twilio.com/docs/ai/mcp",
+    "match": "it does not connect to a Twilio account"
+   }
+  ],
+  "confidence": {
+   "auth": 0.95,
+   "access": 0.9,
+   "api": 0.85,
+   "mcp": 0.8
+  },
+  "needs_browser": false,
+  "open_questions": [
+   "Verification delay for new trial accounts not documented."
+  ],
+  "changes": [
+   {
+    "field": "mcp",
+    "from": "community",
+    "to": "none_found",
+    "why": "Twilio's hosted server is docs-only; rule says none_found for docs-only vendor servers.",
+    "url": "https://www.twilio.com/docs/ai/mcp"
+   },
+   {
+    "field": "mcp_url",
+    "from": "https://mcp.twilio.com/docs",
+    "to": "",
+    "why": "Docs-search server is not a product MCP.",
+    "url": "https://www.twilio.com/docs/ai/mcp"
+   },
+   {
+    "field": "mcp_notes",
+    "from": "Twilio official MCP is docs-search only (public beta); SendGrid actions need community servers.",
+    "to": "docs-only vendor MCP (public beta); twilio-labs/mcp omits SendGrid; community servers exist.",
+    "why": "Records why vendor server excluded.",
+    "url": "https://www.twilio.com/docs/ai/mcp"
+   },
+   {
+    "field": "access_notes",
+    "from": "Free trial sends 100 emails/day for 60 days, no credit card, then paid plan required; sender verification needed.",
+    "to": "60-day free trial, once only: 100 emails/day; paid plan required afterwards to send. Account verification steps and sender verification needed.",
+    "why": "Trial is single-use and account verification is required.",
+    "url": "https://www.twilio.com/docs/sendgrid/ui/account-and-settings/upgrading-your-plan"
+   },
+   {
+    "field": "blocker_notes",
+    "from": "Free tier expires after 60 days; account review may delay sending.",
+    "to": "Trial ends after 60 days; verification steps before account use.",
+    "why": "Vendor lists verification steps, not a delay.",
+    "url": "https://www.twilio.com/docs/sendgrid/ui/account-and-settings/verifying-your-account"
+   }
+  ],
+  "unresolved": [
+   "mcp: none_found follows the docs-only rule, but third-party SendGrid servers exist (e.g. Garoth/sendgrid-mcp); human to decide community vs none_found."
+  ]
+ }
+]

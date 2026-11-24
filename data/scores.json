@@ -1,0 +1,1397 @@
+{
+ "pass0": {
+  "n": 20,
+  "by_field": {
+   "auth": 8,
+   "access": 2,
+   "mcp": 10,
+   "verdict": 5
+  },
+  "correct": 25,
+  "claims": 80,
+  "rows": [
+   {
+    "id": 1,
+    "app": "Salesforce",
+    "auth": {
+     "ok": false,
+     "got": [
+      "unknown"
+     ]
+    },
+    "access": {
+     "ok": false,
+     "got": "self_serve_trial"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": false,
+     "got": "not_buildable"
+    }
+   },
+   {
+    "id": 3,
+    "app": "Pipedrive",
+    "auth": {
+     "ok": false,
+     "got": [
+      "unknown"
+     ]
+    },
+    "access": {
+     "ok": false,
+     "got": "self_serve_trial"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": false,
+     "got": "not_buildable"
+    }
+   },
+   {
+    "id": 11,
+    "app": "Zendesk",
+    "auth": {
+     "ok": false,
+     "got": [
+      "unknown"
+     ]
+    },
+    "access": {
+     "ok": true,
+     "got": "self_serve_trial"
+    },
+    "mcp": {
+     "ok": false,
+     "got": "none_found"
+    },
+    "verdict": {
+     "ok": false,
+     "got": "not_buildable"
+    }
+   },
+   {
+    "id": 13,
+    "app": "Freshdesk",
+    "auth": {
+     "ok": false,
+     "got": [
+      "unknown"
+     ]
+    },
+    "access": {
+     "ok": true,
+     "got": "self_serve_trial"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": false,
+     "got": "not_buildable"
+    }
+   },
+   {
+    "id": 28,
+    "app": "WhatsApp Business",
+    "auth": {
+     "ok": false,
+     "got": [
+      "unknown"
+     ]
+    },
+    "access": {
+     "ok": false,
+     "got": "unknown"
+    },
+    "mcp": {
+     "ok": false,
+     "got": "none_found"
+    },
+    "verdict": {
+     "ok": false,
+     "got": "not_buildable"
+    }
+   },
+   {
+    "id": 30,
+    "app": "Vonage",
+    "auth": {
+     "ok": false,
+     "got": [
+      "unknown"
+     ]
+    },
+    "access": {
+     "ok": false,
+     "got": "unknown"
+    },
+    "mcp": {
+     "ok": false,
+     "got": "none_found"
+    },
+    "verdict": {
+     "ok": false,
+     "got": "not_buildable"
+    }
+   },
+   {
+    "id": 33,
+    "app": "LinkedIn Ads",
+    "auth": {
+     "ok": false,
+     "got": [
+      "oauth2",
+      "api_key"
+     ]
+    },
+    "access": {
+     "ok": false,
+     "got": "unknown"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "none_found"
+    },
+    "verdict": {
+     "ok": false,
+     "got": "build_with_caveat"
+    }
+   },
+   {
+    "id": 38,
+    "app": "Pinterest",
+    "auth": {
+     "ok": false,
+     "got": [
+      "oauth2",
+      "api_key",
+      "basic"
+     ]
+    },
+    "access": {
+     "ok": false,
+     "got": "self_serve_trial"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": false,
+     "got": "build_now"
+    }
+   },
+   {
+    "id": 47,
+    "app": "Ecwid",
+    "auth": {
+     "ok": true,
+     "got": [
+      "oauth2",
+      "api_key"
+     ]
+    },
+    "access": {
+     "ok": false,
+     "got": "unknown"
+    },
+    "mcp": {
+     "ok": false,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "build_with_caveat"
+    }
+   },
+   {
+    "id": 48,
+    "app": "Gumroad",
+    "auth": {
+     "ok": false,
+     "got": [
+      "unknown"
+     ]
+    },
+    "access": {
+     "ok": false,
+     "got": "unknown"
+    },
+    "mcp": {
+     "ok": false,
+     "got": "none_found"
+    },
+    "verdict": {
+     "ok": false,
+     "got": "not_buildable"
+    }
+   },
+   {
+    "id": 54,
+    "app": "MrScraper",
+    "auth": {
+     "ok": true,
+     "got": [
+      "api_key"
+     ]
+    },
+    "access": {
+     "ok": false,
+     "got": "unknown"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": false,
+     "got": "build_with_caveat"
+    }
+   },
+   {
+    "id": 60,
+    "app": "Clay",
+    "auth": {
+     "ok": true,
+     "got": [
+      "api_key"
+     ]
+    },
+    "access": {
+     "ok": false,
+     "got": "self_serve_trial"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "build_now"
+    }
+   },
+   {
+    "id": 61,
+    "app": "GitHub",
+    "auth": {
+     "ok": true,
+     "got": [
+      "oauth2",
+      "api_key",
+      "basic"
+     ]
+    },
+    "access": {
+     "ok": false,
+     "got": "unknown"
+    },
+    "mcp": {
+     "ok": false,
+     "got": "none_found"
+    },
+    "verdict": {
+     "ok": false,
+     "got": "build_with_caveat"
+    }
+   },
+   {
+    "id": 62,
+    "app": "Vercel",
+    "auth": {
+     "ok": true,
+     "got": [
+      "oauth2",
+      "api_key"
+     ]
+    },
+    "access": {
+     "ok": false,
+     "got": "self_serve_trial"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "build_now"
+    }
+   },
+   {
+    "id": 79,
+    "app": "Smartsheet",
+    "auth": {
+     "ok": false,
+     "got": [
+      "unknown"
+     ]
+    },
+    "access": {
+     "ok": false,
+     "got": "unknown"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": false,
+     "got": "not_buildable"
+    }
+   },
+   {
+    "id": 80,
+    "app": "Harvest",
+    "auth": {
+     "ok": true,
+     "got": [
+      "oauth2",
+      "api_key"
+     ]
+    },
+    "access": {
+     "ok": false,
+     "got": "unknown"
+    },
+    "mcp": {
+     "ok": false,
+     "got": "none_found"
+    },
+    "verdict": {
+     "ok": false,
+     "got": "build_with_caveat"
+    }
+   },
+   {
+    "id": 81,
+    "app": "Stripe",
+    "auth": {
+     "ok": true,
+     "got": [
+      "api_key",
+      "basic"
+     ]
+    },
+    "access": {
+     "ok": false,
+     "got": "partner_or_sales"
+    },
+    "mcp": {
+     "ok": false,
+     "got": "none_found"
+    },
+    "verdict": {
+     "ok": false,
+     "got": "needs_outreach"
+    }
+   },
+   {
+    "id": 83,
+    "app": "Binance",
+    "auth": {
+     "ok": false,
+     "got": [
+      "unknown"
+     ]
+    },
+    "access": {
+     "ok": false,
+     "got": "unknown"
+    },
+    "mcp": {
+     "ok": false,
+     "got": "none_found"
+    },
+    "verdict": {
+     "ok": false,
+     "got": "not_buildable"
+    }
+   },
+   {
+    "id": 95,
+    "app": "Reducto",
+    "auth": {
+     "ok": true,
+     "got": [
+      "api_key"
+     ]
+    },
+    "access": {
+     "ok": false,
+     "got": "self_serve_free"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "build_now"
+    }
+   },
+   {
+    "id": 98,
+    "app": "Mermaid CLI",
+    "auth": {
+     "ok": false,
+     "got": [
+      "unknown"
+     ]
+    },
+    "access": {
+     "ok": false,
+     "got": "self_serve_trial"
+    },
+    "mcp": {
+     "ok": false,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "not_buildable"
+    }
+   }
+  ]
+ },
+ "pass1": {
+  "n": 20,
+  "by_field": {
+   "auth": 18,
+   "access": 18,
+   "mcp": 17,
+   "verdict": 17
+  },
+  "correct": 70,
+  "claims": 80,
+  "rows": [
+   {
+    "id": 1,
+    "app": "Salesforce",
+    "auth": {
+     "ok": true,
+     "got": [
+      "oauth2"
+     ]
+    },
+    "access": {
+     "ok": true,
+     "got": "self_serve_free"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "build_now"
+    }
+   },
+   {
+    "id": 3,
+    "app": "Pipedrive",
+    "auth": {
+     "ok": true,
+     "got": [
+      "oauth2",
+      "token"
+     ]
+    },
+    "access": {
+     "ok": true,
+     "got": "self_serve_free"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "build_now"
+    }
+   },
+   {
+    "id": 11,
+    "app": "Zendesk",
+    "auth": {
+     "ok": true,
+     "got": [
+      "oauth2"
+     ]
+    },
+    "access": {
+     "ok": true,
+     "got": "self_serve_trial"
+    },
+    "mcp": {
+     "ok": false,
+     "got": "none_found"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "build_now"
+    }
+   },
+   {
+    "id": 13,
+    "app": "Freshdesk",
+    "auth": {
+     "ok": true,
+     "got": [
+      "api_key",
+      "basic"
+     ]
+    },
+    "access": {
+     "ok": true,
+     "got": "self_serve_trial"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "build_now"
+    }
+   },
+   {
+    "id": 28,
+    "app": "WhatsApp Business",
+    "auth": {
+     "ok": true,
+     "got": [
+      "token",
+      "oauth2"
+     ]
+    },
+    "access": {
+     "ok": true,
+     "got": "self_serve_free"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "build_with_caveat"
+    }
+   },
+   {
+    "id": 30,
+    "app": "Vonage",
+    "auth": {
+     "ok": false,
+     "got": [
+      "basic",
+      "other"
+     ]
+    },
+    "access": {
+     "ok": true,
+     "got": "self_serve_trial"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "build_now"
+    }
+   },
+   {
+    "id": 33,
+    "app": "LinkedIn Ads",
+    "auth": {
+     "ok": true,
+     "got": [
+      "oauth2"
+     ]
+    },
+    "access": {
+     "ok": true,
+     "got": "admin_or_app_approval"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "community"
+    },
+    "verdict": {
+     "ok": false,
+     "got": "build_with_caveat"
+    }
+   },
+   {
+    "id": 38,
+    "app": "Pinterest",
+    "auth": {
+     "ok": true,
+     "got": [
+      "oauth2",
+      "token"
+     ]
+    },
+    "access": {
+     "ok": true,
+     "got": "admin_or_app_approval"
+    },
+    "mcp": {
+     "ok": false,
+     "got": "none_found"
+    },
+    "verdict": {
+     "ok": false,
+     "got": "build_with_caveat"
+    }
+   },
+   {
+    "id": 47,
+    "app": "Ecwid",
+    "auth": {
+     "ok": true,
+     "got": [
+      "token",
+      "oauth2"
+     ]
+    },
+    "access": {
+     "ok": true,
+     "got": "paid_plan"
+    },
+    "mcp": {
+     "ok": false,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "build_with_caveat"
+    }
+   },
+   {
+    "id": 48,
+    "app": "Gumroad",
+    "auth": {
+     "ok": true,
+     "got": [
+      "token",
+      "oauth2"
+     ]
+    },
+    "access": {
+     "ok": true,
+     "got": "self_serve_free"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "build_now"
+    }
+   },
+   {
+    "id": 54,
+    "app": "MrScraper",
+    "auth": {
+     "ok": false,
+     "got": [
+      "token",
+      "other"
+     ]
+    },
+    "access": {
+     "ok": false,
+     "got": "self_serve_free"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "build_now"
+    }
+   },
+   {
+    "id": 60,
+    "app": "Clay",
+    "auth": {
+     "ok": true,
+     "got": [
+      "api_key"
+     ]
+    },
+    "access": {
+     "ok": false,
+     "got": "paid_plan"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": false,
+     "got": "build_with_caveat"
+    }
+   },
+   {
+    "id": 61,
+    "app": "GitHub",
+    "auth": {
+     "ok": true,
+     "got": [
+      "oauth2",
+      "token"
+     ]
+    },
+    "access": {
+     "ok": true,
+     "got": "self_serve_free"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "build_now"
+    }
+   },
+   {
+    "id": 62,
+    "app": "Vercel",
+    "auth": {
+     "ok": true,
+     "got": [
+      "token"
+     ]
+    },
+    "access": {
+     "ok": true,
+     "got": "self_serve_free"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "build_now"
+    }
+   },
+   {
+    "id": 79,
+    "app": "Smartsheet",
+    "auth": {
+     "ok": true,
+     "got": [
+      "token",
+      "oauth2"
+     ]
+    },
+    "access": {
+     "ok": true,
+     "got": "paid_plan"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "build_with_caveat"
+    }
+   },
+   {
+    "id": 80,
+    "app": "Harvest",
+    "auth": {
+     "ok": true,
+     "got": [
+      "token",
+      "oauth2"
+     ]
+    },
+    "access": {
+     "ok": true,
+     "got": "self_serve_free"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "build_now"
+    }
+   },
+   {
+    "id": 81,
+    "app": "Stripe",
+    "auth": {
+     "ok": true,
+     "got": [
+      "api_key",
+      "oauth2"
+     ]
+    },
+    "access": {
+     "ok": true,
+     "got": "self_serve_free"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "build_now"
+    }
+   },
+   {
+    "id": 83,
+    "app": "Binance",
+    "auth": {
+     "ok": true,
+     "got": [
+      "api_key",
+      "other"
+     ]
+    },
+    "access": {
+     "ok": true,
+     "got": "self_serve_free"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "build_now"
+    }
+   },
+   {
+    "id": 95,
+    "app": "Reducto",
+    "auth": {
+     "ok": true,
+     "got": [
+      "api_key"
+     ]
+    },
+    "access": {
+     "ok": true,
+     "got": "self_serve_trial"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "build_now"
+    }
+   },
+   {
+    "id": 98,
+    "app": "Mermaid CLI",
+    "auth": {
+     "ok": true,
+     "got": [
+      "none"
+     ]
+    },
+    "access": {
+     "ok": true,
+     "got": "no_api"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "community"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "build_with_caveat"
+    }
+   }
+  ]
+ },
+ "pass2": {
+  "n": 20,
+  "by_field": {
+   "auth": 18,
+   "access": 20,
+   "mcp": 20,
+   "verdict": 20
+  },
+  "correct": 78,
+  "claims": 80,
+  "rows": [
+   {
+    "id": 1,
+    "app": "Salesforce",
+    "auth": {
+     "ok": true,
+     "got": [
+      "oauth2"
+     ]
+    },
+    "access": {
+     "ok": true,
+     "got": "self_serve_free"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "build_now"
+    }
+   },
+   {
+    "id": 3,
+    "app": "Pipedrive",
+    "auth": {
+     "ok": true,
+     "got": [
+      "oauth2",
+      "token"
+     ]
+    },
+    "access": {
+     "ok": true,
+     "got": "self_serve_free"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "build_now"
+    }
+   },
+   {
+    "id": 11,
+    "app": "Zendesk",
+    "auth": {
+     "ok": true,
+     "got": [
+      "oauth2"
+     ]
+    },
+    "access": {
+     "ok": true,
+     "got": "self_serve_trial"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "build_now"
+    }
+   },
+   {
+    "id": 13,
+    "app": "Freshdesk",
+    "auth": {
+     "ok": true,
+     "got": [
+      "api_key",
+      "basic"
+     ]
+    },
+    "access": {
+     "ok": true,
+     "got": "self_serve_trial"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "build_now"
+    }
+   },
+   {
+    "id": 28,
+    "app": "WhatsApp Business",
+    "auth": {
+     "ok": true,
+     "got": [
+      "token",
+      "oauth2"
+     ]
+    },
+    "access": {
+     "ok": true,
+     "got": "self_serve_free"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "build_now"
+    }
+   },
+   {
+    "id": 30,
+    "app": "Vonage",
+    "auth": {
+     "ok": false,
+     "got": [
+      "basic",
+      "other"
+     ]
+    },
+    "access": {
+     "ok": true,
+     "got": "self_serve_trial"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "build_now"
+    }
+   },
+   {
+    "id": 33,
+    "app": "LinkedIn Ads",
+    "auth": {
+     "ok": true,
+     "got": [
+      "oauth2"
+     ]
+    },
+    "access": {
+     "ok": true,
+     "got": "admin_or_app_approval"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "community"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "needs_outreach"
+    }
+   },
+   {
+    "id": 38,
+    "app": "Pinterest",
+    "auth": {
+     "ok": true,
+     "got": [
+      "oauth2",
+      "token"
+     ]
+    },
+    "access": {
+     "ok": true,
+     "got": "admin_or_app_approval"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "needs_outreach"
+    }
+   },
+   {
+    "id": 47,
+    "app": "Ecwid",
+    "auth": {
+     "ok": true,
+     "got": [
+      "token",
+      "oauth2"
+     ]
+    },
+    "access": {
+     "ok": true,
+     "got": "paid_plan"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "none_found"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "build_with_caveat"
+    }
+   },
+   {
+    "id": 48,
+    "app": "Gumroad",
+    "auth": {
+     "ok": true,
+     "got": [
+      "token",
+      "oauth2"
+     ]
+    },
+    "access": {
+     "ok": true,
+     "got": "self_serve_free"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "build_now"
+    }
+   },
+   {
+    "id": 54,
+    "app": "MrScraper",
+    "auth": {
+     "ok": false,
+     "got": [
+      "token",
+      "other"
+     ]
+    },
+    "access": {
+     "ok": true,
+     "got": "self_serve_trial"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "build_now"
+    }
+   },
+   {
+    "id": 60,
+    "app": "Clay",
+    "auth": {
+     "ok": true,
+     "got": [
+      "api_key"
+     ]
+    },
+    "access": {
+     "ok": true,
+     "got": "self_serve_free"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "build_now"
+    }
+   },
+   {
+    "id": 61,
+    "app": "GitHub",
+    "auth": {
+     "ok": true,
+     "got": [
+      "oauth2",
+      "token"
+     ]
+    },
+    "access": {
+     "ok": true,
+     "got": "self_serve_free"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "build_now"
+    }
+   },
+   {
+    "id": 62,
+    "app": "Vercel",
+    "auth": {
+     "ok": true,
+     "got": [
+      "token",
+      "oauth2"
+     ]
+    },
+    "access": {
+     "ok": true,
+     "got": "self_serve_free"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "build_now"
+    }
+   },
+   {
+    "id": 79,
+    "app": "Smartsheet",
+    "auth": {
+     "ok": true,
+     "got": [
+      "token",
+      "oauth2"
+     ]
+    },
+    "access": {
+     "ok": true,
+     "got": "paid_plan"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "build_with_caveat"
+    }
+   },
+   {
+    "id": 80,
+    "app": "Harvest",
+    "auth": {
+     "ok": true,
+     "got": [
+      "token",
+      "oauth2"
+     ]
+    },
+    "access": {
+     "ok": true,
+     "got": "self_serve_free"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "build_now"
+    }
+   },
+   {
+    "id": 81,
+    "app": "Stripe",
+    "auth": {
+     "ok": true,
+     "got": [
+      "api_key",
+      "oauth2"
+     ]
+    },
+    "access": {
+     "ok": true,
+     "got": "self_serve_free"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "build_now"
+    }
+   },
+   {
+    "id": 83,
+    "app": "Binance",
+    "auth": {
+     "ok": true,
+     "got": [
+      "api_key",
+      "other"
+     ]
+    },
+    "access": {
+     "ok": true,
+     "got": "self_serve_free"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "build_now"
+    }
+   },
+   {
+    "id": 95,
+    "app": "Reducto",
+    "auth": {
+     "ok": true,
+     "got": [
+      "api_key"
+     ]
+    },
+    "access": {
+     "ok": true,
+     "got": "self_serve_trial"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "official"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "build_now"
+    }
+   },
+   {
+    "id": 98,
+    "app": "Mermaid CLI",
+    "auth": {
+     "ok": true,
+     "got": [
+      "none"
+     ]
+    },
+    "access": {
+     "ok": true,
+     "got": "no_api"
+    },
+    "mcp": {
+     "ok": true,
+     "got": "community"
+    },
+    "verdict": {
+     "ok": true,
+     "got": "build_with_caveat"
+    }
+   }
+  ]
+ }
+}

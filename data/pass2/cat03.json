@@ -1,0 +1,868 @@
+[
+ {
+  "id": 21,
+  "app": "Slack",
+  "one_liner": "Team chat workspace with channels, DMs, files and a large app ecosystem.",
+  "auth": [
+   "oauth2",
+   "token"
+  ],
+  "auth_notes": "Bot tokens (xoxb) and user tokens via OAuth 2.0 install flow; Workflow tokens also exist. Tokens scoped per app.",
+  "access": "self_serve_free",
+  "prod_gate": "app_review",
+  "access_notes": "Free workspace plus self-created app gives bot token. Public/commercial distribution needs Marketplace listing; unlisted commercial apps get tighter rate limits.",
+  "api_types": [
+   "rest",
+   "sdk",
+   "cli"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": true,
+  "mcp": "official",
+  "mcp_url": "https://mcp.slack.com/mcp",
+  "mcp_notes": "Hosted Slack MCP server; only Marketplace-published or internal apps may use it.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "Internal apps free; serving other customers needs Marketplace review and non-Marketplace apps hit conversations.history limits.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://docs.slack.dev/authentication/tokens",
+    "match": "Bot tokens ascribe to a granular permission model"
+   },
+   {
+    "field": "access",
+    "url": "https://slack.com/pricing",
+    "match": "Or start with the basics for free"
+   },
+   {
+    "field": "api",
+    "url": "https://docs.slack.dev/reference/methods",
+    "match": "Methods"
+   },
+   {
+    "field": "mcp",
+    "url": "https://docs.slack.dev/ai/mcp-server",
+    "match": "Only directory-published apps or internal apps may use MCP"
+   }
+  ],
+  "confidence": {
+   "auth": 0.9,
+   "access": 0.85,
+   "api": 0.8,
+   "mcp": 0.9
+  },
+  "needs_browser": false,
+  "open_questions": [
+   "Exact current rate limits for non-Marketplace commercially distributed apps (conversations.history/replies reduced May 2025).",
+   "Only official spec repo (slackapi/slack-api-specs) is archived, last push Sept 2021; public but stale."
+  ],
+  "changes": [],
+  "unresolved": [
+   {
+    "field": "openapi_public",
+    "needs": "Decide whether an archived 2021 spec counts as public; kept true."
+   }
+  ]
+ },
+ {
+  "id": 22,
+  "app": "Twilio",
+  "one_liner": "Cloud communications platform with APIs for SMS, voice, video, email and verification.",
+  "auth": [
+   "basic",
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "HTTP Basic with API key SID/secret or Account SID + Auth Token (legacy option); OAuth 2.0 apps, Client Credentials or Authorization Code, US1 only.",
+  "access": "self_serve_trial",
+  "prod_gate": "none",
+  "access_notes": "Free trial without credit card, expires 30 days after sign-up, per-product free units. Upgrade to paid to continue; regional sender registration may apply.",
+  "api_types": [
+   "rest",
+   "sdk",
+   "cli"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": true,
+  "mcp": "official",
+  "mcp_url": "https://github.com/twilio-labs/mcp",
+  "mcp_notes": "twilio-labs @twilio-alpha/mcp acts on API (alpha); hosted mcp.twilio.com/docs is docs-only.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "Trial limits (verified numbers) and carrier registration for production senders, but no vendor approval to start.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://www.twilio.com/docs/iam/api-keys.md",
+    "match": "The API key types are `Main`, `Standard`, and `Restricted`"
+   },
+   {
+    "field": "access",
+    "url": "https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account.md",
+    "match": "You can sign up for a Twilio free trial account without a credit card"
+   },
+   {
+    "field": "api",
+    "url": "https://github.com/twilio/twilio-oai",
+    "match": "Twilio's OpenAPI Specification This repository contains"
+   },
+   {
+    "field": "auth",
+    "url": "https://www.twilio.com/docs/iam/oauth-apps/overview.md",
+    "match": "Twilio supports two OAuth 2.0 grant types"
+   },
+   {
+    "field": "access",
+    "url": "https://www.twilio.com/docs/usage/trials.md",
+    "match": "Trial accounts expire 30 days after sign-up"
+   },
+   {
+    "field": "mcp",
+    "url": "https://raw.githubusercontent.com/twilio-labs/mcp/main/README.md",
+    "match": "Model Context Protocol server that exposes all of Twilio APIs"
+   }
+  ],
+  "confidence": {
+   "auth": 0.9,
+   "access": 0.85,
+   "api": 0.9,
+   "mcp": 0.65
+  },
+  "needs_browser": false,
+  "open_questions": [
+   "Hosted execute-ready OAuth MCP tools are listed by Twilio as planned, not live."
+  ],
+  "changes": [
+   {
+    "field": "auth",
+    "from": [
+     "basic",
+     "api_key"
+    ],
+    "to": [
+     "basic",
+     "api_key",
+     "oauth2"
+    ],
+    "why": "OAuth apps (Client Credentials, Authorization Code) available to all accounts; listed as a supported authentication method.",
+    "url": "https://www.twilio.com/docs/iam/oauth-apps/overview.md"
+   },
+   {
+    "field": "access_notes",
+    "from": "Free trial account without credit card; trial restricts to verified recipients and Twilio-branded messages. Upgrade to paid for production; regional sender registration may apply.",
+    "to": "Free trial without credit card, expires 30 days after sign-up, per-product free units. Upgrade to paid to continue; regional sender registration may apply.",
+    "why": "Trial terms changed to 30-day expiry with product-specific free units.",
+    "url": "https://www.twilio.com/docs/usage/trials.md"
+   },
+   {
+    "field": "mcp_url",
+    "from": "https://mcp.twilio.com/docs",
+    "to": "https://github.com/twilio-labs/mcp",
+    "why": "Hosted mcp.twilio.com/docs is docs-only; Twilio Labs server acts on the product API.",
+    "url": "https://raw.githubusercontent.com/twilio-labs/mcp/main/README.md"
+   }
+  ],
+  "unresolved": [
+   {
+    "field": "mcp",
+    "needs": "Judge whether the alpha twilio-labs server (last push 2026-02-14) counts as official; if not, value is none_found (docs-only)."
+   }
+  ]
+ },
+ {
+  "id": 23,
+  "app": "Zoho Cliq",
+  "one_liner": "Zoho's team chat and collaboration app with channels, bots and calls.",
+  "auth": [
+   "oauth2",
+   "token"
+  ],
+  "auth_notes": "Zoho OAuth 2.0 for the REST API, data-centre specific domains; per-user webhook tokens (zapikey) for channel, bot and extension message endpoints.",
+  "access": "self_serve_free",
+  "prod_gate": "unknown",
+  "access_notes": "Free Cliq edition; pricing table ticks API support on every plan including Free. OAuth client registered in Zoho API console.",
+  "api_types": [
+   "rest",
+   "sdk"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": true,
+  "mcp": "official",
+  "mcp_url": "https://www.zoho.com/cliq/mcp-server.html",
+  "mcp_notes": "Zoho-published Cliq MCP server, set up via Cliq or Zoho MCP console.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "Multi-datacenter OAuth domains add integration complexity.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://www.zoho.com/cliq/help/restapi/v2/",
+    "match": "Rest API's follows the OAuth 2.0 protocol to authorize and authenticate requests"
+   },
+   {
+    "field": "access",
+    "url": "https://www.zoho.com/cliq/pricing.html",
+    "match": "Free Chat plans for all Teams size"
+   },
+   {
+    "field": "api",
+    "url": "https://www.zoho.com/cliq/help/restapi/v2/",
+    "match": "You can download the OpenAPI specification file below"
+   },
+   {
+    "field": "mcp",
+    "url": "https://www.zoho.com/cliq/help/platform/zoho-cliq-mcp.html",
+    "match": "Guide to Zoho Cliq's MCP Server"
+   },
+   {
+    "field": "auth",
+    "url": "https://www.zoho.com/cliq/help/platform/webhook-tokens.html",
+    "match": "unique authentication keys designed for individual users"
+   },
+   {
+    "field": "access",
+    "url": "https://www.zoho.com/cliq/pricing.html",
+    "match": "Developer platform API support"
+   }
+  ],
+  "confidence": {
+   "auth": 0.9,
+   "access": 0.85,
+   "api": 0.85,
+   "mcp": 0.8
+  },
+  "needs_browser": false,
+  "open_questions": [
+   "Production gate for multi-tenant public apps (Zoho Marketplace review) not checked.",
+   "Cliq MCP tool coverage vs REST API."
+  ],
+  "changes": [
+   {
+    "field": "auth",
+    "from": [
+     "oauth2"
+    ],
+    "to": [
+     "oauth2",
+     "token"
+    ],
+    "why": "Per-user webhook tokens (zapikey) authenticate channel and bot message endpoints.",
+    "url": "https://www.zoho.com/cliq/help/platform/webhook-tokens.html"
+   }
+  ],
+  "unresolved": [
+   {
+    "field": "prod_gate",
+    "needs": "Read Zoho Marketplace publishing rules for multi-org OAuth clients."
+   }
+  ]
+ },
+ {
+  "id": 24,
+  "app": "Lark (Larksuite)",
+  "one_liner": "ByteDance's all-in-one workplace suite with chat, docs, calendar and open platform APIs.",
+  "auth": [
+   "oauth2",
+   "token",
+   "other"
+  ],
+  "auth_notes": "app_id/app_secret exchange for tenant_access_token or app_access_token; user_access_token via OAuth 2.0 authorization code.",
+  "access": "self_serve_free",
+  "prod_gate": "app_review",
+  "access_notes": "Create a tenant, become admin, build custom app approved by own admin; no Lark review. Free Starter plan capped at 10,000 basic API calls/month.",
+  "api_types": [
+   "rest",
+   "sdk",
+   "cli"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": null,
+  "mcp": "official",
+  "mcp_url": "https://github.com/larksuite/lark-openapi-mcp",
+  "mcp_notes": "Official OpenAPI MCP (npm @larksuiteoapi/lark-mcp), Beta; runs locally via npx.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "Starter plan quota of 10,000 basic API calls per month; docs partly Chinese-first.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://open.larksuite.com/document/server-docs/getting-started/api-access-token/auth-v3/tenant_access_token_internal.md",
+    "match": "https://open.larksuite.com/open-apis/auth/v3/tenant_access_token/internal"
+   },
+   {
+    "field": "access",
+    "url": "https://open.larksuite.com/document/home/introduction-to-custom-app-development/self-built-application-development-process.md",
+    "match": "无需Lark团队审核，由企业租户管理员审核通过后即可使用"
+   },
+   {
+    "field": "api",
+    "url": "https://open.larksuite.com/document/uAjLw4CM/ukTMukTMukTM/reference/im-v1/message/create.md",
+    "match": "https://open.larksuite.com/open-apis/im/v1/messages"
+   },
+   {
+    "field": "mcp",
+    "url": "https://github.com/larksuite/lark-openapi-mcp",
+    "match": "Feishu/Lark official OpenAPI MCP"
+   },
+   {
+    "field": "access",
+    "url": "https://open.larksuite.com/document/uAjLw4CM/ukTMukTMukTM/api-call-guide/api-billing.md?lang=en-US",
+    "match": "resets on the 1st of each calendar month"
+   },
+   {
+    "field": "api",
+    "url": "https://github.com/larksuite/cli",
+    "match": "maintained by the larksuite team"
+   }
+  ],
+  "confidence": {
+   "auth": 0.85,
+   "access": 0.8,
+   "api": 0.85,
+   "mcp": 0.85
+  },
+  "needs_browser": true,
+  "open_questions": [
+   "No public OpenAPI file found; SDKs generated internally.",
+   "Feishu (China) vs Lark (international) separate endpoints; settled on open.larksuite.com per hint."
+  ],
+  "changes": [
+   {
+    "field": "access_notes",
+    "from": "Create a free-trial tenant, become admin, build a custom app approved by own tenant admin; no Lark team review. Store apps require listing review.",
+    "to": "Create a tenant, become admin, build custom app approved by own admin; no Lark review. Free Starter plan capped at 10,000 basic API calls/month.",
+    "why": "Vendor doc gives the Starter plan quota that pass 1 left open.",
+    "url": "https://open.larksuite.com/document/uAjLw4CM/ukTMukTMukTM/api-call-guide/api-billing.md?lang=en-US"
+   }
+  ],
+  "unresolved": [
+   {
+    "field": "access",
+    "needs": "Confirm Starter is free with no time limit on the plans page; larksuite.com/en_us/plans text is JS-rendered."
+   }
+  ]
+ },
+ {
+  "id": 25,
+  "app": "Pumble",
+  "one_liner": "Free team chat app from CAKE.com with channels, threads, calls and an apps platform.",
+  "auth": [
+   "api_key",
+   "token",
+   "oauth2"
+  ],
+  "auth_notes": "API addon issues per-user API keys; Pumble apps use OAuth2 code flow yielding user and bot access tokens, plus app key for MCP.",
+  "access": "self_serve_free",
+  "prod_gate": "unknown",
+  "access_notes": "API addon and key generation available on all plans including Free; Owner, Admin or Member can generate keys.",
+  "api_types": [
+   "rest",
+   "sdk"
+  ],
+  "api_breadth": "medium",
+  "openapi_public": true,
+  "mcp": "official",
+  "mcp_url": "https://mcp.pumble.com/mcp",
+  "mcp_notes": "Official hosted MCP server; tools depend on app scopes; needs app key and user/bot token.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "API key rate limit 1000 requests per minute per user; surface limited to messaging basics.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://pumble.com/help/integrations/add-pumble-apps/api-keys/",
+    "match": "Generate an API key"
+   },
+   {
+    "field": "access",
+    "url": "https://pumble.com/help/integrations/add-pumble-apps/api-keys/",
+    "match": "Available on all plans"
+   },
+   {
+    "field": "api",
+    "url": "https://pumble.com/help/integrations/add-pumble-apps/api-keys/",
+    "match": "The full list of available actions is available in the Swagger documentation"
+   },
+   {
+    "field": "mcp",
+    "url": "https://pumble.com/help/integrations/automation-workflow-integrations/how-to-use-the-pumble-mcp-server/",
+    "match": "With the Pumble Model Context Protocol (MCP) server"
+   },
+   {
+    "field": "auth",
+    "url": "https://cake-com.github.io/pumble-node-sdk/authorization.html",
+    "match": "Pumble uses OAuth2 in order to allow your app"
+   }
+  ],
+  "confidence": {
+   "auth": 0.85,
+   "access": 0.85,
+   "api": 0.75,
+   "mcp": 0.85
+  },
+  "needs_browser": false,
+  "open_questions": [
+   "Scalar API docs at pumble-api-keys.addons.marketplace.cake.com embed ~26 endpoints in HTML; no standalone openapi.json URL.",
+   "Marketplace publishing page describes a CAKE.com developer account and form; no review step found."
+  ],
+  "changes": [
+   {
+    "field": "auth",
+    "from": [
+     "api_key",
+     "token"
+    ],
+    "to": [
+     "api_key",
+     "token",
+     "oauth2"
+    ],
+    "why": "Pumble apps use an OAuth2 code flow issuing user and bot tokens.",
+    "url": "https://cake-com.github.io/pumble-node-sdk/authorization.html"
+   }
+  ],
+  "unresolved": [
+   {
+    "field": "prod_gate",
+    "needs": "Ask CAKE.com or open the developer portal to see whether marketplace publishing is reviewed."
+   }
+  ]
+ },
+ {
+  "id": 26,
+  "app": "Discord",
+  "one_liner": "Community chat platform with servers, channels, voice and a bot/app platform.",
+  "auth": [
+   "token",
+   "oauth2",
+   "basic"
+  ],
+  "auth_notes": "Bot token via Authorization: Bot header; OAuth2 bearer tokens; Basic client_id:secret only for OAuth2 token endpoints.",
+  "access": "self_serve_free",
+  "prod_gate": "app_review",
+  "access_notes": "Create app and bot in Developer Portal free. Apps in 100+ guilds require verification; privileged intents (message content) need approval.",
+  "api_types": [
+   "rest",
+   "sdk"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": true,
+  "mcp": "none_found",
+  "mcp_url": "",
+  "mcp_notes": "docs-only: docs.discord.com/mcp searches documentation; no vendor product MCP found",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "Gateway-dependent features (reading message content) require intent approval at scale; REST-only use is simpler.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://discord.com/developers/docs/reference",
+    "match": "Using a bot token found on the Bot page"
+   },
+   {
+    "field": "access",
+    "url": "https://docs.discord.com/developers/events/gateway.md",
+    "match": "required for apps in 100+ guilds"
+   },
+   {
+    "field": "api",
+    "url": "https://raw.githubusercontent.com/discord/discord-api-spec/main/README.md",
+    "match": "public preview of the"
+   },
+   {
+    "field": "mcp",
+    "url": "https://docs.discord.com/mcp",
+    "match": "the server is read-only and scoped to Documentation"
+   }
+  ],
+  "confidence": {
+   "auth": 0.9,
+   "access": 0.85,
+   "api": 0.85,
+   "mcp": 0.8
+  },
+  "needs_browser": false,
+  "open_questions": [
+   "Exact current OpenAPI spec status (public preview) and completeness."
+  ],
+  "changes": [
+   {
+    "field": "mcp",
+    "from": "official",
+    "to": "none_found",
+    "why": "Vendor server only searches documentation; no product actions.",
+    "url": "https://docs.discord.com/mcp"
+   },
+   {
+    "field": "mcp_url",
+    "from": "https://docs.discord.com/mcp",
+    "to": "",
+    "why": "No product MCP from vendor.",
+    "url": "https://docs.discord.com/mcp"
+   }
+  ],
+  "unresolved": []
+ },
+ {
+  "id": 27,
+  "app": "Telegram",
+  "one_liner": "Messaging app with a free HTTP Bot API plus client APIs (TDLib, MTProto) for custom clients.",
+  "auth": [
+   "token",
+   "other"
+  ],
+  "auth_notes": "Bot API uses a per-bot token from @BotFather; client API/TDLib uses api_id/api_hash plus user phone login.",
+  "access": "self_serve_free",
+  "prod_gate": "none",
+  "access_notes": "Bot token created in seconds via @BotFather at no cost; Bot API and TDLib are free of charge. No review for bots.",
+  "api_types": [
+   "rest",
+   "sdk"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": false,
+  "mcp": "none_found",
+  "mcp_url": "",
+  "mcp_notes": "No vendor MCP found; many community Bot API MCP servers exist.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "Bots cannot message users who have not started them and cannot read arbitrary chats.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://core.telegram.org/bots/api",
+    "match": "Each bot is given a unique authentication token when it is created"
+   },
+   {
+    "field": "access",
+    "url": "https://core.telegram.org/api",
+    "match": "You are welcome to use both APIs free of charge"
+   },
+   {
+    "field": "api",
+    "url": "https://core.telegram.org/bots/api",
+    "match": "The Bot API is an HTTP-based interface created for developers"
+   },
+   {
+    "field": "mcp",
+    "url": "https://core.telegram.org/bots",
+    "match": ""
+   }
+  ],
+  "confidence": {
+   "auth": 0.95,
+   "access": 0.95,
+   "api": 0.95,
+   "mcp": 0.65
+  },
+  "needs_browser": false,
+  "open_questions": [
+   "No official OpenAPI spec; community specs exist but unverified.",
+   "Absence of an official MCP inferred from search and vendor pages, not a vendor statement."
+  ],
+  "changes": [],
+  "unresolved": [
+   {
+    "field": "mcp",
+    "needs": "Community Bot API servers exist; decide whether that should read community. Kept none_found: no vendor page either way."
+   }
+  ]
+ },
+ {
+  "id": 28,
+  "app": "WhatsApp Business",
+  "one_liner": "Meta's WhatsApp Business Platform Cloud API for programmatic messaging and calling with customers.",
+  "auth": [
+   "token",
+   "oauth2"
+  ],
+  "auth_notes": "Temporary or system-user access tokens; Business Integration System User tokens via Embedded Signup (OAuth) for Tech Providers.",
+  "access": "self_serve_free",
+  "prod_gate": "app_review",
+  "access_notes": "Meta app plus business portfolio auto-creates test account and test number, no payment method needed. Production: business verification, per-message pricing, App Review/Tech Provider for others.",
+  "api_types": [
+   "rest",
+   "sdk"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": true,
+  "mcp": "official",
+  "mcp_url": "https://mcp.facebook.com/whatsapp_business_tools",
+  "mcp_notes": "WhatsApp Business Tools MCP, gradual rollout; for development and testing.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "Production use requires business verification, template approval and App Review/Tech Provider for multi-customer; paid per message.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://raw.githubusercontent.com/meta/openapi/main/business-messaging-api_v23.0.yaml",
+    "match": "System user access token with whatsapp_business_management permission"
+   },
+   {
+    "field": "auth",
+    "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/get-started",
+    "match": "generate a temporary access token"
+   },
+   {
+    "field": "access",
+    "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/about-the-platform",
+    "match": "test Messaging account, and test business phone number"
+   },
+   {
+    "field": "api",
+    "url": "https://raw.githubusercontent.com/meta/openapi/main/README.md",
+    "match": "Business Messaging - WhatsApp API OpenAPI Specification"
+   },
+   {
+    "field": "mcp",
+    "url": "https://developers.facebook.com/documentation/mcp",
+    "match": "Meta runs official remote Model Context Protocol (MCP) servers"
+   }
+  ],
+  "confidence": {
+   "auth": 0.8,
+   "access": 0.75,
+   "api": 0.9,
+   "mcp": 0.85
+  },
+  "needs_browser": true,
+  "open_questions": [
+   "Test number recipient/quota limits not found.",
+   "Marketing messages on Cloud API sunset by Oct 2027 (blog headline)."
+  ],
+  "changes": [
+   {
+    "field": "openapi_public",
+    "from": false,
+    "to": true,
+    "why": "Meta publishes an official WhatsApp Business Messaging OpenAPI spec, pushed August 2026.",
+    "url": "https://raw.githubusercontent.com/meta/openapi/main/README.md"
+   },
+   {
+    "field": "api_breadth",
+    "from": "medium",
+    "to": "broad",
+    "why": "Official spec has 78 paths and 113 operations.",
+    "url": "https://raw.githubusercontent.com/meta/openapi/main/business-messaging-api_v23.0.yaml"
+   },
+   {
+    "field": "verdict",
+    "from": "build_with_caveat",
+    "to": "build_now",
+    "why": "Access is self_serve_free and API broad; production gate does not change the verdict.",
+    "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/about-the-platform"
+   },
+   {
+    "field": "main_blocker",
+    "from": "app_review",
+    "to": "none",
+    "why": "App review and business verification are the production gate, recorded in prod_gate.",
+    "url": "https://developers.facebook.com/documentation/business-messaging/whatsapp/about-the-platform"
+   },
+   {
+    "field": "mcp_url",
+    "from": "https://developers.facebook.com/blog/post/2026/09/15/whatsapp-business-messaging-mcp-ai-agent/",
+    "to": "https://mcp.facebook.com/whatsapp_business_tools",
+    "why": "Meta documentation lists the server endpoint; pass 1 gave a blog post.",
+    "url": "https://developers.facebook.com/documentation/mcp"
+   }
+  ],
+  "unresolved": [
+   {
+    "field": "evidence",
+    "needs": "Pass 1 checker got HTTP 400 on developers.facebook.com; new FB snippets were seen in a 200 response but may fail the checker. Confirm by eye."
+   },
+   {
+    "field": "access",
+    "needs": "Log in to Meta to confirm test number lasts and any recipient cap."
+   }
+  ]
+ },
+ {
+  "id": 29,
+  "app": "Aircall",
+  "one_liner": "Cloud phone system for sales and support teams with CRM integrations and AI voice agents.",
+  "auth": [
+   "basic",
+   "oauth2"
+  ],
+  "auth_notes": "Basic auth with API ID and token for own account; OAuth 2.0 for multi-customer apps, requires Technology Partner Program.",
+  "access": "self_serve_trial",
+  "prod_gate": "partner_program",
+  "access_notes": "7-day free trial, then Essentials $30/license/month (annual, 3-user minimum). FAQ says all plans include API access; Professional lists \"Full API access\".",
+  "api_types": [
+   "rest",
+   "sdk"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": null,
+  "mcp": "official",
+  "mcp_url": "https://mcp.aircall.io/mcp",
+  "mcp_notes": "Read-only beta; enrol via Account Manager; AI add-on for conversation intelligence.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "API key creation on trial not stated; public OAuth apps need Technology Partner Program and review.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://developer.aircall.io/api-references/",
+    "match": "Authentication can be done through OAuth or Basic Auth"
+   },
+   {
+    "field": "access",
+    "url": "https://aircall.io/pricing/",
+    "match": "All plans include API access and 250+ integrations"
+   },
+   {
+    "field": "api",
+    "url": "https://developer.aircall.io/api-references/",
+    "match": "Retrieve a Call"
+   },
+   {
+    "field": "mcp",
+    "url": "https://support.aircall.io/en-gb/articles/39677926959517",
+    "match": "Aircall MCP is currently in beta"
+   },
+   {
+    "field": "access",
+    "url": "https://aircall.io/pricing/",
+    "match": "Aircall offers free access to test the platform before committing"
+   },
+   {
+    "field": "auth",
+    "url": "https://developer.aircall.io/docs/authentication.md",
+    "match": "Aircall supports two ways to authenticate with the REST API"
+   },
+   {
+    "field": "auth",
+    "url": "https://developer.aircall.io/docs/public-vs-private-app.md",
+    "match": "you must first join the"
+   }
+  ],
+  "confidence": {
+   "auth": 0.9,
+   "access": 0.55,
+   "api": 0.85,
+   "mcp": 0.85
+  },
+  "needs_browser": false,
+  "open_questions": [
+   "Whether API keys can be generated on a trial account.",
+   "No OpenAPI file located."
+  ],
+  "changes": [
+   {
+    "field": "mcp",
+    "from": "none_found",
+    "to": "official",
+    "why": "Aircall help centre documents a hosted read-only MCP beta; older developer FAQ says none.",
+    "url": "https://support.aircall.io/en-gb/articles/39677926959517"
+   },
+   {
+    "field": "mcp_url",
+    "from": "",
+    "to": "https://mcp.aircall.io/mcp",
+    "why": "Server URL given in the beta article.",
+    "url": "https://support.aircall.io/en-gb/articles/39677926959517"
+   },
+   {
+    "field": "verdict",
+    "from": "build_with_caveat",
+    "to": "build_now",
+    "why": "Trial access and broad API; trial terms only affect confidence.",
+    "url": "https://aircall.io/signup/signup-attribution/"
+   },
+   {
+    "field": "main_blocker",
+    "from": "paid_plan",
+    "to": "none",
+    "why": "Self-serve 7-day trial; paid plan only after trial.",
+    "url": "https://aircall.io/signup/signup-attribution/"
+   },
+   {
+    "field": "access_notes",
+    "from": "Needs an Aircall account (Essentials $30/license/month; all plans include API access); 'free access' trial offered. OAuth apps need tech-partner sign-up.",
+    "to": "7-day free trial, then Essentials $30/license/month (annual, 3-user minimum). FAQ says all plans include API access; Professional lists \"Full API access\".",
+    "why": "Sign-up page states a 7-day trial; plan conflict recorded.",
+    "url": "https://aircall.io/signup/signup-attribution/"
+   }
+  ],
+  "unresolved": [
+   {
+    "field": "access",
+    "needs": "Start a trial and check Integrations > API Keys; if keys are blocked, access becomes paid_plan and verdict build_with_caveat."
+   }
+  ]
+ },
+ {
+  "id": 30,
+  "app": "Vonage",
+  "one_liner": "Communications APIs for SMS, voice, video, messaging channels, verification and network insights.",
+  "auth": [
+   "basic",
+   "other"
+  ],
+  "auth_notes": "API key/secret Basic auth for some APIs; Application JWT signed RS256 (key pair) required for Voice, Messages webhooks.",
+  "access": "self_serve_trial",
+  "prod_gate": "none",
+  "access_notes": "Sign up for free credit, then pay per request; top up balance for production. Some regions/sender IDs require registration.",
+  "api_types": [
+   "rest",
+   "sdk",
+   "cli"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": true,
+  "mcp": "official",
+  "mcp_url": "https://developer.vonage.com/en/mcp-server/overview",
+  "mcp_notes": "Local npm server sends SMS/WhatsApp/RCS, manages numbers; separate docs-search server.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "Trial accounts are credit-limited; SMS sender registration varies by country.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://developer.vonage.com/llms.txt",
+    "match": "Some APIs require Vonage Application JWTs signed with RS256"
+   },
+   {
+    "field": "access",
+    "url": "https://developer.vonage.com/en/getting-started/overview",
+    "match": "give you some free credit when you first open your account"
+   },
+   {
+    "field": "api",
+    "url": "https://developer.vonage.com/llms.txt",
+    "match": "Index of all Vonage OpenAPI 3 specifications"
+   },
+   {
+    "field": "mcp",
+    "url": "https://developer.vonage.com/en/mcp-server/technical-details",
+    "match": "The server executes the corresponding Vonage API call"
+   }
+  ],
+  "confidence": {
+   "auth": 0.85,
+   "access": 0.7,
+   "api": 0.85,
+   "mcp": 0.85
+  },
+  "needs_browser": true,
+  "open_questions": [
+   "llms.txt does not mention Number Verification or Network Auth; a vendor blog result describes OAuth2 authorization code for Number Verification.",
+   "Free credit amount and trial restrictions not read (pricing page blocked)."
+  ],
+  "changes": [],
+  "unresolved": [
+   {
+    "field": "auth",
+    "needs": "Check whether CAMARA Network Auth / Number Verification (OAuth2) is still open to new accounts; if so add oauth2."
+   },
+   {
+    "field": "access",
+    "needs": "Open dashboard sign-up to see free credit amount and trial limits."
+   }
+  ]
+ }
+]

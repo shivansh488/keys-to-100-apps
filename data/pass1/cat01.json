@@ -1,0 +1,585 @@
+[
+ {
+  "id": 1,
+  "app": "Salesforce",
+  "one_liner": "Enterprise CRM platform for sales, service and marketing with a broad developer platform.",
+  "auth": [
+   "oauth2"
+  ],
+  "auth_notes": "OAuth 2.0 via External Client Apps (connected-app creation restricted since Spring '26); docs JS-rendered, not curl-readable.",
+  "access": "self_serve_free",
+  "prod_gate": "unknown",
+  "access_notes": "Free Developer Edition org at developer.salesforce.com/signup (from search snippet, not curl-verified); production API is extra cost on some editions (Web Services API add-on $25/user/month).",
+  "api_types": [
+   "rest",
+   "soap",
+   "graphql",
+   "sdk",
+   "cli"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": null,
+  "mcp": "official",
+  "mcp_url": "",
+  "mcp_notes": "Hosted MCP servers GA; need per-server admin enablement, External Client App; billed via Flex Credits.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "Free Developer Edition org available; ECA setup and admin enablement needed.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://raw.githubusercontent.com/wiki/forcedotcom/mcp-hosted/FAQ.md",
+    "match": "External Client Apps (ECAs) only."
+   },
+   {
+    "field": "access",
+    "url": "https://www.salesforce.com/sales/pricing/",
+    "match": "Web Services API Additional $25 USD/user/month"
+   },
+   {
+    "field": "api",
+    "url": "https://raw.githubusercontent.com/wiki/forcedotcom/mcp-hosted/FAQ.md",
+    "match": "Lightning UI or via the REST API"
+   },
+   {
+    "field": "mcp",
+    "url": "https://github.com/forcedotcom/mcp-hosted",
+    "match": "Hosted MCP servers are now generally available"
+   }
+  ],
+  "confidence": {
+   "auth": 0.7,
+   "access": 0.5,
+   "api": 0.7,
+   "mcp": 0.8
+  },
+  "needs_browser": true,
+  "open_questions": [
+   "Developer Edition free status and ECA flows only seen via search snippets; docs 403/JS-rendered to curl",
+   "mcp_url is not in fetched pages; verify endpoint format in hosted MCP docs",
+   "Prod gate for serving other orgs (AppExchange security review?) not verified"
+  ]
+ },
+ {
+  "id": 2,
+  "app": "HubSpot",
+  "one_liner": "All-in-one CRM with marketing, sales and service hubs and a large public API.",
+  "auth": [
+   "oauth2",
+   "token"
+  ],
+  "auth_notes": "OAuth for multi-account apps; static auth app token or scoped service keys (Bearer) for a single account.",
+  "access": "self_serve_free",
+  "prod_gate": "none",
+  "access_notes": "Free developer test accounts (90-day enterprise trial features) and a free CRM; OAuth app installable on multiple accounts without Marketplace listing.",
+  "api_types": [
+   "rest",
+   "sdk",
+   "cli"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": true,
+  "mcp": "official",
+  "mcp_url": "https://mcp.hubspot.com",
+  "mcp_notes": "Remote MCP over OAuth for CRM read/write; separate local Developer MCP.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://developers.hubspot.com/docs/api/intro-to-auth",
+    "match": "static auth access tokens are used for installing"
+   },
+   {
+    "field": "access",
+    "url": "https://developers.hubspot.com/docs/getting-started/account-types",
+    "match": "Developer test accounts are free HubSpot accounts"
+   },
+   {
+    "field": "api",
+    "url": "https://developers.hubspot.com/docs/api/intro-to-auth",
+    "match": "REST APIs directly without having to use the CLI"
+   },
+   {
+    "field": "mcp",
+    "url": "https://developers.hubspot.com/docs/build-with-ai/remote-mcp-server.md",
+    "match": "publicly hosted endpoint for connecting external AI tools"
+   }
+  ],
+  "confidence": {
+   "auth": 0.9,
+   "access": 0.8,
+   "api": 0.85,
+   "mcp": 0.9
+  },
+  "needs_browser": false,
+  "open_questions": [
+   "Free CRM tier API access limits not read from pricing page (JS)"
+  ]
+ },
+ {
+  "id": 3,
+  "app": "Pipedrive",
+  "one_liner": "Sales-focused CRM with pipeline management, with REST API v1/v2 and marketplace apps.",
+  "auth": [
+   "oauth2",
+   "token"
+  ],
+  "auth_notes": "Per-user API token in x-api-token header; OAuth 2.0 for marketplace/public apps.",
+  "access": "self_serve_free",
+  "prod_gate": "app_review",
+  "access_notes": "Free developer sandbox account via request form (5 seats); account trial also no card. Public apps go through an approval process.",
+  "api_types": [
+   "rest",
+   "sdk"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": true,
+  "mcp": "official",
+  "mcp_url": "https://mcp.pipedrive.ai/mcp",
+  "mcp_notes": "Native MCP on all plans via OAuth; URL from third-party guides, not vendor page.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://pipedrive.readme.io/docs/core-api-concepts-authentication",
+    "match": "The API token must be provided in the x-api-token header"
+   },
+   {
+    "field": "access",
+    "url": "https://pipedrive.readme.io/docs/developer-sandbox-account.md",
+    "match": "safe development and testing environment"
+   },
+   {
+    "field": "api",
+    "url": "https://developers.pipedrive.com/docs/api/v1",
+    "match": "implement the RESTful Pipedrive API"
+   },
+   {
+    "field": "mcp",
+    "url": "https://www.pipedrive.com/en/newsroom/pipedrive-launches-native-mcp-server-bringing-crm-workflows-directly-into-ai-assistants",
+    "match": "Pipedrive MCP is available to customers on all Pipedrive plans"
+   }
+  ],
+  "confidence": {
+   "auth": 0.9,
+   "access": 0.65,
+   "api": 0.9,
+   "mcp": 0.8
+  },
+  "needs_browser": false,
+  "open_questions": [
+   "Is the sandbox form instant or manually approved?",
+   "mcp_url unconfirmed on vendor pages",
+   "Public app approval is required for marketplace; private-app limits unchecked"
+  ]
+ },
+ {
+  "id": 4,
+  "app": "Attio",
+  "one_liner": "Modern, data-model-flexible CRM with REST API, webhooks, app SDK and MCP.",
+  "auth": [
+   "oauth2",
+   "api_key"
+  ],
+  "auth_notes": "OAuth 2.0 for multi-workspace apps; workspace API key for single-workspace use.",
+  "access": "self_serve_free",
+  "prod_gate": "app_review",
+  "access_notes": "Free plan (3 users); unpublished OAuth apps limited to 25 workspaces, publishing needed beyond. API availability on free tier not confirmed by table.",
+  "api_types": [
+   "rest",
+   "sdk"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": true,
+  "mcp": "official",
+  "mcp_url": "https://mcp.attio.com/mcp",
+  "mcp_notes": "OAuth remote MCP; SQL query tool not on every plan.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://docs.attio.com/rest-api/guides/authentication.md",
+    "match": "By generating an API key for your workspace"
+   },
+   {
+    "field": "access",
+    "url": "https://attio.com/pricing",
+    "match": "For individuals to get started with Attio."
+   },
+   {
+    "field": "api",
+    "url": "https://docs.attio.com/rest-api/guides/authentication.md",
+    "match": "make requests to the Attio REST API"
+   },
+   {
+    "field": "mcp",
+    "url": "https://docs.attio.com/mcp/overview.md",
+    "match": "https://mcp.attio.com/mcp"
+   }
+  ],
+  "confidence": {
+   "auth": 0.95,
+   "access": 0.7,
+   "api": 0.9,
+   "mcp": 0.95
+  },
+  "needs_browser": false,
+  "open_questions": [
+   "Whether the Free plan includes API access (pricing matrix lost check marks in text)"
+  ]
+ },
+ {
+  "id": 5,
+  "app": "Twenty",
+  "one_liner": "Open-source (AGPL) CRM, cloud or self-hosted, with REST/GraphQL APIs generated per workspace.",
+  "auth": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "Bearer API key from Settings > Developers; OAuth for external apps acting for users.",
+  "access": "self_serve_free",
+  "prod_gate": "none",
+  "access_notes": "Open-source self-host via Docker Compose; cloud has trial, Pro $9/user/month.",
+  "api_types": [
+   "rest",
+   "graphql",
+   "sdk"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": null,
+  "mcp": "official",
+  "mcp_url": "https://{your-workspace-url}/mcp",
+  "mcp_notes": "Built-in streamable-HTTP MCP, OAuth or API key; cloud and self-hosted.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://docs.twenty.com/developers/api-and-webhooks/api",
+    "match": "Authorization: Bearer YOUR_API_KEY"
+   },
+   {
+    "field": "access",
+    "url": "https://raw.githubusercontent.com/twentyhq/twenty/main/README.md",
+    "match": "Run Twenty on your own infrastructure with"
+   },
+   {
+    "field": "api",
+    "url": "https://docs.twenty.com/developers/api-and-webhooks/api",
+    "match": "REST and GraphQL APIs generated from your workspace schema"
+   },
+   {
+    "field": "mcp",
+    "url": "https://docs.twenty.com/developers/extend/mcp",
+    "match": "You have two ways to authenticate your MCP client"
+   }
+  ],
+  "confidence": {
+   "auth": 0.9,
+   "access": 0.9,
+   "api": 0.85,
+   "mcp": 0.9
+  },
+  "needs_browser": false,
+  "open_questions": [
+   "Static OpenAPI spec not published; per-workspace docs only after key creation",
+   "Cloud free-trial length not read"
+  ]
+ },
+ {
+  "id": 6,
+  "app": "Podio",
+  "one_liner": "No-code work platform (apps, workflows, CRM templates) with a REST API.",
+  "auth": [
+   "oauth2"
+  ],
+  "auth_notes": "OAuth2 flows: server-side, client-side, username/password, app auth; client id/secret from API key page.",
+  "access": "self_serve_trial",
+  "prod_gate": "unknown",
+  "access_notes": "API key page says sign in or sign up; pricing page is JS-rendered so free/trial terms unverified.",
+  "api_types": [
+   "rest",
+   "sdk"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": null,
+  "mcp": "none_found",
+  "mcp_url": "",
+  "mcp_notes": "No MCP page found on developers.podio.com.",
+  "verdict": "build_with_caveat",
+  "main_blocker": "other",
+  "blocker_notes": "Dated API docs; plan and trial terms not verifiable.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://developers.podio.com/authentication",
+    "match": "The Podio API uses the OAuth2 protocol for authentication"
+   },
+   {
+    "field": "access",
+    "url": "https://developers.podio.com/api-key",
+    "match": "You just have to sign in or sign up with Podio"
+   },
+   {
+    "field": "api",
+    "url": "https://developers.podio.com/doc",
+    "match": "Handles recurrence for different objects, currently tasks."
+   },
+   {
+    "field": "mcp",
+    "url": "https://developers.podio.com/api-key",
+    "match": ""
+   }
+  ],
+  "confidence": {
+   "auth": 0.8,
+   "access": 0.35,
+   "api": 0.7,
+   "mcp": 0.5
+  },
+  "needs_browser": true,
+  "open_questions": [
+   "Free vs paid plan terms for API access (pricing JS-rendered)",
+   "Product roadmap and any API deprecations not checked",
+   "No MCP search beyond vendor docs"
+  ]
+ },
+ {
+  "id": 7,
+  "app": "Zoho CRM",
+  "one_liner": "Zoho's sales CRM suite with a broad v8 REST API and OAuth 2.0 for all access.",
+  "auth": [
+   "oauth2"
+  ],
+  "auth_notes": "OAuth 2.0 only; access and refresh tokens via Zoho authorization server (self-client flow not read).",
+  "access": "self_serve_trial",
+  "prod_gate": "none",
+  "access_notes": "Free trial of paid editions; separate Free Edition (3 users) exists but API access in it not confirmed. Standard has 5000 API calls/day.",
+  "api_types": [
+   "rest",
+   "sdk"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": null,
+  "mcp": "official",
+  "mcp_url": "https://www.zoho.com/mcp/",
+  "mcp_notes": "Zoho MCP is a platform product; CRM-specific server details not read.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html",
+    "match": "The Zoho CRM API uses the OAuth 2.0 protocol for authentication"
+   },
+   {
+    "field": "access",
+    "url": "https://www.zoho.com/crm/zohocrm-pricing.html",
+    "match": "Free forever for 3 users."
+   },
+   {
+    "field": "api",
+    "url": "https://www.zoho.com/crm/zohocrm-pricing.html",
+    "match": "perform actions with 5000 API calls/day"
+   },
+   {
+    "field": "mcp",
+    "url": "https://www.zoho.com/mcp/",
+    "match": "Sign Up for Free"
+   }
+  ],
+  "confidence": {
+   "auth": 0.9,
+   "access": 0.6,
+   "api": 0.7,
+   "mcp": 0.5
+  },
+  "needs_browser": false,
+  "open_questions": [
+   "Does Free Edition include API access?",
+   "Zoho MCP CRM tool coverage and URL form unknown",
+   "Regional data-center domains affect OAuth endpoints"
+  ]
+ },
+ {
+  "id": 8,
+  "app": "Close",
+  "one_liner": "Sales CRM for SMBs with built-in calling and email, a documented API and remote MCP.",
+  "auth": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "API keys per user/org in Settings > Developer; OAuth 2.0 for apps.",
+  "access": "self_serve_trial",
+  "prod_gate": "unknown",
+  "access_notes": "No free plan; 14-day free trial without card, then plans from $9/month Solo.",
+  "api_types": [
+   "rest",
+   "sdk"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": true,
+  "mcp": "official",
+  "mcp_url": "https://mcp.close.com/mcp",
+  "mcp_notes": "Official remote MCP, OAuth DCR or API key with scope header.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://developer.close.com/topics/authentication.md",
+    "match": "API keys can be created and managed in your Close account"
+   },
+   {
+    "field": "access",
+    "url": "https://www.close.com/pricing",
+    "match": "but you can try it free for 14 days"
+   },
+   {
+    "field": "api",
+    "url": "https://developer.close.com/llms.txt",
+    "match": "raw OpenAPI 3.1 specification for this API"
+   },
+   {
+    "field": "mcp",
+    "url": "https://help.close.com/docs/mcp-server",
+    "match": "The MCP server URL is https://mcp.close.com/mcp"
+   }
+  ],
+  "confidence": {
+   "auth": 0.95,
+   "access": 0.9,
+   "api": 0.95,
+   "mcp": 0.95
+  },
+  "needs_browser": false,
+  "open_questions": [
+   "Requirements to register an OAuth app for other customers not read"
+  ]
+ },
+ {
+  "id": 9,
+  "app": "Copper",
+  "one_liner": "Google Workspace-native CRM with a REST developer API using API keys or OAuth.",
+  "auth": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "API key plus user email headers; OAuth 2.0 preferred for partner integrations.",
+  "access": "self_serve_trial",
+  "prod_gate": "unknown",
+  "access_notes": "Try Free, no credit card; plans from Basic $29/seat/month. API tier gating not stated on pages read.",
+  "api_types": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": false,
+  "mcp": "none_found",
+  "mcp_url": "",
+  "mcp_notes": "Copper MCP page says coming soon; waitlist only.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://developer.copper.com/introduction/authentication.html",
+    "match": "There are two ways to access the Copper Developer API"
+   },
+   {
+    "field": "access",
+    "url": "https://www.copper.com/pricing",
+    "match": "Start free, no credit card required."
+   },
+   {
+    "field": "api",
+    "url": "https://developer.copper.com/introduction/requests.html",
+    "match": "All requests must be sent using HTTPS with TLS 1.2 or higher."
+   },
+   {
+    "field": "mcp",
+    "url": "https://www.copper.com/mcp",
+    "match": "Copper MCP is coming to Claude"
+   }
+  ],
+  "confidence": {
+   "auth": 0.9,
+   "access": 0.7,
+   "api": 0.75,
+   "mcp": 0.8
+  },
+  "needs_browser": false,
+  "open_questions": [
+   "Does API access require a paid plan after trial?",
+   "OpenAPI spec existence not confirmed (none seen)",
+   "Trial length not read"
+  ]
+ },
+ {
+  "id": 10,
+  "app": "DealCloud",
+  "one_liner": "Intapp DealCloud CRM for deal and relationship management in financial services.",
+  "auth": [
+   "api_key"
+  ],
+  "auth_notes": "User API key exchanged with client_id for 15-minute bearer token; user group needs API capability.",
+  "access": "partner_or_sales",
+  "prod_gate": "unknown",
+  "access_notes": "Customer-only: API enabled by admin or DealCloud CSM inside an existing tenant; no public sandbox found.",
+  "api_types": [
+   "rest",
+   "sdk"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": null,
+  "mcp": "official",
+  "mcp_url": "https://[tenant].my.intapp.com/mcp/celeste/DealCloud",
+  "mcp_notes": "Official, OAuth; needs Celeste license and admin enablement per tenant.",
+  "verdict": "needs_outreach",
+  "main_blocker": "partner_or_sales",
+  "blocker_notes": "Requires existing DealCloud tenant, admin and Celeste license for MCP.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://api.docs.dealcloud.com/docs/token",
+    "match": "Tokens expire after 900 seconds (15 minutes)"
+   },
+   {
+    "field": "access",
+    "url": "https://api.docs.dealcloud.com/docs/apikeys",
+    "match": "contact your organization's admin or DealCloud Customer Success Manager"
+   },
+   {
+    "field": "api",
+    "url": "https://api.docs.dealcloud.com/docs/apikeys",
+    "match": "To enable API access, ensure the intended user"
+   },
+   {
+    "field": "mcp",
+    "url": "https://api.docs.dealcloud.com/mcp/getting-started",
+    "match": "DealCloud with Celeste license."
+   }
+  ],
+  "confidence": {
+   "auth": 0.8,
+   "access": 0.7,
+   "api": 0.8,
+   "mcp": 0.9
+  },
+  "needs_browser": false,
+  "open_questions": [
+   "Any trial/sandbox via Intapp sales?",
+   "OpenAPI/swagger availability (scopes text mentions swagger)",
+   "Pricing not public"
+  ]
+ }
+]

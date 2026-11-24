@@ -1,0 +1,726 @@
+[
+ {
+  "id": 11,
+  "app": "Zendesk",
+  "one_liner": "Customer service and ticketing platform with Support, Help Center, messaging, voice and AI agents.",
+  "auth": [
+   "oauth2"
+  ],
+  "auth_notes": "OAuth access tokens required; API tokens and basic auth are deprecated. Global OAuth client needed for multi-customer apps.",
+  "access": "self_serve_trial",
+  "prod_gate": "app_review",
+  "access_notes": "14-day free trial, all plan features. Non-expiring sponsored account only for Marketplace partners, on request. Multi-customer apps need approved global OAuth client.",
+  "api_types": [
+   "rest",
+   "sdk"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": true,
+  "mcp": "official",
+  "mcp_url": "https://<subdomain>.zendesk.com/mcp",
+  "mcp_notes": "Early access (EAP); OAuth; all Suite and Support plans; admin configures connection in Admin Center.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "Trial is 14 days; ongoing use needs a paid plan.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+    "match": "Zendesk supports using OAuth access tokens to authenticate API requests"
+   },
+   {
+    "field": "access",
+    "url": "https://developer.zendesk.com/documentation/api-basics/getting-started/getting-a-trial-or-sponsored-account-for-development/",
+    "match": "with a free, 14-day trial account"
+   },
+   {
+    "field": "api",
+    "url": "https://developer.zendesk.com/zendesk/oas.yaml",
+    "match": "Zendesk Support API endpoints"
+   },
+   {
+    "field": "mcp",
+    "url": "https://support.zendesk.com/hc/en-us/articles/11400026079130",
+    "match": "copy the MCP server URL under Tools"
+   }
+  ],
+  "confidence": {
+   "auth": 0.92,
+   "access": 0.88,
+   "api": 0.85,
+   "mcp": 0.92
+  },
+  "needs_browser": false,
+  "open_questions": [
+   "Whether EAP enrolment for the MCP server works on a trial account or needs Zendesk acceptance.",
+   "Cut-off date for deprecated API tokens."
+  ],
+  "changes": [
+   {
+    "field": "mcp",
+    "from": "none_found",
+    "to": "official",
+    "why": "Zendesk help documents a vendor Zendesk MCP Server (EAP) that creates and updates tickets.",
+    "url": "https://support.zendesk.com/hc/en-us/articles/11400026079130"
+   },
+   {
+    "field": "mcp_url",
+    "from": "",
+    "to": "https://<subdomain>.zendesk.com/mcp",
+    "why": "Example MCP server URL given in the setup article.",
+    "url": "https://support.zendesk.com/hc/en-us/articles/11400026079130"
+   },
+   {
+    "field": "prod_gate",
+    "from": "unknown",
+    "to": "app_review",
+    "why": "Multi-customer apps need a global OAuth client, which Zendesk must approve.",
+    "url": "https://developer.zendesk.com/documentation/marketplace/building-a-marketplace-app/set-up-a-global-oauth-client/"
+   }
+  ],
+  "unresolved": [
+   "MCP EAP enrolment: a human admin must try AI > External AI in a trial Admin Center."
+  ]
+ },
+ {
+  "id": 12,
+  "app": "Intercom",
+  "one_liner": "Customer messaging and support platform with inbox, help center and the Fin AI agent.",
+  "auth": [
+   "oauth2",
+   "token"
+  ],
+  "auth_notes": "Access Token from a private app in Developer Hub; OAuth required for public apps accessing others' workspaces.",
+  "access": "self_serve_free",
+  "prod_gate": "app_review",
+  "access_notes": "Free development workspaces (US only, user caps, no outbound email). Private apps need no review; public apps need Intercom review.",
+  "api_types": [
+   "rest",
+   "sdk"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": true,
+  "mcp": "official",
+  "mcp_url": "https://mcp.intercom.com/mcp",
+  "mcp_notes": "Hosted remote MCP, 16 tools; US/EU only; OAuth or bearer token.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "Dev workspace limits; public apps need Intercom review before customers can install.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication",
+    "match": "provide you with an Access Token as soon as"
+   },
+   {
+    "field": "access",
+    "url": "https://developers.intercom.com/docs/build-an-integration/getting-started",
+    "match": "Development workspaces are free and intended for development purposes only"
+   },
+   {
+    "field": "api",
+    "url": "https://developers.intercom.com/docs/references/rest-api/api.intercom.io/conversations/listconversations",
+    "match": "List all conversations"
+   },
+   {
+    "field": "mcp",
+    "url": "https://developers.intercom.com/docs/guides/mcp",
+    "match": "Intercom hosts a remote MCP server that follows"
+   }
+  ],
+  "confidence": {
+   "auth": 0.95,
+   "access": 0.9,
+   "api": 0.95,
+   "mcp": 0.95
+  },
+  "needs_browser": false,
+  "open_questions": [
+   "Whether the MCP server works against a development workspace."
+  ],
+  "changes": [
+   {
+    "field": "prod_gate",
+    "from": "unknown",
+    "to": "app_review",
+    "why": "Public apps, listed or unlisted, must be reviewed and approved by Intercom.",
+    "url": "https://developers.intercom.com/docs/publish-to-the-app-store/review-publish-your-app"
+   }
+  ],
+  "unresolved": []
+ },
+ {
+  "id": 13,
+  "app": "Freshdesk",
+  "one_liner": "Cloud helpdesk and ticketing from Freshworks with email, chat, phone and AI features.",
+  "auth": [
+   "api_key",
+   "basic"
+  ],
+  "auth_notes": "Personal API key as basic-auth username, dummy password. OAuth 2.0 scopes documented, but only for FDK-built Freshworks/Custom apps; not listed.",
+  "access": "self_serve_trial",
+  "prod_gate": "unknown",
+  "access_notes": "14-day Enterprise trial, 50 calls/min. Free program (6 months, 2 agents) has 0 API calls/min. MCP needs Growth/Pro/Enterprise. Marketplace apps reviewed.",
+  "api_types": [
+   "rest",
+   "sdk"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": null,
+  "mcp": "official",
+  "mcp_url": "https://<subdomain>.freshdesk.com/mcp",
+  "mcp_notes": "GA Sep 10 2026; API key auth only; paid plans with monthly action quotas.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "Trial only; long-term use and MCP actions need paid plan.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://developers.freshdesk.com/api/",
+    "match": "You can use your personal API key to authenticate"
+   },
+   {
+    "field": "access",
+    "url": "https://www.freshworks.com/freshdesk/pricing/",
+    "match": "instantly get access to our Enterprise plan for 14 days"
+   },
+   {
+    "field": "api",
+    "url": "https://developers.freshdesk.com/api/",
+    "match": "Create a Ticket /api/v2/tickets"
+   },
+   {
+    "field": "mcp",
+    "url": "https://support.freshdesk.com/support/solutions/articles/50000012670",
+    "match": "the Freshworks MCP integration is generally available"
+   }
+  ],
+  "confidence": {
+   "auth": 0.75,
+   "access": 0.9,
+   "api": 0.85,
+   "mcp": 0.85
+  },
+  "needs_browser": false,
+  "open_questions": [
+   "No public OpenAPI file found.",
+   "Whether OAuth works for external (non-FDK) apps on Freshdesk: API reference lists a scope per endpoint, docs mention FDK apps only (https://developers.freshworks.com/docs/app-sdk/v3.0/support_ticket/oauth-implementation-in-apps/)."
+  ],
+  "changes": [],
+  "unresolved": [
+   "auth: log in to the Freshworks developer portal and check whether OAuth credentials for an external app can select Freshdesk scopes.",
+   "prod_gate: API-key integrations show no gate, Marketplace apps are reviewed; a human must choose the distribution route."
+  ]
+ },
+ {
+  "id": 14,
+  "app": "Front",
+  "one_liner": "Shared inbox and customer operations platform for email, chat, SMS and social channels.",
+  "auth": [
+   "oauth2",
+   "token"
+  ],
+  "auth_notes": "Bearer tokens via OAuth app or company-level API token (admin only); OAuth required for public integrations.",
+  "access": "self_serve_free",
+  "prod_gate": "app_review",
+  "access_notes": "Free developer environment limited to 3 teammates, no expiry stated; 14-day Professional trial also exists. Admin creates tokens/apps. Public apps submitted to Front for review.",
+  "api_types": [
+   "rest",
+   "sdk"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": true,
+  "mcp": "official",
+  "mcp_url": "https://mcp.frontapp.com/mcp",
+  "mcp_notes": "OAuth 2.1 PKCE, confidential client, no DCR; separate Admin MCP server exists.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "Admin rights needed to create credentials; App Store publication reviewed by Front.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://dev.frontapp.com/docs/authentication.md",
+    "match": "There are two ways to get a Bearer token"
+   },
+   {
+    "field": "access",
+    "url": "https://dev.frontapp.com/docs/welcome.md",
+    "match": "access to a free developer environment"
+   },
+   {
+    "field": "api",
+    "url": "https://raw.githubusercontent.com/frontapp/front-api-specs/main/core-api/core-api.json",
+    "match": "\"title\": \"Core API\""
+   },
+   {
+    "field": "mcp",
+    "url": "https://dev.frontapp.com/docs/mcp-server.md",
+    "match": "lets AI agents act on Front conversation data"
+   }
+  ],
+  "confidence": {
+   "auth": 0.9,
+   "access": 0.85,
+   "api": 0.95,
+   "mcp": 0.9
+  },
+  "needs_browser": false,
+  "open_questions": [
+   "Whether developer accounts ever expire (docs state no limit).",
+   "API tokens cannot be used with the MCP server."
+  ],
+  "changes": [
+   {
+    "field": "access",
+    "from": "self_serve_trial",
+    "to": "self_serve_free",
+    "why": "Front offers a free developer environment (3 teammates) beyond the 14-day trial; no expiry stated.",
+    "url": "https://dev.frontapp.com/docs/welcome.md"
+   },
+   {
+    "field": "prod_gate",
+    "from": "unknown",
+    "to": "app_review",
+    "why": "Front reviews submitted integrations and may refuse; public integrations must use OAuth.",
+    "url": "https://dev.frontapp.com/docs/partnering-with-front.md"
+   },
+   {
+    "field": "openapi_public",
+    "from": null,
+    "to": true,
+    "why": "Core API OpenAPI 3.0 JSON public in frontapp/front-api-specs.",
+    "url": "https://raw.githubusercontent.com/frontapp/front-api-specs/main/core-api/core-api.json"
+   }
+  ],
+  "unresolved": [
+   "access: a human should sign up at front.com/signup?affiliate=developers to confirm no expiry."
+  ]
+ },
+ {
+  "id": 15,
+  "app": "Pylon",
+  "one_liner": "B2B support platform for Slack, email and chat with account intelligence and AI agents.",
+  "auth": [
+   "token"
+  ],
+  "auth_notes": "Bearer API token created by an admin in dashboard; US and EU regions. MCP also supports OAuth 2.0.",
+  "access": "partner_or_sales",
+  "prod_gate": "unknown",
+  "access_notes": "No self-serve signup on site; trials set up with a sales representative, no free plan. API on every plan from Professional ($89/seat); sandbox Enterprise only.",
+  "api_types": [
+   "rest",
+   "sdk",
+   "cli"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": true,
+  "mcp": "official",
+  "mcp_url": "https://mcp.usepylon.com",
+  "mcp_notes": "Streamable HTTP; OAuth 2.0 or API token; EU endpoint available.",
+  "verdict": "needs_outreach",
+  "main_blocker": "partner_or_sales",
+  "blocker_notes": "Trials and demo organisation set up by a sales representative.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication.md",
+    "match": "The Pylon API uses"
+   },
+   {
+    "field": "access",
+    "url": "https://www.usepylon.com/pylon-facts",
+    "match": "set up with a sales representative"
+   },
+   {
+    "field": "api",
+    "url": "https://docs.usepylon.com/pylon-docs/developer/api/sdks.md",
+    "match": "official SDKs for TypeScript, Python, and Go"
+   },
+   {
+    "field": "mcp",
+    "url": "https://docs.usepylon.com/pylon-docs/integrations/pylon-mcp.md",
+    "match": "The Pylon MCP Server exposes Pylon data to AI tools"
+   }
+  ],
+  "confidence": {
+   "auth": 0.9,
+   "access": 0.85,
+   "api": 0.95,
+   "mcp": 0.9
+  },
+  "needs_browser": false,
+  "open_questions": [
+   "Pricing says annual contract; facts page also says monthly billing is available."
+  ],
+  "changes": [
+   {
+    "field": "openapi_public",
+    "from": null,
+    "to": true,
+    "why": "OpenAPI 3.0.3 served without login; 179 operations.",
+    "url": "https://api.usepylon.com/openapi.json"
+   },
+   {
+    "field": "api_types",
+    "from": [
+     "rest"
+    ],
+    "to": [
+     "rest",
+     "sdk",
+     "cli"
+    ],
+    "why": "Official TypeScript, Python, Go SDKs (beta) and experimental CLI documented.",
+    "url": "https://docs.usepylon.com/pylon-docs/developer/api/sdks.md"
+   }
+  ],
+  "unresolved": [
+   "access: app.usepylon.com/signup is a JS shell to curl; a human should check whether it allows signup without sales."
+  ]
+ },
+ {
+  "id": 16,
+  "app": "LiveAgent",
+  "one_liner": "Help desk and call center software with ticketing, live chat, calls and AI agents.",
+  "auth": [
+   "api_key"
+  ],
+  "auth_notes": "API v3 key sent in apikey header, with per-key permission scopes; v1 key separate and deprecated. MCP also supports OAuth 2.1.",
+  "access": "self_serve_trial",
+  "prod_gate": "none",
+  "access_notes": "30-day free trial, no card; API keys on every paid plan (1 on Starter). MCP server only Business and Enterprise. Free-plan page now redirects to trial.",
+  "api_types": [
+   "rest",
+   "sdk"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": true,
+  "mcp": "official",
+  "mcp_url": "https://<your-liveagent-domain>/api/mcp",
+  "mcp_notes": "OAuth 2.1 or bearer token; Business and Enterprise plans only per pricing page.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "Docs UI sits on account domains, but the Swagger JSON is public; paid plan after 30-day trial.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://support.liveagent.com/741982-API-key",
+    "match": "API key has to be set in header"
+   },
+   {
+    "field": "access",
+    "url": "https://www.liveagent.com/pricing/",
+    "match": "30-day free trial, no credit card"
+   },
+   {
+    "field": "api",
+    "url": "https://support.ladesk.com/docs/api/v3/api-docs-generator.php",
+    "match": "complete API documentation for LiveAgent software"
+   },
+   {
+    "field": "mcp",
+    "url": "https://support.liveagent.com/647358-MCP-Integration-for-Agents",
+    "match": "There are two ways to authenticate your MCP client"
+   }
+  ],
+  "confidence": {
+   "auth": 0.9,
+   "access": 0.85,
+   "api": 0.95,
+   "mcp": 0.88
+  },
+  "needs_browser": false,
+  "open_questions": [
+   "Old FAQ still mentions a hidden Free plan; liveagent.com/free-plan redirects to /trial.",
+   "Swagger also lists an OAuth2 scheme with placeholder URLs; treated as scope metadata, not an auth method."
+  ],
+  "changes": [
+   {
+    "field": "main_blocker",
+    "from": "docs_gated",
+    "to": "none",
+    "why": "API v3 Swagger is readable without login (106 operations), so docs are not gated.",
+    "url": "https://support.ladesk.com/docs/api/v3/api-docs-generator.php"
+   },
+   {
+    "field": "needs_browser",
+    "from": true,
+    "to": false,
+    "why": "Swagger JSON and MCP article both load by curl.",
+    "url": "https://support.ladesk.com/docs/api/v3/api-docs-generator.php"
+   }
+  ],
+  "unresolved": [
+   "mcp_url: current guide says /api/mcp, early-preview FAQ says /public/api/mcp; a human must read it in an account profile."
+  ]
+ },
+ {
+  "id": 17,
+  "app": "Plain",
+  "one_liner": "API-first B2B customer support platform with threads, workflows and AI agents.",
+  "auth": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "Machine user API keys with fine-grained permissions; OAuth apps act as a signed-in user but only in the workspace that created them.",
+  "access": "self_serve_trial",
+  "prod_gate": "unknown",
+  "access_notes": "7-day free trial, no credit card; Foundation from $45/user/month annual, API included on it. Machine users created in workspace settings.",
+  "api_types": [
+   "graphql",
+   "sdk"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": false,
+  "mcp": "official",
+  "mcp_url": "https://mcp.plain.com/mcp",
+  "mcp_notes": "OAuth sign-in with Plain account; nearly 400 tools.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "Only 7-day trial; paid plan after.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://www.plain.com/docs/graphql/authentication",
+    "match": "Create a machine user and an API key"
+   },
+   {
+    "field": "access",
+    "url": "https://www.plain.com/pricing",
+    "match": "7 day free trial"
+   },
+   {
+    "field": "api",
+    "url": "https://www.plain.com/docs/graphql/introduction",
+    "match": "GraphQL API Introduction Authentication OAuth Schema"
+   },
+   {
+    "field": "mcp",
+    "url": "https://www.plain.com/docs/integrations/mcp-server.md",
+    "match": "Connect Claude Code, Cursor, or any MCP client"
+   }
+  ],
+  "confidence": {
+   "auth": 0.9,
+   "access": 0.9,
+   "api": 0.7,
+   "mcp": 0.95
+  },
+  "needs_browser": false,
+  "open_questions": [
+   "OAuth apps work only in their own workspace, so each customer must issue its own API key or OAuth app.",
+   "Startup programme gives 50% off only."
+  ],
+  "changes": [],
+  "unresolved": [
+   "prod_gate: no cross-workspace distribution route documented; ask Plain."
+  ]
+ },
+ {
+  "id": 18,
+  "app": "Help Scout",
+  "one_liner": "Shared inbox and customer support platform with Docs knowledge base and Beacon widget.",
+  "auth": [
+   "oauth2",
+   "api_key"
+  ],
+  "auth_notes": "Inbox API: OAuth 2.0 auth code and client credentials. Docs API uses per-user API key.",
+  "access": "self_serve_trial",
+  "prod_gate": "unknown",
+  "access_notes": "15-day trial of Standard or Plus; API access requires Standard, Plus or Pro (Free plan has none). Credentials need an active user.",
+  "api_types": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": null,
+  "mcp": "official",
+  "mcp_url": "https://mcp.helpscout.net/mcp",
+  "mcp_notes": "Read-only for new connections; Standard+ plans; reports need Plus or Pro.",
+  "verdict": "build_now",
+  "main_blocker": "paid_plan",
+  "blocker_notes": "API needs Standard plan or higher after the 15-day trial.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://developer.helpscout.com/mailbox-api/overview/authentication/",
+    "match": "implementing Authorization Code and Client Credential flows"
+   },
+   {
+    "field": "access",
+    "url": "https://www.helpscout.com/pricing/",
+    "match": "15 days to take all of the plan’s features"
+   },
+   {
+    "field": "api",
+    "url": "https://developer.helpscout.com/",
+    "match": "read and write data to Help Scout inboxes"
+   },
+   {
+    "field": "mcp",
+    "url": "https://docs.helpscout.com/article/1779-connect-your-ai-agent-with-help-scout-to-search-conversations-and-pull-reports",
+    "match": "gives AI assistants secure, official access to Help Scout data"
+   }
+  ],
+  "confidence": {
+   "auth": 0.95,
+   "access": 0.9,
+   "api": 0.8,
+   "mcp": 0.95
+  },
+  "needs_browser": false,
+  "open_questions": [
+   "No OpenAPI file located (developer site has llms.txt only)."
+  ],
+  "changes": [],
+  "unresolved": [
+   "prod_gate: no public-app review page in developer docs; ask Help Scout whether OAuth apps for other accounts need approval."
+  ]
+ },
+ {
+  "id": 19,
+  "app": "Gorgias",
+  "one_liner": "E-commerce helpdesk for Shopify brands with tickets, macros, automation and AI agent.",
+  "auth": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "Private apps use email plus API key (basic style); OAuth2 mandatory for public apps.",
+  "access": "self_serve_trial",
+  "prod_gate": "app_review",
+  "access_notes": "Free trial, no card; helpdesk plans from $10/mo. Developer sandbox needs a draft app and email to tech partners. Public apps go through review.",
+  "api_types": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": true,
+  "mcp": "official",
+  "mcp_url": "https://mcp.gorgias.com/mcp",
+  "mcp_notes": "Open beta, all Helpdesk plans; acts as connecting user; Claude/ChatGPT directories.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "Public apps need review; sandbox is manual.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://developers.gorgias.com/reference/authentication.md",
+    "match": "The Gorgias API supports two authentication methods"
+   },
+   {
+    "field": "access",
+    "url": "https://www.gorgias.com/pricing",
+    "match": "Start free trial No credit card required"
+   },
+   {
+    "field": "api",
+    "url": "https://developers.gorgias.com/reference/authentication",
+    "match": "List customers get"
+   },
+   {
+    "field": "mcp",
+    "url": "https://docs.gorgias.com/en-US/connect-your-ai-assistant-to-gorgias-6310546",
+    "match": "The Gorgias MCP lets you work with your Gorgias helpdesk"
+   }
+  ],
+  "confidence": {
+   "auth": 0.9,
+   "access": 0.8,
+   "api": 0.8,
+   "mcp": 0.92
+  },
+  "needs_browser": false,
+  "open_questions": [
+   "Trial length not published on the pricing page.",
+   "Sandbox is a trial converted manually by Gorgias after a draft app; the plain trial needs no approval.",
+   "developers.gorgias.com/mcp is a docs MCP; product MCP is mcp.gorgias.com."
+  ],
+  "changes": [
+   {
+    "field": "openapi_public",
+    "from": null,
+    "to": true,
+    "why": "Each reference page publishes its OpenAPI definition; no single consolidated file found.",
+    "url": "https://developers.gorgias.com/reference/create-ticket.md"
+   }
+  ],
+  "unresolved": [
+   "Trial length and API-key access inside the trial: a human would need to start a trial."
+  ]
+ },
+ {
+  "id": 20,
+  "app": "Gladly",
+  "one_liner": "Customer service platform organised around customer profiles and conversations rather than tickets.",
+  "auth": [
+   "basic",
+   "token"
+  ],
+  "auth_notes": "Token-based Basic auth: agent email plus API token; user needs API User permission set by a Gladly admin.",
+  "access": "partner_or_sales",
+  "prod_gate": "unknown",
+  "access_notes": "Existing customer required; Gladly enables a separate sandbox on request. No public trial or pricing; contact sales.",
+  "api_types": [
+   "rest",
+   "sdk"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": true,
+  "mcp": "official",
+  "mcp_url": "https://mcp.<region>.gladly.com/<org>/mcp",
+  "mcp_notes": "Gladly must enable per organization; covers Gladly AI (Guides, Workflows, sessions), user sign-in.",
+  "verdict": "needs_outreach",
+  "main_blocker": "partner_or_sales",
+  "blocker_notes": "Needs a Gladly customer account; sandbox enabled by Gladly.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://developer.gladly.com/rest/",
+    "match": "Gladly API uses token-based Basic Authentication"
+   },
+   {
+    "field": "access",
+    "url": "https://developer.gladly.com/rest/",
+    "match": "We'll enable the Gladly API in a separate sandbox environment"
+   },
+   {
+    "field": "api",
+    "url": "https://developer.gladly.com/llms.txt",
+    "match": "Machine-readable OpenAPI 3.0.1 spec"
+   },
+   {
+    "field": "mcp",
+    "url": "https://help.gladly.com/docs/what-is-the-gladly-mcp-for-claude.md",
+    "match": "connects Claude to your Gladly organization"
+   }
+  ],
+  "confidence": {
+   "auth": 0.9,
+   "access": 0.75,
+   "api": 0.9,
+   "mcp": 0.93
+  },
+  "needs_browser": false,
+  "open_questions": [
+   "MCP documented for Claude only; other clients not mentioned.",
+   "Whether any sandbox exists without being a customer."
+  ],
+  "changes": [
+   {
+    "field": "mcp",
+    "from": "none_found",
+    "to": "official",
+    "why": "Gladly publishes a vendor MCP connector (Nov 2026) that reads and changes Gladly AI configuration.",
+    "url": "https://help.gladly.com/docs/what-is-the-gladly-mcp-for-claude.md"
+   },
+   {
+    "field": "mcp_url",
+    "from": "",
+    "to": "https://mcp.<region>.gladly.com/<org>/mcp",
+    "why": "Setup article derives this connector address from the sign-in address.",
+    "url": "https://help.gladly.com/docs/set-up-the-gladly-mcp-for-claude.md"
+   }
+  ],
+  "unresolved": [
+   "access: ask Gladly sales/partner team whether non-customers can get a gladly.qa sandbox."
+  ]
+ }
+]

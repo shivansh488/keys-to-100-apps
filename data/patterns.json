@@ -1,0 +1,589 @@
+{
+ "n": 100,
+ "access": {
+  "self_serve_free": 58,
+  "self_serve_trial": 21,
+  "partner_or_sales": 8,
+  "admin_or_app_approval": 4,
+  "paid_plan": 7,
+  "no_api": 2
+ },
+ "mcp": {
+  "official": 86,
+  "none_found": 8,
+  "community": 6
+ },
+ "verdict": {
+  "build_now": 77,
+  "needs_outreach": 12,
+  "build_with_caveat": 11
+ },
+ "main_blocker": {
+  "none": 77,
+  "partner_or_sales": 8,
+  "app_review": 4,
+  "paid_plan": 6,
+  "local_only": 2,
+  "narrow_api": 3
+ },
+ "prod_gate": {
+  "security_review": 1,
+  "app_review": 31,
+  "none": 49,
+  "unknown": 17,
+  "partner_program": 2
+ },
+ "api_breadth": {
+  "broad": 81,
+  "medium": 13,
+  "none": 2,
+  "narrow": 4
+ },
+ "auth_any": {
+  "oauth2": 68,
+  "token": 43,
+  "api_key": 42,
+  "basic": 10,
+  "other": 13,
+  "none": 2
+ },
+ "auth_static": 81,
+ "auth_oauth": 68,
+ "auth_both": 53,
+ "oauth_only": [
+  "Salesforce",
+  "Podio",
+  "Zoho CRM",
+  "Zendesk",
+  "LinkedIn Ads",
+  "Threads (Meta)",
+  "QuickBooks",
+  "Xero",
+  "Ramp",
+  "NotebookLM"
+ ],
+ "static_no_oauth": 28,
+ "cat": {
+  "CRM and Sales": {
+   "free": 7,
+   "trial": 2,
+   "sales": 1,
+   "oauth": 10,
+   "static": 7,
+   "build": 9,
+   "second": 5,
+   "mcp": 9
+  },
+  "Support and Helpdesk": {
+   "trial": 6,
+   "free": 2,
+   "sales": 2,
+   "oauth": 6,
+   "static": 9,
+   "build": 8,
+   "second": 4,
+   "mcp": 10
+  },
+  "Communications and Messaging": {
+   "free": 7,
+   "trial": 3,
+   "oauth": 8,
+   "static": 8,
+   "build": 10,
+   "second": 5,
+   "mcp": 8
+  },
+  "Marketing, Ads, Email and Social": {
+   "free": 6,
+   "approval": 2,
+   "trial": 2,
+   "oauth": 8,
+   "static": 7,
+   "build": 8,
+   "second": 6,
+   "mcp": 6
+  },
+  "Ecommerce": {
+   "free": 6,
+   "sales": 1,
+   "paid": 2,
+   "approval": 1,
+   "oauth": 8,
+   "static": 8,
+   "build": 6,
+   "second": 5,
+   "mcp": 8
+  },
+  "Data, SEO and Scraping": {
+   "free": 5,
+   "trial": 2,
+   "paid": 1,
+   "none": 1,
+   "sales": 1,
+   "oauth": 2,
+   "static": 8,
+   "build": 7,
+   "second": 1,
+   "mcp": 8
+  },
+  "Developer, Infra and Data platforms": {
+   "free": 7,
+   "trial": 3,
+   "oauth": 9,
+   "static": 9,
+   "build": 10,
+   "second": 2,
+   "mcp": 10
+  },
+  "Productivity and Project Management": {
+   "free": 9,
+   "paid": 1,
+   "oauth": 9,
+   "static": 10,
+   "build": 9,
+   "second": 0,
+   "mcp": 10
+  },
+  "Finance and Fintech": {
+   "free": 6,
+   "sales": 2,
+   "paid": 1,
+   "approval": 1,
+   "oauth": 5,
+   "static": 7,
+   "build": 6,
+   "second": 5,
+   "mcp": 9
+  },
+  "AI, Research and Media-native": {
+   "trial": 3,
+   "sales": 1,
+   "free": 3,
+   "paid": 2,
+   "none": 1,
+   "oauth": 3,
+   "static": 8,
+   "build": 4,
+   "second": 1,
+   "mcp": 8
+  }
+ },
+ "self_serve": 79,
+ "ss_second_gate": 27,
+ "ss_unknown": 10,
+ "list_build_now": [],
+ "list_build_with_caveat": [
+  [
+   "Squarespace",
+   "paid_plan",
+   "app_review",
+   "paid_plan",
+   false
+  ],
+  [
+   "Ecwid",
+   "paid_plan",
+   "app_review",
+   "paid_plan",
+   false
+  ],
+  [
+   "Ahrefs",
+   "paid_plan",
+   "app_review",
+   "paid_plan",
+   true
+  ],
+  [
+   "Sherlock",
+   "no_api",
+   "none",
+   "local_only",
+   false
+  ],
+  [
+   "Smartsheet",
+   "paid_plan",
+   "none",
+   "paid_plan",
+   true
+  ],
+  [
+   "iPayX",
+   "paid_plan",
+   "none",
+   "narrow_api",
+   false
+  ],
+  [
+   "NotebookLM",
+   "self_serve_trial",
+   "unknown",
+   "narrow_api",
+   true
+  ],
+  [
+   "Consensus",
+   "self_serve_free",
+   "unknown",
+   "narrow_api",
+   true
+  ],
+  [
+   "Devin",
+   "paid_plan",
+   "none",
+   "paid_plan",
+   true
+  ],
+  [
+   "higgsfield",
+   "paid_plan",
+   "none",
+   "paid_plan",
+   true
+  ],
+  [
+   "Mermaid CLI",
+   "no_api",
+   "none",
+   "local_only",
+   false
+  ]
+ ],
+ "list_needs_outreach": [
+  [
+   "DealCloud",
+   "partner_or_sales",
+   "unknown",
+   "partner_or_sales",
+   false
+  ],
+  [
+   "Pylon",
+   "partner_or_sales",
+   "unknown",
+   "partner_or_sales",
+   true
+  ],
+  [
+   "Gladly",
+   "partner_or_sales",
+   "unknown",
+   "partner_or_sales",
+   false
+  ],
+  [
+   "LinkedIn Ads",
+   "admin_or_app_approval",
+   "app_review",
+   "app_review",
+   true
+  ],
+  [
+   "Pinterest",
+   "admin_or_app_approval",
+   "app_review",
+   "app_review",
+   true
+  ],
+  [
+   "Salesforce Commerce Cloud",
+   "partner_or_sales",
+   "none",
+   "partner_or_sales",
+   false
+  ],
+  [
+   "Amazon Selling Partner",
+   "admin_or_app_approval",
+   "app_review",
+   "app_review",
+   false
+  ],
+  [
+   "Waterfall.io",
+   "partner_or_sales",
+   "unknown",
+   "partner_or_sales",
+   false
+  ],
+  [
+   "Paygent Connect",
+   "partner_or_sales",
+   "unknown",
+   "partner_or_sales",
+   false
+  ],
+  [
+   "Brex",
+   "admin_or_app_approval",
+   "app_review",
+   "app_review",
+   true
+  ],
+  [
+   "PitchBook",
+   "partner_or_sales",
+   "unknown",
+   "partner_or_sales",
+   true
+  ],
+  [
+   "Otter AI",
+   "partner_or_sales",
+   "unknown",
+   "partner_or_sales",
+   true
+  ]
+ ],
+ "gap_build_now": [
+  [
+   "LiveAgent",
+   "self_serve_trial",
+   [
+    "api_key"
+   ],
+   "none",
+   "official",
+   0.85
+  ],
+  [
+   "Vonage",
+   "self_serve_trial",
+   [
+    "basic",
+    "other"
+   ],
+   "none",
+   "official",
+   0.7
+  ],
+  [
+   "systeme.io",
+   "self_serve_free",
+   [
+    "api_key"
+   ],
+   "none",
+   "official",
+   0.75
+  ],
+  [
+   "WooCommerce",
+   "self_serve_free",
+   [
+    "api_key",
+    "basic",
+    "other"
+   ],
+   "none",
+   "official",
+   0.85
+  ],
+  [
+   "Magento (Adobe Commerce)",
+   "self_serve_free",
+   [
+    "token",
+    "oauth2",
+    "other"
+   ],
+   "none",
+   "community",
+   0.6
+  ],
+  [
+   "fanbasis",
+   "self_serve_free",
+   [
+    "api_key"
+   ],
+   "none",
+   "official",
+   0.7
+  ],
+  [
+   "SE Ranking",
+   "self_serve_trial",
+   [
+    "api_key"
+   ],
+   "none",
+   "official",
+   0.9
+  ],
+  [
+   "Binance",
+   "self_serve_free",
+   [
+    "api_key",
+    "other"
+   ],
+   "none",
+   "official",
+   0.8
+  ],
+  [
+   "Reducto",
+   "self_serve_trial",
+   [
+    "api_key"
+   ],
+   "none",
+   "official",
+   0.9
+  ]
+ ],
+ "gap_other": [
+  [
+   "DealCloud",
+   "needs_outreach",
+   "partner_or_sales"
+  ],
+  [
+   "Gladly",
+   "needs_outreach",
+   "partner_or_sales"
+  ],
+  [
+   "Salesforce Commerce Cloud",
+   "needs_outreach",
+   "partner_or_sales"
+  ],
+  [
+   "Squarespace",
+   "build_with_caveat",
+   "paid_plan"
+  ],
+  [
+   "Ecwid",
+   "build_with_caveat",
+   "paid_plan"
+  ],
+  [
+   "Amazon Selling Partner",
+   "needs_outreach",
+   "app_review"
+  ],
+  [
+   "Sherlock",
+   "build_with_caveat",
+   "local_only"
+  ],
+  [
+   "Waterfall.io",
+   "needs_outreach",
+   "partner_or_sales"
+  ],
+  [
+   "Paygent Connect",
+   "needs_outreach",
+   "partner_or_sales"
+  ],
+  [
+   "iPayX",
+   "build_with_caveat",
+   "narrow_api"
+  ],
+  [
+   "Mermaid CLI",
+   "build_with_caveat",
+   "local_only"
+  ]
+ ],
+ "mcp_prod_gated": [
+  "DealCloud",
+  "Pylon",
+  "Gladly",
+  "Salesforce Commerce Cloud",
+  "Squarespace",
+  "Amazon Selling Partner",
+  "Ahrefs",
+  "Smartsheet",
+  "iPayX",
+  "Brex",
+  "PitchBook",
+  "Otter AI",
+  "Consensus",
+  "Devin",
+  "higgsfield"
+ ],
+ "mcp_none": [
+  [
+   "Copper",
+   "none_found"
+  ],
+  [
+   "Discord",
+   "none_found"
+  ],
+  [
+   "Telegram",
+   "none_found"
+  ],
+  [
+   "LinkedIn Ads",
+   "community"
+  ],
+  [
+   "Pinterest",
+   "none_found"
+  ],
+  [
+   "Threads (Meta)",
+   "community"
+  ],
+  [
+   "SendGrid",
+   "community"
+  ],
+  [
+   "Magento (Adobe Commerce)",
+   "community"
+  ],
+  [
+   "Ecwid",
+   "none_found"
+  ],
+  [
+   "Sherlock",
+   "community"
+  ],
+  [
+   "Waterfall.io",
+   "none_found"
+  ],
+  [
+   "Paygent Connect",
+   "none_found"
+  ],
+  [
+   "NotebookLM",
+   "none_found"
+  ],
+  [
+   "Mermaid CLI",
+   "community"
+  ]
+ ],
+ "openapi": 67,
+ "low_conf": [
+  [
+   "Aircall",
+   0.55
+  ],
+  [
+   "Sentry",
+   0.55
+  ],
+  [
+   "Paygent Connect",
+   0.5
+  ],
+  [
+   "iPayX",
+   0.45
+  ]
+ ]
+}

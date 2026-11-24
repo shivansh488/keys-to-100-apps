@@ -1,0 +1,333 @@
+{
+ "scores": {
+  "pass0": {
+   "n": 22,
+   "ok": 10,
+   "miss": [
+    [
+     "Podio",
+     "auth",
+     [
+      "unknown"
+     ],
+     [
+      [
+       "oauth2"
+      ],
+      [
+       "basic",
+       "static",
+       "other"
+      ]
+     ]
+    ],
+    [
+     "Gladly",
+     "auth",
+     [
+      "unknown"
+     ],
+     [
+      [],
+      [
+       "basic",
+       "static"
+      ]
+     ]
+    ],
+    [
+     "Aircall",
+     "auth",
+     [
+      "unknown"
+     ],
+     [
+      [
+       "basic",
+       "oauth2"
+      ],
+      [
+       "static"
+      ]
+     ]
+    ],
+    [
+     "systeme.io",
+     "auth",
+     [
+      "unknown"
+     ],
+     [
+      [
+       "static"
+      ],
+      []
+     ]
+    ],
+    [
+     "systeme.io",
+     "mcp",
+     "none_found",
+     [
+      "official"
+     ]
+    ],
+    [
+     "systeme.io",
+     "verdict",
+     "not_buildable",
+     [
+      "build_now"
+     ]
+    ],
+    [
+     "Magento (Adobe Commerce)",
+     "auth",
+     [
+      "unknown"
+     ],
+     [
+      [
+       "static",
+       "oauth2"
+      ],
+      [
+       "other"
+      ]
+     ]
+    ],
+    [
+     "Netlify",
+     "mcp",
+     "none_found",
+     [
+      "official"
+     ]
+    ],
+    [
+     "Coda",
+     "access",
+     "partner_or_sales",
+     [
+      "self_serve_free"
+     ]
+    ],
+    [
+     "Coda",
+     "verdict",
+     "needs_outreach",
+     [
+      "build_now"
+     ]
+    ],
+    [
+     "Ramp",
+     "auth",
+     [
+      "unknown"
+     ],
+     [
+      [
+       "oauth2"
+      ],
+      [
+       "basic"
+      ]
+     ]
+    ],
+    [
+     "Ramp",
+     "mcp",
+     "none_found",
+     [
+      "official"
+     ]
+    ]
+   ]
+  },
+  "pass1": {
+   "n": 22,
+   "ok": 21,
+   "miss": [
+    [
+     "Podio",
+     "mcp",
+     "none_found",
+     [
+      "official"
+     ]
+    ]
+   ]
+  },
+  "pass2": {
+   "n": 22,
+   "ok": 22,
+   "miss": []
+  }
+ },
+ "labels": {
+  "6": {
+   "auth": [
+    [
+     "oauth2"
+    ],
+    [
+     "basic",
+     "static",
+     "other"
+    ]
+   ],
+   "mcp": [
+    "official"
+   ],
+   "urls": [
+    "https://developers.podio.com/authentication",
+    "https://www.progress.com/podio/documentation/using-podio/podio-mcp-server"
+   ]
+  },
+  "20": {
+   "auth": [
+    [],
+    [
+     "basic",
+     "static"
+    ]
+   ],
+   "access": [
+    "partner_or_sales"
+   ],
+   "verdict": [
+    "needs_outreach"
+   ],
+   "urls": [
+    "https://developer.gladly.com/rest/"
+   ]
+  },
+  "29": {
+   "auth": [
+    [
+     "basic",
+     "oauth2"
+    ],
+    [
+     "static"
+    ]
+   ],
+   "urls": [
+    "https://developers.aircall.io/api-references"
+   ]
+  },
+  "37": {
+   "auth": [
+    [
+     "static"
+    ],
+    []
+   ],
+   "access": [
+    "self_serve_free"
+   ],
+   "mcp": [
+    "official"
+   ],
+   "verdict": [
+    "build_now"
+   ],
+   "urls": [
+    "https://developer.systeme.io/reference/api",
+    "https://systeme.io/pricing",
+    "https://systeme.io/mcp"
+   ]
+  },
+  "45": {
+   "auth": [
+    [
+     "static",
+     "oauth2"
+    ],
+    [
+     "other"
+    ]
+   ],
+   "mcp": [
+    "none_found",
+    "community"
+   ],
+   "urls": [
+    "https://developer.adobe.com/commerce/webapi/get-started/authentication/"
+   ]
+  },
+  "57": {
+   "access": [
+    "self_serve_free",
+    "self_serve_trial"
+   ],
+   "mcp": [
+    "official"
+   ],
+   "verdict": [
+    "build_now"
+   ],
+   "urls": [
+    "https://brightdata.com/ai/mcp-server"
+   ]
+  },
+  "63": {
+   "auth": [
+    [
+     "oauth2",
+     "static"
+    ],
+    []
+   ],
+   "mcp": [
+    "official"
+   ],
+   "urls": [
+    "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/"
+   ]
+  },
+  "78": {
+   "auth": [
+    [
+     "static"
+    ],
+    [
+     "oauth2"
+    ]
+   ],
+   "access": [
+    "self_serve_free"
+   ],
+   "verdict": [
+    "build_now"
+   ],
+   "urls": [
+    "https://coda.io/developers/apis/v1"
+   ]
+  },
+  "89": {
+   "auth": [
+    [
+     "oauth2"
+    ],
+    [
+     "basic"
+    ]
+   ],
+   "mcp": [
+    "official"
+   ],
+   "urls": [
+    "https://docs.ramp.com/developer-api/v1/authorization"
+   ]
+  },
+  "96": {
+   "urls": [
+    "https://docs.devin.ai/api-reference/overview"
+   ]
+  }
+ },
+ "settled": 22,
+ "possible": 40
+}

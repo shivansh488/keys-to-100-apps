@@ -1,0 +1,166 @@
+<title>Keys to 100 Apps</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* Layout: one reading column of findings, then a full-width matrix. Verdict colors are status; access colors are the chart series. */
+:root{--bg:#f7f9fb;--panel:#ffffff;--fg:#14202e;--mute:#556475;--line:#d8e0e8;--accent:#1f5fae;--go:#0b6b3a;--gobg:#dff3e7;--mid:#7a5200;--midbg:#fbefd2;--stop:#a3262a;--stopbg:#fbe3e2;
+--s-free:#2a78d6;--s-trial:#1baf7a;--s-paid:#eda100;--s-appr:#6250d6;--s-sales:#e34948;--s-none:#8b97a4;
+--disp:"Bricolage Grotesque",Inter,system-ui,sans-serif;--body:Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10161d;--panel:#171f28;--fg:#e7edf3;--mute:#9eacba;--line:#2b3744;--accent:#79b0f2;--go:#7fdca6;--gobg:#143524;--mid:#f0c96b;--midbg:#3a2e10;--stop:#ff9d98;--stopbg:#41201f;--s-free:#3987e5;--s-trial:#199e70;--s-paid:#c98500;--s-appr:#9085e9;--s-sales:#e66767;--s-none:#6d7a88;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#10161d;--panel:#171f28;--fg:#e7edf3;--mute:#9eacba;--line:#2b3744;--accent:#79b0f2;--go:#7fdca6;--gobg:#143524;--mid:#f0c96b;--midbg:#3a2e10;--stop:#ff9d98;--stopbg:#41201f;--s-free:#3987e5;--s-trial:#199e70;--s-paid:#c98500;--s-appr:#9085e9;--s-sales:#e66767;--s-none:#6d7a88;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.55 var(--body)}
+.wrap{max-width:1180px;margin-inline:auto;padding-block:40px 72px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:52px}
+h1,h2,h3{font-family:var(--disp);line-height:1.15;margin:0;text-wrap:balance}
+h1{font-size:clamp(2rem,5vw,3.1rem);max-width:21ch}
+h2{font-size:1.65rem}h3{font-size:1.08rem}
+p{margin:0;max-width:68ch}small{display:block;color:var(--mute);font-size:.8rem;line-height:1.4;font-weight:400}
+a{color:var(--accent)}a:focus-visible,select:focus-visible,input:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+section,header{display:flex;flex-direction:column;gap:18px;min-width:0}
+.lede{font-size:1.1rem;color:var(--mute)}
+nav{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.9rem}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-block:1px solid var(--line)}
+.facts div{padding:16px 18px 16px 0}.facts b{font:700 2rem/1 var(--disp);display:block;font-variant-numeric:tabular-nums}
+.find{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 44px}
+.find>div{display:flex;flex-direction:column;gap:6px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.85rem;color:var(--mute)}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px}
+.s-free{background:var(--s-free)}.s-trial{background:var(--s-trial)}.s-paid{background:var(--s-paid)}.s-appr{background:var(--s-appr)}.s-sales{background:var(--s-sales)}.s-none{background:var(--s-none)}
+.chart{display:flex;flex-direction:column;gap:10px}
+.barrow{display:grid;grid-template-columns:270px minmax(0,1fr);gap:14px;align-items:center;font-size:.92rem}
+.bar{display:flex;gap:2px;height:22px}
+.seg{position:relative;min-width:0;display:block;border-radius:2px}.seg:last-child{border-radius:2px 4px 4px 2px}
+.seg b{position:absolute;left:4px;top:3px;height:16px;min-width:16px;padding:0 4px;border-radius:3px;background:var(--panel);color:var(--fg);font:600 .72rem/16px var(--body);text-align:center}
+.seg:hover{filter:brightness(1.12)}
+.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.three>div{display:flex;flex-direction:column;gap:10px}
+ul{margin:0;padding-left:18px}.three ul{list-style:none;padding:0}.three li{padding:5px 0;border-bottom:1px solid var(--line)}.three li span{color:var(--mute);font-size:.85rem}
+.v{display:inline-block;padding:1px 8px;border-radius:4px;font-weight:600;font-size:.82rem;white-space:nowrap}
+.v-go{background:var(--gobg);color:var(--go)}.v-mid{background:var(--midbg);color:var(--mid)}.v-stop{background:var(--stopbg);color:var(--stop)}
+.scroll{overflow-x:auto;border:1px solid var(--line);background:var(--panel)}
+table{border-collapse:collapse;width:100%;font-size:.87rem}
+th,td{text-align:left;vertical-align:top;padding:9px 11px;border-bottom:1px solid var(--line)}
+thead th{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--mute);font-weight:600;white-space:nowrap}
+tbody th{font-weight:600}.num{color:var(--mute);font-variant-numeric:tabular-nums}
+#m{min-width:1120px}#m tbody th{width:230px}#m td:nth-child(4){width:230px}
+.tag{display:inline-block;border:1px solid var(--line);border-radius:3px;padding:0 5px;margin:0 4px 4px 0;font-size:.77rem;white-space:nowrap}.warn{color:var(--mid);border-color:var(--mid);margin-left:6px;font-weight:500}
+.ev a{margin-right:6px;display:inline-block}
+.filters{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+select,input,button{font:inherit;color:var(--fg);background:var(--panel);border:1px solid var(--line);border-radius:5px;padding:7px 10px;max-width:100%}button{cursor:pointer}
+.meter{display:inline-block;width:min(220px,40vw);height:10px;background:var(--line);margin-right:10px;border-radius:0 4px 4px 0}.meter i{display:block;height:100%;background:var(--accent);border-radius:0 4px 4px 0}
+.ok{color:var(--go)}.no{color:var(--stop);font-weight:600}
+ol.flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:22px;counter-reset:f}
+ol.flow li{counter-increment:f;border-top:3px solid var(--accent);padding-top:10px;display:flex;flex-direction:column;gap:5px}
+ol.flow li::before{content:counter(f);font:700 1.1rem var(--disp);color:var(--accent)}
+pre{margin:0;overflow-x:auto;background:var(--panel);border:1px solid var(--line);padding:14px;font:13px/1.55 ui-monospace,Menlo,monospace}
+details{border-top:1px solid var(--line);padding-top:12px}summary{cursor:pointer;font-weight:600}details>*+*{margin-top:12px}
+.note{border:1px solid var(--mid);background:var(--midbg);color:var(--fg);padding:14px 16px;max-width:none}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px}.two>div{display:flex;flex-direction:column;gap:12px;min-width:0}
+@media (max-width:820px){.facts{grid-template-columns:repeat(2,1fr)}.find,.three,.two{grid-template-columns:minmax(0,1fr)}.barrow{grid-template-columns:minmax(0,1fr);gap:3px}ol.flow{grid-template-columns:minmax(0,1fr)}}
+</style>
+<div class="wrap">
+<header>
+<h1>{{NB}} of 100 apps can become agent tools today</h1>
+<p class="lede">Getting a key is usually easy. Shipping to other people's accounts is where apps get stuck. Agents researched 100 apps, then a second set of agents tried to prove them wrong.</p>
+<nav aria-label="Sections"><a href="#patterns">Patterns</a><a href="#act">What to build</a><a href="#proof">Accuracy</a><a href="#agent">The agent</a><a href="#matrix">All 100 apps</a><a href="#limits">What went wrong</a></nav>
+<div class="facts">
+<div><b>{{SS}}</b>hand a developer a key alone ({{FREE}} free, {{TRIAL}} on trial)</div>
+<div><b>{{SG}}</b>of those {{SS}} add a second gate before you can serve customers</div>
+<div><b>{{NO}}</b>need a person at the vendor to say yes first</div>
+<div><b>{{NG}}</b>buildable now and missing from Composio's catalogue</div>
+</div>
+</header>
+
+<section id="patterns">
+<h2>Patterns</h2>
+<div class="find">
+<div><h3>Static keys are everywhere, OAuth is close behind</h3><p>{{STA}} apps accept an API key or token and {{OAU}} accept OAuth2. {{BOTH}} take both, so build on a key and ship on OAuth. Only {{OONLY}} are OAuth-only.</p></div>
+<div><h3>The second gate is the hidden cost</h3><p>{{SG}} self-serve apps still require app review, a partner program or a security review for customer accounts. {{SU}} more could not be settled. Productivity apps show none of this; ads and social have the most.</p></div>
+<div><h3>Sales calls are the top hard blocker</h3><p>Of the 23 apps not ready today, 8 sit behind sales or a partnership, 6 behind a paid plan, 4 behind vendor approval, 3 have a narrow API and 2 only run locally.</p></div>
+<div><h3>An official MCP server no longer sets an app apart</h3><p>{{MCP}} vendors publish one that acts on the product. {{MCPG}} of those still sit on apps we cannot freely build for, so an MCP server is not proof of access. Docs-search servers do not count here.</p></div>
+</div>
+<h3>How you get a first credential, by category (10 apps each)</h3>
+<div class="legend">{{LEG}}</div>
+<div class="chart">{{BARS}}</div>
+<p>Infra and messaging are fully self-serve. Support tools lean on trials. Ecommerce, AI and finance hold most of the paid and partner gates.</p>
+</section>
+
+<section id="act">
+<h2>What to build, unlock and chase</h2>
+<div class="three">
+<div><h3><span class="v v-go">Build first</span> {{NG}} apps</h3><p><small>Self-serve, and not in Composio's public toolkit catalogue on 24 Nov 2026. {{NGT}} of the 100 are missing in all. Confirm fanbasis before starting.</small></p><ul>{{GAP}}</ul></div>
+<div><h3><span class="v v-mid">Caveat</span> {{NC}} apps</h3><p><small>Buildable after paying, with a small surface, or by wrapping a local tool.</small></p><ul>{{CAV}}</ul></div>
+<div><h3><span class="v v-stop">Outreach</span> {{NO}} apps</h3><p><small>Start the conversation now, since none has a self-serve path.</small></p><ul>{{OUT}}</ul></div>
+</div>
+</section>
+
+<section id="proof">
+<h2>How accurate is this?</h2>
+<p>Three checks, each independent of the agent that wrote the answer.</p>
+<div class="scroll"><table><thead><tr><th>Pass</th><th>Locked sample, 20 apps</th><th>Fresh holdout, 10 apps</th><th>Agrees with Composio's auth</th></tr></thead><tbody>{{ACC}}</tbody></table></div>
+<p class="note"><b>Read the locked-sample gain with care.</b> Of the 8 answers that pass 2 fixed, 3 were new facts and 5 came from rules clarified after the gold labels were written. The holdout was drawn afterwards to test that, and only {{SETT}} of its 40 claims could be settled from primary pages. Summary reports on some holdout apps had been seen first, so it is not perfectly blind. Pass 1 to pass 2 on the holdout is one answer. A fair reading is that pass 1 is roughly 90% right and pass 2 somewhat better.</p>
+<p>The sample was drawn by random seed, two per category, and committed before any agent ran. The labels were read from vendor pages in a live browser by the supervising agent, and locked before its outputs were opened. <b>That reader was an AI. Human sign-off so far: {{HCN}} checks.</b></p>
+<div class="two">
+<div><h3>Right answers by field, out of 20</h3><div class="scroll"><table><thead><tr><th>Field</th><th>Pass 0</th><th>Pass 1</th><th>Pass 2</th></tr></thead><tbody>{{FLD}}</tbody></table></div></div>
+<div><h3>Every citation is machine-checked</h3><p>A script reloads each cited page and looks for the quoted words. Pass 1: {{EV1}} found. Pass 2: {{EV2}} found. A match proves the words are there, not that the conclusion is right, which is why the samples exist.</p></div>
+</div>
+<details open><summary>What pass 1 got wrong, and what happened next</summary><div class="scroll"><table><thead><tr><th>App</th><th>Field</th><th>Pass 1 said</th><th>Outcome</th></tr></thead><tbody>{{MISS}}</tbody></table></div></details>
+<details><summary>All 80 sampled answers after pass 2, with sources</summary><div class="scroll"><table><thead><tr><th>App</th><th>Auth</th><th>Access</th><th>MCP</th><th>Verdict</th><th>Pages read</th></tr></thead><tbody>{{HITS}}</tbody></table></div></details>
+<details><summary>Final edits by the supervising agent after pass 2</summary><ul>{{OVR}}</ul></details>
+</section>
+
+<section id="agent">
+<h2>The agent</h2>
+<ol class="flow">
+<li><h3>Crawl</h3><p>Python script reads each hint URL and five likely links, then applies rules. No keys needed. This is pass 0.</p></li>
+<li><h3>Research</h3><p>Ten agents, one per category, search and read vendor docs, then fill a strict schema with a quote per claim.</p></li>
+<li><h3>Check quotes</h3><p>Script reloads every cited page. Failures become work for the next step.</p></li>
+<li><h3>Attack</h3><p>Ten fresh agents on a stronger model try to refute each record. Gold labels were moved out of reach.</p></li>
+<li><h3>Reconcile</h3><p>Score, cross-check with Composio's catalogue, settle disputes in a browser, log every override.</p></li>
+</ol>
+<div class="two">
+<div><h3>Run it</h3><pre>python3 pipeline/pass0_baseline.py      # no key
+python3 pipeline/check_evidence.py data/pass2
+python3 pipeline/score.py
+python3 run_agent.py research --ids 11  # Claude API
+python3 run_agent.py verify   --ids 11
+python3 pipeline/build_page.py</pre><p><small>The published run used Claude Code subagents with the prompts in <code>prompts/</code>. <code>run_agent.py</code> repeats it over the Claude API; it compiles but was not run here, because this machine had no API key.</small></p></div>
+<div><h3>Where a human is needed</h3><p>Agents never signed up, logged in or paid, so anything visible only inside an account is open. {{UNR}} apps carry at least one open question. These 12 could change an answer:</p><ul>{{HC}}</ul></div>
+</div>
+</section>
+
+<section id="matrix">
+<h2>All 100 apps</h2>
+<div class="filters">
+<input id="q" type="search" placeholder="Search apps" aria-label="Search apps">
+<select id="fc" aria-label="Category"><option value="">All categories</option>{{CATS}}</select>
+<select id="fv" aria-label="Verdict"><option value="">All verdicts</option><option value="go">Build now</option><option value="mid">Caveat</option><option value="stop">Outreach</option></select>
+<select id="fa" aria-label="Access"><option value="">All access</option><option value="free">Free</option><option value="trial">Trial</option><option value="paid">Paid plan</option><option value="appr">Vendor approval</option><option value="sales">Sales or partner</option><option value="none">No remote API</option></select>
+<select id="fu" aria-label="Auth"><option value="">All auth</option><option value="oauth2">OAuth2</option><option value="api_key">API key</option><option value="token">Token</option><option value="basic">Basic</option></select>
+<select id="fk" aria-label="In Composio"><option value="">In Composio or not</option><option value="gap">Not in Composio</option><option value="in">In Composio</option></select>
+<button id="rs" type="button">Clear filters</button><span id="ct" aria-live="polite">100 apps</span>
+</div>
+<div class="scroll"><table id="m"><thead><tr><th>#</th><th>App</th><th>Verdict</th><th>First credential</th><th>Auth</th><th>Gate for customers</th><th>API</th><th>MCP</th><th>In Composio</th><th>Evidence</th></tr></thead><tbody>{{ROWS}}</tbody></table></div>
+<p><small>For agents: the same rows with full evidence are in <code>data.json</code> and <code>data.csv</code> beside this page. Verdict rule: free or trial with a medium or broad API is build now; paid, narrow or local is caveat; vendor approval or sales is outreach. The customer gate never changes the verdict.</small></p>
+</section>
+
+<section id="limits">
+<h2>What went wrong</h2>
+<ul>
+<li>Some apps beat the agent. Paygent Connect has no public docs and its identity is a best guess. iPayX, Sentry and Aircall access answers are below 60% confidence.</li>
+<li>One gold label was wrong. Pinterest's MCP server was marked live from a search summary; the vendor page says it has not launched.</li>
+<li>fanbasis now redirects to Commas. Its docs domain is not linked from the vendor site, so that verdict needs a human check.</li>
+<li>Paygent's site hides instructions aimed at AI summarizers. The agents treated them as data and ignored them.</li>
+<li>Two verifiers tried several browser identities on Meta's docs after an error. The safety check blocked it, they stopped, and the Meta pages were read in a normal browser instead.</li>
+<li>Vendor pages contradict each other for MrScraper, Clay, Aircall and Squarespace. The table shows the more specific page and lists the conflict in the data file.</li>
+<li>Composio's SDK and MCP were not used to run this, since no Composio key was available. Its public catalogue served as a second source.</li>
+</ul>
+</section>
+</div>
+<script>
+(function(){var g=function(i){return document.getElementById(i)},rows=[].slice.call(document.querySelectorAll('#m tbody tr')),ids=['q','fc','fv','fa','fu','fk'];
+function run(){var q=g('q').value.toLowerCase(),c=g('fc').value,v=g('fv').value,a=g('fa').value,u=g('fu').value,k=g('fk').value,n=0;
+rows.forEach(function(r){var d=r.dataset,ok=(!q||r.cells[1].textContent.toLowerCase().indexOf(q)>-1)&&(!c||d.c===c)&&(!v||d.v===v)&&(!a||d.a===a)&&(!u||d.u.split(' ').indexOf(u)>-1)&&(!k||d.k===k);r.hidden=!ok;if(ok)n++});g('ct').textContent=n+(n===1?' app':' apps')}
+ids.forEach(function(i){g(i).addEventListener('input',run)});g('rs').addEventListener('click',function(){ids.forEach(function(i){g(i).value=''});run()})})();
+</script>

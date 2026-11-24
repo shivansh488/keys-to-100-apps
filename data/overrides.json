@@ -1,0 +1,58 @@
+[
+ {
+  "id": 91,
+  "app": "NotebookLM",
+  "field": "access",
+  "frm": "self_serve_free",
+  "to": "self_serve_trial",
+  "why": "Brief's hint names the Gemini Enterprise API; pass 2 had answered for the consumer preview."
+ },
+ {
+  "id": 91,
+  "app": "NotebookLM",
+  "field": "mcp",
+  "frm": "official",
+  "to": "none_found",
+  "why": "Brief's hint names the Gemini Enterprise API; pass 2 had answered for the consumer preview."
+ },
+ {
+  "id": 91,
+  "app": "NotebookLM",
+  "field": "mcp_url",
+  "frm": "https://notebook.googleapis.com/mcp",
+  "to": "",
+  "why": "Brief's hint names the Gemini Enterprise API; pass 2 had answered for the consumer preview."
+ },
+ {
+  "id": 91,
+  "app": "NotebookLM",
+  "field": "access_notes",
+  "frm": "Enable notebook.googleapis.com in own GCP project; free in Public Preview, personal Google Accounts only. Enterprise API: 14-day trial, then paid, minimum 15 licenses.",
+  "to": "Enterprise API: 14-day trial, then paid, minimum 15 licences. (A separate consumer preview API is free and has an MCP server.)",
+  "why": "Brief's hint names the Gemini Enterprise API; pass 2 had answered for the consumer preview."
+ },
+ {
+  "id": 40,
+  "app": "SendGrid",
+  "field": "mcp",
+  "frm": "none_found",
+  "to": "community",
+  "why": "Pass 2 notes say community servers exist; label should be community."
+ },
+ {
+  "id": 18,
+  "app": "Help Scout",
+  "field": "main_blocker",
+  "frm": "paid_plan",
+  "to": "none",
+  "why": "Trial carries the API, so paid plan is a later cost rather than a build blocker."
+ },
+ {
+  "id": 38,
+  "app": "Pinterest",
+  "field": "mcp",
+  "frm": "official",
+  "to": "none_found",
+  "why": "Vendor page opened in browser says the server is announced and not launched yet."
+ }
+]

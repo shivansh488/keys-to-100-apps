@@ -1,0 +1,1409 @@
+{
+ "1": {
+  "slugs": [
+   "salesforce"
+  ],
+  "toolkits": {
+   "salesforce": {
+    "auth": [
+     "OAUTH2",
+     "S2S_OAUTH2"
+    ],
+    "managed": "Yes",
+    "tools": 595
+   }
+  }
+ },
+ "2": {
+  "slugs": [
+   "hubspot"
+  ],
+  "toolkits": {
+   "hubspot": {
+    "auth": [
+     "OAUTH2",
+     "API_KEY"
+    ],
+    "managed": "Yes",
+    "tools": 355
+   }
+  }
+ },
+ "3": {
+  "slugs": [
+   "pipedrive"
+  ],
+  "toolkits": {
+   "pipedrive": {
+    "auth": [
+     "OAUTH2",
+     "API_KEY"
+    ],
+    "managed": "No",
+    "tools": 407
+   }
+  }
+ },
+ "4": {
+  "slugs": [
+   "attio"
+  ],
+  "toolkits": {
+   "attio": {
+    "auth": [
+     "OAUTH2"
+    ],
+    "managed": "Yes",
+    "tools": 114
+   }
+  }
+ },
+ "5": {
+  "slugs": [
+   "twenty"
+  ],
+  "toolkits": {
+   "twenty": {
+    "auth": [
+     "API_KEY"
+    ],
+    "managed": "N/A",
+    "tools": 23
+   }
+  }
+ },
+ "6": {
+  "slugs": [
+   "podio"
+  ],
+  "toolkits": {
+   "podio": {
+    "auth": [
+     "OAUTH2"
+    ],
+    "managed": "No",
+    "tools": 143
+   }
+  }
+ },
+ "7": {
+  "slugs": [
+   "zoho"
+  ],
+  "toolkits": {
+   "zoho": {
+    "auth": [
+     "OAUTH2"
+    ],
+    "managed": "Yes",
+    "tools": 115
+   }
+  }
+ },
+ "8": {
+  "slugs": [
+   "close",
+   "close_mcp"
+  ],
+  "toolkits": {
+   "close": {
+    "auth": [
+     "API_KEY"
+    ],
+    "managed": "N/A",
+    "tools": 75
+   },
+   "close_mcp": {
+    "auth": [
+     "DCR_OAUTH"
+    ],
+    "managed": "No",
+    "tools": 114
+   }
+  }
+ },
+ "9": {
+  "slugs": [
+   "copper"
+  ],
+  "toolkits": {
+   "copper": {
+    "auth": [
+     "API_KEY"
+    ],
+    "managed": "N/A",
+    "tools": 65
+   }
+  }
+ },
+ "10": {
+  "slugs": [],
+  "toolkits": {}
+ },
+ "11": {
+  "slugs": [
+   "zendesk"
+  ],
+  "toolkits": {
+   "zendesk": {
+    "auth": [
+     "OAUTH2"
+    ],
+    "managed": "Yes",
+    "tools": 484
+   }
+  }
+ },
+ "12": {
+  "slugs": [
+   "intercom",
+   "intercom_mcp"
+  ],
+  "toolkits": {
+   "intercom": {
+    "auth": [
+     "OAUTH2"
+    ],
+    "managed": "Yes",
+    "tools": 138
+   },
+   "intercom_mcp": {
+    "auth": [
+     "API_KEY"
+    ],
+    "managed": "N/A",
+    "tools": 15
+   }
+  }
+ },
+ "13": {
+  "slugs": [
+   "freshdesk"
+  ],
+  "toolkits": {
+   "freshdesk": {
+    "auth": [
+     "API_KEY"
+    ],
+    "managed": "N/A",
+    "tools": 184
+   }
+  }
+ },
+ "14": {
+  "slugs": [
+   "front"
+  ],
+  "toolkits": {
+   "front": {
+    "auth": [
+     "API_KEY",
+     "OAUTH2"
+    ],
+    "managed": "No",
+    "tools": 180
+   }
+  }
+ },
+ "15": {
+  "slugs": [
+   "pylon_mcp"
+  ],
+  "toolkits": {
+   "pylon_mcp": {
+    "auth": [
+     "DCR_OAUTH"
+    ],
+    "managed": "No",
+    "tools": 12
+   }
+  }
+ },
+ "16": {
+  "slugs": [],
+  "toolkits": {}
+ },
+ "17": {
+  "slugs": [
+   "plain",
+   "plain_mcp"
+  ],
+  "toolkits": {
+   "plain": {
+    "auth": [
+     "API_KEY"
+    ],
+    "managed": "N/A",
+    "tools": 120
+   },
+   "plain_mcp": {
+    "auth": [
+     "DCR_OAUTH"
+    ],
+    "managed": "No",
+    "tools": 80
+   }
+  }
+ },
+ "18": {
+  "slugs": [
+   "help_scout"
+  ],
+  "toolkits": {
+   "help_scout": {
+    "auth": [
+     "OAUTH2"
+    ],
+    "managed": "No",
+    "tools": 129
+   }
+  }
+ },
+ "19": {
+  "slugs": [
+   "gorgias"
+  ],
+  "toolkits": {
+   "gorgias": {
+    "auth": [
+     "API_KEY",
+     "OAUTH2"
+    ],
+    "managed": "Yes",
+    "tools": 51
+   }
+  }
+ },
+ "20": {
+  "slugs": [],
+  "toolkits": {}
+ },
+ "21": {
+  "slugs": [
+   "slack"
+  ],
+  "toolkits": {
+   "slack": {
+    "auth": [
+     "OAUTH2"
+    ],
+    "managed": "Yes",
+    "tools": 174
+   }
+  }
+ },
+ "22": {
+  "slugs": [
+   "twilio"
+  ],
+  "toolkits": {
+   "twilio": {
+    "auth": [
+     "API_KEY",
+     "BASIC",
+     "S2S_OAUTH2"
+    ],
+    "managed": "No",
+    "tools": 454
+   }
+  }
+ },
+ "23": {
+  "slugs": [
+   "zoho_cliq"
+  ],
+  "toolkits": {
+   "zoho_cliq": {
+    "auth": [
+     "OAUTH2"
+    ],
+    "managed": "No",
+    "tools": 162
+   }
+  }
+ },
+ "24": {
+  "slugs": [
+   "lark"
+  ],
+  "toolkits": {
+   "lark": {
+    "auth": [
+     "OAUTH2"
+    ],
+    "managed": "No",
+    "tools": 451
+   }
+  }
+ },
+ "25": {
+  "slugs": [
+   "pumble"
+  ],
+  "toolkits": {
+   "pumble": {
+    "auth": [
+     "API_KEY"
+    ],
+    "managed": "N/A",
+    "tools": 9
+   }
+  }
+ },
+ "26": {
+  "slugs": [
+   "discord"
+  ],
+  "toolkits": {
+   "discord": {
+    "auth": [
+     "OAUTH2"
+    ],
+    "managed": "Yes",
+    "tools": 28
+   }
+  }
+ },
+ "27": {
+  "slugs": [
+   "telegram"
+  ],
+  "toolkits": {
+   "telegram": {
+    "auth": [
+     "API_KEY"
+    ],
+    "managed": "N/A",
+    "tools": 18
+   }
+  }
+ },
+ "28": {
+  "slugs": [
+   "whatsapp"
+  ],
+  "toolkits": {
+   "whatsapp": {
+    "auth": [
+     "OAUTH2",
+     "API_KEY"
+    ],
+    "managed": "Yes",
+    "tools": 127
+   }
+  }
+ },
+ "29": {
+  "slugs": [
+   "aircall"
+  ],
+  "toolkits": {
+   "aircall": {
+    "auth": [
+     "OAUTH2",
+     "BASIC"
+    ],
+    "managed": "Yes",
+    "tools": 48
+   }
+  }
+ },
+ "30": {
+  "slugs": [],
+  "toolkits": {}
+ },
+ "31": {
+  "slugs": [
+   "googleads"
+  ],
+  "toolkits": {
+   "googleads": {
+    "auth": [
+     "OAUTH2"
+    ],
+    "managed": "Yes",
+    "tools": 78
+   }
+  }
+ },
+ "32": {
+  "slugs": [
+   "metaads"
+  ],
+  "toolkits": {
+   "metaads": {
+    "auth": [
+     "OAUTH2",
+     "API_KEY"
+    ],
+    "managed": "Yes",
+    "tools": 101
+   }
+  }
+ },
+ "33": {
+  "slugs": [
+   "linkedin_ads"
+  ],
+  "toolkits": {
+   "linkedin_ads": {
+    "auth": [
+     "OAUTH2"
+    ],
+    "managed": "No",
+    "tools": 28
+   }
+  }
+ },
+ "34": {
+  "slugs": [
+   "highlevel_mcp"
+  ],
+  "toolkits": {
+   "highlevel_mcp": {
+    "auth": [
+     "API_KEY"
+    ],
+    "managed": "N/A",
+    "tools": 36
+   }
+  }
+ },
+ "35": {
+  "slugs": [
+   "mailchimp"
+  ],
+  "toolkits": {
+   "mailchimp": {
+    "auth": [
+     "OAUTH2"
+    ],
+    "managed": "Yes",
+    "tools": 278
+   }
+  }
+ },
+ "36": {
+  "slugs": [
+   "klaviyo"
+  ],
+  "toolkits": {
+   "klaviyo": {
+    "auth": [
+     "API_KEY",
+     "OAUTH2"
+    ],
+    "managed": "No",
+    "tools": 233
+   }
+  }
+ },
+ "37": {
+  "slugs": [],
+  "toolkits": {}
+ },
+ "38": {
+  "slugs": [
+   "pinterest"
+  ],
+  "toolkits": {
+   "pinterest": {
+    "auth": [
+     "OAUTH2"
+    ],
+    "managed": "Yes",
+    "tools": 27
+   }
+  }
+ },
+ "39": {
+  "slugs": [
+   "threads"
+  ],
+  "toolkits": {
+   "threads": {
+    "auth": [
+     "OAUTH2"
+    ],
+    "managed": "No",
+    "tools": 24
+   }
+  }
+ },
+ "40": {
+  "slugs": [
+   "sendgrid"
+  ],
+  "toolkits": {
+   "sendgrid": {
+    "auth": [
+     "API_KEY"
+    ],
+    "managed": "N/A",
+    "tools": 364
+   }
+  }
+ },
+ "41": {
+  "slugs": [
+   "shopify"
+  ],
+  "toolkits": {
+   "shopify": {
+    "auth": [
+     "OAUTH2",
+     "S2S_OAUTH2"
+    ],
+    "managed": "No",
+    "tools": 478
+   }
+  }
+ },
+ "42": {
+  "slugs": [],
+  "toolkits": {}
+ },
+ "43": {
+  "slugs": [
+   "bigcommerce"
+  ],
+  "toolkits": {
+   "bigcommerce": {
+    "auth": [
+     "API_KEY",
+     "OAUTH2"
+    ],
+    "managed": "No",
+    "tools": 532
+   }
+  }
+ },
+ "44": {
+  "slugs": [],
+  "toolkits": {}
+ },
+ "45": {
+  "slugs": [],
+  "toolkits": {}
+ },
+ "46": {
+  "slugs": [],
+  "toolkits": {}
+ },
+ "47": {
+  "slugs": [],
+  "toolkits": {}
+ },
+ "48": {
+  "slugs": [
+   "gumroad"
+  ],
+  "toolkits": {
+   "gumroad": {
+    "auth": [
+     "OAUTH2"
+    ],
+    "managed": "Yes",
+    "tools": 13
+   }
+  }
+ },
+ "49": {
+  "slugs": [],
+  "toolkits": {}
+ },
+ "50": {
+  "slugs": [],
+  "toolkits": {}
+ },
+ "51": {
+  "slugs": [
+   "dataforseo"
+  ],
+  "toolkits": {
+   "dataforseo": {
+    "auth": [
+     "BASIC"
+    ],
+    "managed": "N/A",
+    "tools": 354
+   }
+  }
+ },
+ "52": {
+  "slugs": [],
+  "toolkits": {}
+ },
+ "53": {
+  "slugs": [
+   "ahrefs",
+   "ahrefs_mcp"
+  ],
+  "toolkits": {
+   "ahrefs": {
+    "auth": [
+     "API_KEY",
+     "OAUTH2"
+    ],
+    "managed": "No",
+    "tools": 46
+   },
+   "ahrefs_mcp": {
+    "auth": [
+     "DCR_OAUTH"
+    ],
+    "managed": "No",
+    "tools": 135
+   }
+  }
+ },
+ "54": {
+  "slugs": [
+   "mrscraper"
+  ],
+  "toolkits": {
+   "mrscraper": {
+    "auth": [
+     "API_KEY"
+    ],
+    "managed": "N/A",
+    "tools": 11
+   }
+  }
+ },
+ "55": {
+  "slugs": [
+   "apify",
+   "apify_mcp"
+  ],
+  "toolkits": {
+   "apify": {
+    "auth": [
+     "API_KEY"
+    ],
+    "managed": "N/A",
+    "tools": 185
+   },
+   "apify_mcp": {
+    "auth": [
+     "DCR_OAUTH"
+    ],
+    "managed": "No",
+    "tools": 12
+   }
+  }
+ },
+ "56": {
+  "slugs": [
+   "firecrawl"
+  ],
+  "toolkits": {
+   "firecrawl": {
+    "auth": [
+     "API_KEY"
+    ],
+    "managed": "N/A",
+    "tools": 246
+   }
+  }
+ },
+ "57": {
+  "slugs": [
+   "brightdata"
+  ],
+  "toolkits": {
+   "brightdata": {
+    "auth": [
+     "API_KEY"
+    ],
+    "managed": "N/A",
+    "tools": 167
+   }
+  }
+ },
+ "58": {
+  "slugs": [],
+  "toolkits": {}
+ },
+ "59": {
+  "slugs": [],
+  "toolkits": {}
+ },
+ "60": {
+  "slugs": [
+   "clay",
+   "clay_mcp"
+  ],
+  "toolkits": {
+   "clay": {
+    "auth": [
+     "API_KEY"
+    ],
+    "managed": "N/A",
+    "tools": 15
+   },
+   "clay_mcp": {
+    "auth": [
+     "DCR_OAUTH"
+    ],
+    "managed": "No",
+    "tools": 17
+   }
+  }
+ },
+ "61": {
+  "slugs": [
+   "github",
+   "github_mcp"
+  ],
+  "toolkits": {
+   "github": {
+    "auth": [
+     "OAUTH2"
+    ],
+    "managed": "Yes",
+    "tools": 905
+   },
+   "github_mcp": {
+    "auth": [
+     "API_KEY"
+    ],
+    "managed": "N/A",
+    "tools": 44
+   }
+  }
+ },
+ "62": {
+  "slugs": [
+   "vercel",
+   "vercel_mcp"
+  ],
+  "toolkits": {
+   "vercel": {
+    "auth": [
+     "OAUTH2",
+     "API_KEY"
+    ],
+    "managed": "No",
+    "tools": 414
+   },
+   "vercel_mcp": {
+    "auth": [
+     "DCR_OAUTH"
+    ],
+    "managed": "No",
+    "tools": 37
+   }
+  }
+ },
+ "63": {
+  "slugs": [
+   "netlify_mcp"
+  ],
+  "toolkits": {
+   "netlify_mcp": {
+    "auth": [
+     "DCR_OAUTH"
+    ],
+    "managed": "No",
+    "tools": 9
+   }
+  }
+ },
+ "64": {
+  "slugs": [
+   "cloudflare",
+   "cloudflare_mcp"
+  ],
+  "toolkits": {
+   "cloudflare": {
+    "auth": [
+     "API_KEY"
+    ],
+    "managed": "N/A",
+    "tools": 171
+   },
+   "cloudflare_mcp": {
+    "auth": [
+     "DCR_OAUTH"
+    ],
+    "managed": "No",
+    "tools": 3
+   }
+  }
+ },
+ "65": {
+  "slugs": [
+   "supabase",
+   "supabase_mcp"
+  ],
+  "toolkits": {
+   "supabase": {
+    "auth": [
+     "OAUTH2",
+     "API_KEY"
+    ],
+    "managed": "Yes",
+    "tools": 235
+   },
+   "supabase_mcp": {
+    "auth": [
+     "DCR_OAUTH"
+    ],
+    "managed": "No",
+    "tools": 32
+   }
+  }
+ },
+ "66": {
+  "slugs": [
+   "neo4j"
+  ],
+  "toolkits": {
+   "neo4j": {
+    "auth": [
+     "OAUTH2",
+     "BASIC",
+     "API_KEY",
+     "S2S_OAUTH2"
+    ],
+    "managed": "No",
+    "tools": 21
+   }
+  }
+ },
+ "67": {
+  "slugs": [
+   "snowflake"
+  ],
+  "toolkits": {
+   "snowflake": {
+    "auth": [
+     "OAUTH2"
+    ],
+    "managed": "No",
+    "tools": 17
+   }
+  }
+ },
+ "68": {
+  "slugs": [
+   "mongodb",
+   "mongodb_mcp"
+  ],
+  "toolkits": {
+   "mongodb": {
+    "auth": [
+     "S2S_OAUTH2"
+    ],
+    "managed": "No",
+    "tools": 496
+   },
+   "mongodb_mcp": {
+    "auth": [
+     "S2S_OAUTH2"
+    ],
+    "managed": "No",
+    "tools": 41
+   }
+  }
+ },
+ "69": {
+  "slugs": [
+   "datadog",
+   "datadog_mcp"
+  ],
+  "toolkits": {
+   "datadog": {
+    "auth": [
+     "OAUTH2",
+     "API_KEY",
+     "BEARER_TOKEN"
+    ],
+    "managed": "No",
+    "tools": 256
+   },
+   "datadog_mcp": {
+    "auth": [
+     "DCR_OAUTH"
+    ],
+    "managed": "No",
+    "tools": 370
+   }
+  }
+ },
+ "70": {
+  "slugs": [
+   "sentry",
+   "sentry_mcp"
+  ],
+  "toolkits": {
+   "sentry": {
+    "auth": [
+     "OAUTH2"
+    ],
+    "managed": "Yes",
+    "tools": 212
+   },
+   "sentry_mcp": {
+    "auth": [
+     "DCR_OAUTH"
+    ],
+    "managed": "No",
+    "tools": 9
+   }
+  }
+ },
+ "71": {
+  "slugs": [
+   "notion",
+   "notion_mcp"
+  ],
+  "toolkits": {
+   "notion": {
+    "auth": [
+     "OAUTH2",
+     "API_KEY"
+    ],
+    "managed": "Yes",
+    "tools": 60
+   },
+   "notion_mcp": {
+    "auth": [
+     "DCR_OAUTH"
+    ],
+    "managed": "No",
+    "tools": 42
+   }
+  }
+ },
+ "72": {
+  "slugs": [
+   "airtable"
+  ],
+  "toolkits": {
+   "airtable": {
+    "auth": [
+     "OAUTH2",
+     "API_KEY"
+    ],
+    "managed": "Yes",
+    "tools": 28
+   }
+  }
+ },
+ "73": {
+  "slugs": [
+   "linear",
+   "linear_mcp"
+  ],
+  "toolkits": {
+   "linear": {
+    "auth": [
+     "OAUTH2",
+     "API_KEY"
+    ],
+    "managed": "Yes",
+    "tools": 48
+   },
+   "linear_mcp": {
+    "auth": [
+     "DCR_OAUTH"
+    ],
+    "managed": "No",
+    "tools": 78
+   }
+  }
+ },
+ "74": {
+  "slugs": [
+   "jira"
+  ],
+  "toolkits": {
+   "jira": {
+    "auth": [
+     "OAUTH2",
+     "S2S_OAUTH2",
+     "API_KEY"
+    ],
+    "managed": "Yes",
+    "tools": 171
+   }
+  }
+ },
+ "75": {
+  "slugs": [
+   "asana"
+  ],
+  "toolkits": {
+   "asana": {
+    "auth": [
+     "OAUTH2"
+    ],
+    "managed": "Yes",
+    "tools": 247
+   }
+  }
+ },
+ "76": {
+  "slugs": [
+   "monday",
+   "monday_mcp"
+  ],
+  "toolkits": {
+   "monday": {
+    "auth": [
+     "OAUTH2"
+    ],
+    "managed": "Yes",
+    "tools": 126
+   },
+   "monday_mcp": {
+    "auth": [
+     "DCR_OAUTH"
+    ],
+    "managed": "No",
+    "tools": 96
+   }
+  }
+ },
+ "77": {
+  "slugs": [
+   "clickup",
+   "clickup_mcp"
+  ],
+  "toolkits": {
+   "clickup": {
+    "auth": [
+     "OAUTH2",
+     "API_KEY"
+    ],
+    "managed": "Yes",
+    "tools": 165
+   },
+   "clickup_mcp": {
+    "auth": [
+     "DCR_OAUTH"
+    ],
+    "managed": "No",
+    "tools": 58
+   }
+  }
+ },
+ "78": {
+  "slugs": [
+   "coda"
+  ],
+  "toolkits": {
+   "coda": {
+    "auth": [
+     "API_KEY"
+    ],
+    "managed": "N/A",
+    "tools": 110
+   }
+  }
+ },
+ "79": {
+  "slugs": [
+   "smartsheet"
+  ],
+  "toolkits": {
+   "smartsheet": {
+    "auth": [
+     "OAUTH2",
+     "BEARER_TOKEN"
+    ],
+    "managed": "No",
+    "tools": 185
+   }
+  }
+ },
+ "80": {
+  "slugs": [
+   "harvest"
+  ],
+  "toolkits": {
+   "harvest": {
+    "auth": [
+     "OAUTH2"
+    ],
+    "managed": "Yes",
+    "tools": 57
+   }
+  }
+ },
+ "81": {
+  "slugs": [
+   "stripe",
+   "stripe_mcp"
+  ],
+  "toolkits": {
+   "stripe": {
+    "auth": [
+     "API_KEY",
+     "OAUTH2"
+    ],
+    "managed": "Yes",
+    "tools": 435
+   },
+   "stripe_mcp": {
+    "auth": [
+     "DCR_OAUTH"
+    ],
+    "managed": "No",
+    "tools": 10
+   }
+  }
+ },
+ "82": {
+  "slugs": [
+   "plaid",
+   "plaid_mcp"
+  ],
+  "toolkits": {
+   "plaid": {
+    "auth": [
+     "API_KEY"
+    ],
+    "managed": "N/A",
+    "tools": 70
+   },
+   "plaid_mcp": {
+    "auth": [
+     "DCR_OAUTH"
+    ],
+    "managed": "No",
+    "tools": 5
+   }
+  }
+ },
+ "83": {
+  "slugs": [],
+  "toolkits": {}
+ },
+ "84": {
+  "slugs": [],
+  "toolkits": {}
+ },
+ "85": {
+  "slugs": [],
+  "toolkits": {}
+ },
+ "86": {
+  "slugs": [
+   "quickbooks"
+  ],
+  "toolkits": {
+   "quickbooks": {
+    "auth": [
+     "OAUTH2"
+    ],
+    "managed": "Yes",
+    "tools": 119
+   }
+  }
+ },
+ "87": {
+  "slugs": [
+   "xero"
+  ],
+  "toolkits": {
+   "xero": {
+    "auth": [
+     "OAUTH2"
+    ],
+    "managed": "No",
+    "tools": 109
+   }
+  }
+ },
+ "88": {
+  "slugs": [
+   "brex"
+  ],
+  "toolkits": {
+   "brex": {
+    "auth": [
+     "OAUTH2",
+     "API_KEY"
+    ],
+    "managed": "No",
+    "tools": 84
+   }
+  }
+ },
+ "89": {
+  "slugs": [
+   "ramp",
+   "ramp_mcp"
+  ],
+  "toolkits": {
+   "ramp": {
+    "auth": [
+     "OAUTH2"
+    ],
+    "managed": "No",
+    "tools": 186
+   },
+   "ramp_mcp": {
+    "auth": [
+     "DCR_OAUTH"
+    ],
+    "managed": "No",
+    "tools": 213
+   }
+  }
+ },
+ "90": {
+  "slugs": [
+   "pitchbook"
+  ],
+  "toolkits": {
+   "pitchbook": {
+    "auth": [
+     "API_KEY"
+    ],
+    "managed": "N/A",
+    "tools": 130
+   }
+  }
+ },
+ "91": {
+  "slugs": [
+   "notebook_lm"
+  ],
+  "toolkits": {
+   "notebook_lm": {
+    "auth": [
+     "OAUTH2"
+    ],
+    "managed": "Yes",
+    "tools": 11
+   }
+  }
+ },
+ "92": {
+  "slugs": [
+   "otter_ai_mcp"
+  ],
+  "toolkits": {
+   "otter_ai_mcp": {
+    "auth": [
+     "DCR_OAUTH"
+    ],
+    "managed": "No",
+    "tools": 3
+   }
+  }
+ },
+ "93": {
+  "slugs": [
+   "fathom"
+  ],
+  "toolkits": {
+   "fathom": {
+    "auth": [
+     "OAUTH2",
+     "API_KEY"
+    ],
+    "managed": "Yes",
+    "tools": 10
+   }
+  }
+ },
+ "94": {
+  "slugs": [
+   "consensus",
+   "consensus_mcp"
+  ],
+  "toolkits": {
+   "consensus": {
+    "auth": [
+     "API_KEY"
+    ],
+    "managed": "N/A",
+    "tools": 1
+   },
+   "consensus_mcp": {
+    "auth": [
+     "DCR_OAUTH"
+    ],
+    "managed": "No",
+    "tools": 1
+   }
+  }
+ },
+ "95": {
+  "slugs": [],
+  "toolkits": {}
+ },
+ "96": {
+  "slugs": [
+   "devin_mcp"
+  ],
+  "toolkits": {
+   "devin_mcp": {
+    "auth": [
+     "API_KEY"
+    ],
+    "managed": "N/A",
+    "tools": 23
+   }
+  }
+ },
+ "97": {
+  "slugs": [
+   "higgsfield",
+   "higgsfield_mcp"
+  ],
+  "toolkits": {
+   "higgsfield": {
+    "auth": [
+     "API_KEY"
+    ],
+    "managed": "N/A",
+    "tools": 14
+   },
+   "higgsfield_mcp": {
+    "auth": [
+     "DCR_OAUTH"
+    ],
+    "managed": "No",
+    "tools": 101
+   }
+  }
+ },
+ "98": {
+  "slugs": [],
+  "toolkits": {}
+ },
+ "99": {
+  "slugs": [
+   "youtube_transcript"
+  ],
+  "toolkits": {
+   "youtube_transcript": {
+    "auth": [
+     "API_KEY"
+    ],
+    "managed": "N/A",
+    "tools": 9
+   }
+  }
+ },
+ "100": {
+  "slugs": [
+   "grain"
+  ],
+  "toolkits": {
+   "grain": {
+    "auth": [
+     "API_KEY"
+    ],
+    "managed": "N/A",
+    "tools": 17
+   }
+  }
+ }
+}

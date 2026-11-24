@@ -1,0 +1,996 @@
+[
+ {
+  "id": 71,
+  "app": "Notion",
+  "one_liner": "Workspace for notes, docs, wikis and databases with a public REST API.",
+  "auth": [
+   "token",
+   "oauth2"
+  ],
+  "auth_notes": "Personal access tokens and internal connection tokens (bearer); OAuth 2.0 for public/OAuth integrations.",
+  "access": "self_serve_free",
+  "prod_gate": "none",
+  "access_notes": "Free plan: workspace owners create PATs (not configurable). Plus: all members. Business default owners only; Enterprise owners plus selected groups. Security review only for Marketplace listing.",
+  "api_types": [
+   "rest",
+   "sdk",
+   "cli"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": true,
+  "mcp": "official",
+  "mcp_url": "https://mcp.notion.com/mcp",
+  "mcp_notes": "Hosted OAuth MCP, works on every plan; static MCP tokens need Business or Enterprise.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "Free workspace owner can start alone; Marketplace listing optional and reviewed; PATs expire within one year.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://developers.notion.com/guides/get-started/authorization",
+    "match": "use the OAuth 2.0 protocol"
+   },
+   {
+    "field": "access",
+    "url": "https://developers.notion.com/guides/connections-and-tokens/personal-access-tokens.md",
+    "match": "Workspace owners only. | Not configurable."
+   },
+   {
+    "field": "api",
+    "url": "https://developers.notion.com/guides/connections-and-tokens/personal-access-tokens.md",
+    "match": "Authorization: Bearer {PERSONAL_ACCESS_TOKEN}"
+   },
+   {
+    "field": "mcp",
+    "url": "https://developers.notion.com/guides/mcp/get-started-with-mcp.md",
+    "match": "adding Notion as a custom MCP server"
+   }
+  ],
+  "confidence": {
+   "auth": 0.95,
+   "access": 0.8,
+   "api": 0.95,
+   "mcp": 0.95
+  },
+  "needs_browser": false,
+  "open_questions": [],
+  "changes": [
+   {
+    "field": "prod_gate",
+    "from": "security_review",
+    "to": "none",
+    "why": "Security review applies only to Marketplace listing; unlisted any-workspace apps work without it.",
+    "url": "https://developers.notion.com/guides/connections-and-tokens/public-integrations/overview.md"
+   },
+   {
+    "field": "access_notes",
+    "from": "Any full workspace member can create a PAT (Business/Enterprise restrict by default); internal connections need workspace owner. Public integrations need security review only for Marketplace listing.",
+    "to": "Free plan: workspace owners create PATs (not configurable). Plus: all members. Business default owners only; Enterprise owners plus selected groups. Security review only for Marketplace listing.",
+    "why": "Free plan policy is stated per plan; pass 1 omitted the Free restriction.",
+    "url": "https://developers.notion.com/guides/connections-and-tokens/personal-access-tokens.md"
+   },
+   {
+    "field": "mcp_notes",
+    "from": "Hosted remote MCP server with OAuth; admin API for MCP connections.",
+    "to": "Hosted OAuth MCP, works on every plan; static MCP tokens need Business or Enterprise.",
+    "why": "Plan scope stated in MCP FAQ.",
+    "url": "https://developers.notion.com/guides/mcp/get-started-with-mcp.md"
+   },
+   {
+    "field": "blocker_notes",
+    "from": "Free workspace works; Marketplace listing optional and reviewed.",
+    "to": "Free workspace owner can start alone; Marketplace listing optional and reviewed; PATs expire within one year.",
+    "why": "PATs expire by default after one year.",
+    "url": "https://developers.notion.com/guides/connections-and-tokens/personal-access-tokens.md"
+   },
+   {
+    "field": "evidence.access",
+    "from": {
+     "url": "https://developers.notion.com/guides/notion-api/quick-start.md",
+     "match": "PAT creation is restricted by default"
+    },
+    "to": {
+     "url": "https://developers.notion.com/guides/connections-and-tokens/personal-access-tokens.md",
+     "match": "Workspace owners only. | Not configurable."
+    },
+    "why": "Old snippet covered paid plans only, not the Free plan.",
+    "url": "https://developers.notion.com/guides/connections-and-tokens/personal-access-tokens.md"
+   }
+  ],
+  "unresolved": []
+ },
+ {
+  "id": 72,
+  "app": "Airtable",
+  "one_liner": "Spreadsheet-database platform for building collaborative apps and workflows.",
+  "auth": [
+   "token",
+   "oauth2"
+  ],
+  "auth_notes": "Personal access tokens (scoped bearer) and OAuth 2.0 access tokens; legacy API keys ended Feb 2024.",
+  "access": "self_serve_free",
+  "prod_gate": "none",
+  "access_notes": "Free plan carries base data endpoints (1000 calls/workspace/month); PATs and OAuth integrations self-registered. OAuth beyond development only needs terms, privacy and support details.",
+  "api_types": [
+   "rest",
+   "sdk"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": false,
+  "mcp": "official",
+  "mcp_url": "https://mcp.airtable.com/mcp",
+  "mcp_notes": "Hosted MCP supporting OAuth and personal access tokens; available on all plans.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "Free plan has low monthly call quota (1000).",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://airtable.com/developers/web/api/authentication.md",
+    "match": "We currently support using personal access tokens and OAuth access tokens"
+   },
+   {
+    "field": "access",
+    "url": "https://airtable.com/developers/web/api/billing-plans.md",
+    "match": "Public API limit is currently only enforced on the Free"
+   },
+   {
+    "field": "api",
+    "url": "https://airtable.com/developers/web/api/rate-limits.md",
+    "match": "The API is limited to 5 requests per second per base"
+   },
+   {
+    "field": "mcp",
+    "url": "https://support.airtable.com/docs/using-the-airtable-mcp-server",
+    "match": "Point it at the server URL https://mcp.airtable.com/mcp"
+   }
+  ],
+  "confidence": {
+   "auth": 0.95,
+   "access": 0.8,
+   "api": 0.85,
+   "mcp": 0.9
+  },
+  "needs_browser": false,
+  "open_questions": [
+   "No OpenAPI spec found (llms.txt lists no spec file)."
+  ],
+  "changes": [
+   {
+    "field": "evidence.access",
+    "from": {
+     "url": "https://support.airtable.com/docs/airtable-plans",
+     "match": "1000 API calls per workspace per month"
+    },
+    "to": {
+     "url": "https://airtable.com/developers/web/api/billing-plans.md",
+     "match": "Public API limit is currently only enforced on the Free"
+    },
+    "why": "Vendor page stating which API endpoints the Free plan carries.",
+    "url": "https://airtable.com/developers/web/api/billing-plans.md"
+   },
+   {
+    "field": "access_notes",
+    "from": "Free plan allows 1000 API calls per workspace per month; PATs and OAuth integrations self-registered at airtable.com/create.",
+    "to": "Free plan carries base data endpoints (1000 calls/workspace/month); PATs and OAuth integrations self-registered. OAuth beyond development only needs terms, privacy and support details.",
+    "why": "OAuth release only needs URLs, no review; Free tier endpoint scope documented.",
+    "url": "https://airtable.com/developers/web/api/oauth-reference.md"
+   }
+  ],
+  "unresolved": [
+   "openapi_public: no spec link in the docs index; a human could ask Airtable support."
+  ]
+ },
+ {
+  "id": 73,
+  "app": "Linear",
+  "one_liner": "Issue tracking and product development tool with a GraphQL API.",
+  "auth": [
+   "api_key",
+   "oauth2"
+  ],
+  "auth_notes": "Personal API keys (Authorization header); OAuth 2.0 with user/app actor, including client credentials grant.",
+  "access": "self_serve_free",
+  "prod_gate": "none",
+  "access_notes": "Free plan ($0, unlimited members, 250 issues) gives API keys; OAuth apps created by workspace admins; no documented review for apps.",
+  "api_types": [
+   "graphql",
+   "sdk"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": false,
+  "mcp": "official",
+  "mcp_url": "https://mcp.linear.app/mcp",
+  "mcp_notes": "Hosted Streamable HTTP MCP, OAuth 2.1 with DCR; bearer token or API key also accepted.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "GraphQL only; schema via introspection, no OpenAPI.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://linear.app/developers/graphql",
+    "match": "The Linear API supports personal API keys and OAuth2 authentication"
+   },
+   {
+    "field": "access",
+    "url": "https://linear.app/pricing",
+    "match": "API and webhook access Included Included Included Included"
+   },
+   {
+    "field": "api",
+    "url": "https://linear.app/developers/rate-limiting",
+    "match": "you can make up to 2,500 requests per hour"
+   },
+   {
+    "field": "mcp",
+    "url": "https://linear.app/docs/mcp",
+    "match": "Our MCP server uses Streamable HTTP as the primary transport"
+   }
+  ],
+  "confidence": {
+   "auth": 0.95,
+   "access": 0.85,
+   "api": 0.9,
+   "mcp": 0.95
+  },
+  "needs_browser": false,
+  "open_questions": [
+   "Endpoint count not applicable (GraphQL); breadth judged from schema size, not counted."
+  ],
+  "changes": [
+   {
+    "field": "evidence.access",
+    "from": {
+     "url": "https://linear.app/pricing",
+     "match": "Free for everyone Unlimited members 2 teams 250 issues"
+    },
+    "to": {
+     "url": "https://linear.app/pricing",
+     "match": "API and webhook access Included Included Included Included"
+    },
+    "why": "Direct statement that the Free plan includes API access.",
+    "url": "https://linear.app/pricing"
+   }
+  ],
+  "unresolved": []
+ },
+ {
+  "id": 74,
+  "app": "Jira",
+  "one_liner": "Atlassian issue and project tracking with a Cloud REST API.",
+  "auth": [
+   "basic",
+   "oauth2",
+   "token"
+  ],
+  "auth_notes": "Basic auth with email plus API token; service account API tokens as Bearer; OAuth 2.0 (3LO, service account client credentials; Forge).",
+  "access": "self_serve_free",
+  "prod_gate": "none",
+  "access_notes": "Free plan (up to 10 users) gives self-serve API tokens. 3LO apps shareable by link; unreviewed apps show a warning, Marketplace approval optional.",
+  "api_types": [
+   "rest",
+   "sdk",
+   "cli"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": true,
+  "mcp": "official",
+  "mcp_url": "https://mcp.atlassian.com/v2/mcp",
+  "mcp_notes": "Atlassian remote MCP v2; OAuth 2.1, API token only if org admin enables it.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "Free Jira site covers dev; Cloud REST v3 is broad.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/",
+    "match": "Authentication using passwords has been deprecated"
+   },
+   {
+    "field": "access",
+    "url": "https://support.atlassian.com/jira-cloud-administration/docs/explore-jira-cloud-plans/",
+    "match": "Free plan is for small teams of fewer than 10"
+   },
+   {
+    "field": "api",
+    "url": "https://developer.atlassian.com/cloud/jira/platform/swagger-v3.v3.json",
+    "match": "Jira Cloud platform REST API documentation"
+   },
+   {
+    "field": "mcp",
+    "url": "https://support.atlassian.com/atlassian-rovo-mcp-server/docs/getting-started-with-the-atlassian-remote-mcp-server/",
+    "match": "Authentication via API token is also available as optional"
+   },
+   {
+    "field": "auth",
+    "url": "https://support.atlassian.com/user-management/docs/manage-api-tokens-for-service-accounts/",
+    "match": "You can use Bearer token authentication or basic authentication"
+   }
+  ],
+  "confidence": {
+   "auth": 0.85,
+   "access": 0.9,
+   "api": 0.9,
+   "mcp": 0.9
+  },
+  "needs_browser": false,
+  "open_questions": [
+   "Service account tier wording conflicts on one page (5 free per organization, yet lists Guard Standard/Enterprise).",
+   "Connect end of support reported as 31 January 2027 (search result only)."
+  ],
+  "changes": [
+   {
+    "field": "auth",
+    "from": [
+     "basic",
+     "oauth2",
+     "other"
+    ],
+    "to": [
+     "basic",
+     "oauth2",
+     "token"
+    ],
+    "why": "Service account API tokens accept Bearer; Forge is OAuth 2.0 and Connect JWT is being retired.",
+    "url": "https://support.atlassian.com/user-management/docs/manage-api-tokens-for-service-accounts/"
+   },
+   {
+    "field": "auth_notes",
+    "from": "Basic auth with email plus API token; OAuth 2.0 (3LO); Forge apps. Passwords deprecated.",
+    "to": "Basic auth with email plus API token; service account API tokens as Bearer; OAuth 2.0 (3LO, service account client credentials; Forge).",
+    "why": "Service account and Forge methods read on vendor pages.",
+    "url": "https://support.atlassian.com/user-management/docs/create-oauth-2-0-credential-for-service-accounts/"
+   },
+   {
+    "field": "prod_gate",
+    "from": "unknown",
+    "to": "none",
+    "why": "3LO apps can be shared by link unreviewed; users just see a warning.",
+    "url": "https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/"
+   },
+   {
+    "field": "access_notes",
+    "from": "Free plan 'free forever for 10 users' gives API token self-serve; OAuth 3LO apps via developer console; distribution/marketplace review not checked.",
+    "to": "Free plan (up to 10 users) gives self-serve API tokens. 3LO apps shareable by link; unreviewed apps show a warning, Marketplace approval optional.",
+    "why": "Distribution rules and Free plan now read on vendor pages.",
+    "url": "https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/"
+   },
+   {
+    "field": "evidence.access",
+    "from": {
+     "url": "https://www.atlassian.com/software/jira/pricing",
+     "match": "Jira pricing: Free, Standard, Premium, Enterprise"
+    },
+    "to": {
+     "url": "https://support.atlassian.com/jira-cloud-administration/docs/explore-jira-cloud-plans/",
+     "match": "Free plan is for small teams of fewer than 10"
+    },
+    "why": "Old snippet was only the page title.",
+    "url": "https://support.atlassian.com/jira-cloud-administration/docs/explore-jira-cloud-plans/"
+   },
+   {
+    "field": "evidence.api",
+    "from": {
+     "url": "https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/",
+     "match": "allows external applications and services to access Atlassian product APIs"
+    },
+    "to": {
+     "url": "https://developer.atlassian.com/cloud/jira/platform/swagger-v3.v3.json",
+     "match": "Jira Cloud platform REST API documentation"
+    },
+    "why": "OpenAPI file downloads directly: 433 paths.",
+    "url": "https://developer.atlassian.com/cloud/jira/platform/swagger-v3.v3.json"
+   },
+   {
+    "field": "mcp_notes",
+    "from": "Atlassian Rovo remote MCP; OAuth, optional API token authentication.",
+    "to": "Atlassian remote MCP v2; OAuth 2.1, API token only if org admin enables it.",
+    "why": "Docs moved to AI Gateway; token auth is admin-enabled.",
+    "url": "https://support.atlassian.com/atlassian-ai-gateway/docs/authentication-and-authorization/"
+   },
+   {
+    "field": "needs_browser",
+    "from": true,
+    "to": false,
+    "why": "All cited pages readable by curl.",
+    "url": "https://developer.atlassian.com/cloud/jira/platform/swagger-v3.v3.json"
+   },
+   {
+    "field": "confidence.access",
+    "from": 0.85,
+    "to": 0.9,
+    "why": "Free plan and sharing read directly.",
+    "url": "https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/"
+   }
+  ],
+  "unresolved": [
+   "Whether service accounts work on a Free-only organization: the Atlassian page gives conflicting tiers; a human should check admin.atlassian.com."
+  ]
+ },
+ {
+  "id": 75,
+  "app": "Asana",
+  "one_liner": "Work management platform for teams with a REST API.",
+  "auth": [
+   "token",
+   "oauth2"
+  ],
+  "auth_notes": "Personal access tokens, Enterprise-tier service account tokens, and OAuth 2.0 (OpenID Connect supported).",
+  "access": "self_serve_free",
+  "prod_gate": "none",
+  "access_notes": "PATs from developer console; free domains get 150 requests/min. Apps can be shared with any workspace; App Directory listing optional.",
+  "api_types": [
+   "rest",
+   "sdk",
+   "cli"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": true,
+  "mcp": "official",
+  "mcp_url": "https://mcp.asana.com/v2/mcp",
+  "mcp_notes": "Hosted V2, GA; OAuth client must be pre-registered as an MCP app; not admin-blocked.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "Free domain works; limits lower.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://developers.asana.com/docs/authentication.md",
+    "match": "PATs are long-lived tokens allowing programmatic authentication"
+   },
+   {
+    "field": "access",
+    "url": "https://developers.asana.com/docs/rate-limits",
+    "match": "whether the domain is free or paid"
+   },
+   {
+    "field": "api",
+    "url": "https://raw.githubusercontent.com/Asana/openapi/master/defs/asana_oas.yaml",
+    "match": "This is the interface for interacting with the [Asana"
+   },
+   {
+    "field": "mcp",
+    "url": "https://developers.asana.com/docs/using-asanas-mcp-server.md",
+    "match": "The Asana MCP V2 server is available at"
+   },
+   {
+    "field": "api",
+    "url": "https://developers.asana.com/docs/asana-cli.md",
+    "match": "The Asana CLI provides command-line access to the Asana API"
+   }
+  ],
+  "confidence": {
+   "auth": 0.9,
+   "access": 0.75,
+   "api": 0.9,
+   "mcp": 0.9
+  },
+  "needs_browser": false,
+  "open_questions": [
+   "Free-plan PAT availability is inferred from the Free rate-limit tier; no explicit plan statement. Developer sandbox is a form request."
+  ],
+  "changes": [
+   {
+    "field": "api_types",
+    "from": [
+     "rest",
+     "sdk"
+    ],
+    "to": [
+     "rest",
+     "sdk",
+     "cli"
+    ],
+    "why": "Asana now publishes an official CLI (npm @asana-api/cli).",
+    "url": "https://developers.asana.com/docs/asana-cli.md"
+   },
+   {
+    "field": "auth_notes",
+    "from": "Personal access tokens (also service accounts) and OAuth 2.0 apps.",
+    "to": "Personal access tokens, Enterprise-tier service account tokens, and OAuth 2.0 (OpenID Connect supported).",
+    "why": "Service accounts are Enterprise tier only.",
+    "url": "https://developers.asana.com/docs/authentication.md"
+   },
+   {
+    "field": "mcp_notes",
+    "from": "Hosted Streamable HTTP MCP; requires OAuth and app not blocked by admin.",
+    "to": "Hosted V2, GA; OAuth client must be pre-registered as an MCP app; not admin-blocked.",
+    "why": "GA status and pre-registration are documented.",
+    "url": "https://developers.asana.com/docs/integrating-with-asanas-mcp-server.md"
+   },
+   {
+    "field": "evidence.api",
+    "from": {
+     "url": "https://developers.asana.com/docs/share-your-app.md",
+     "match": "any workspace (public)"
+    },
+    "to": {
+     "url": "https://raw.githubusercontent.com/Asana/openapi/master/defs/asana_oas.yaml",
+     "match": "This is the interface for interacting with the [Asana"
+    },
+    "why": "Old snippet was about app sharing, not the API; the spec has 192 paths.",
+    "url": "https://raw.githubusercontent.com/Asana/openapi/master/defs/asana_oas.yaml"
+   }
+  ],
+  "unresolved": [
+   "Explicit statement that the Personal (free) plan includes API tokens: a human would create a token on a free account."
+  ]
+ },
+ {
+  "id": 76,
+  "app": "Monday.com",
+  "one_liner": "Work operating system for managing projects, CRM and workflows, with a GraphQL API.",
+  "auth": [
+   "token",
+   "oauth2"
+  ],
+  "auth_notes": "Personal V2 API token (header); OAuth 2.0 for apps, with newer OAuth 2.1 flow recommended.",
+  "access": "self_serve_free",
+  "prod_gate": "none",
+  "access_notes": "Free plan (2 seats) with 200 API calls/day, or free developer account; public apps shareable by link, marketplace listing reviewed.",
+  "api_types": [
+   "graphql",
+   "sdk",
+   "cli"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": false,
+  "mcp": "official",
+  "mcp_url": "https://mcp.monday.com/mcp",
+  "mcp_notes": "Hosted MCP, API token or OAuth; customer admin approval for non-preapproved clients via DCR.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "Low call quota on free (200/day).",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://developer.monday.com/api-reference/docs/authentication",
+    "match": "monday platform API token permissions"
+   },
+   {
+    "field": "access",
+    "url": "https://developer.monday.com/api-reference/docs/rate-limits",
+    "match": "Free 200 Standard/Basic 1,000 Pro/Trial 10,000"
+   },
+   {
+    "field": "api",
+    "url": "https://developer.monday.com/api-reference/docs/rate-limits",
+    "match": "maintains the API service as a free feature across all plans"
+   },
+   {
+    "field": "mcp",
+    "url": "https://developer.monday.com/api-reference/docs/mcp-api-token",
+    "match": "https://mcp.monday.com/mcp"
+   },
+   {
+    "field": "auth",
+    "url": "https://developer.monday.com/apps/docs/oauth.md",
+    "match": "Authenticating monday apps with OAuth2 and defining permission scopes"
+   }
+  ],
+  "confidence": {
+   "auth": 0.85,
+   "access": 0.8,
+   "api": 0.85,
+   "mcp": 0.9
+  },
+  "needs_browser": false,
+  "open_questions": [],
+  "changes": [
+   {
+    "field": "prod_gate",
+    "from": "unknown",
+    "to": "none",
+    "why": "Public apps shareable with other accounts by link; review only for marketplace listing.",
+    "url": "https://developer.monday.com/apps/docs/install-and-share-your-apps.md"
+   },
+   {
+    "field": "access_notes",
+    "from": "Free forever plan (2 seats) with 200 daily API calls; API stated free across all plans; app marketplace review not checked.",
+    "to": "Free plan (2 seats) with 200 API calls/day, or free developer account; public apps shareable by link, marketplace listing reviewed.",
+    "why": "App sharing rules read; free developer account documented.",
+    "url": "https://developer.monday.com/apps/docs/install-and-share-your-apps.md"
+   },
+   {
+    "field": "auth_notes",
+    "from": "Personal API token (header); OAuth 2.0 for apps.",
+    "to": "Personal V2 API token (header); OAuth 2.0 for apps, with newer OAuth 2.1 flow recommended.",
+    "why": "Current OAuth docs call the old flow legacy.",
+    "url": "https://developer.monday.com/apps/docs/oauth.md"
+   },
+   {
+    "field": "mcp_notes",
+    "from": "Hosted MCP; API token via bearer header or OAuth app.",
+    "to": "Hosted MCP, API token or OAuth; customer admin approval for non-preapproved clients via DCR.",
+    "why": "Auth paths table documents admin approval for dynamic clients.",
+    "url": "https://developer.monday.com/api-reference/docs/integrate-with-monday-mcp.md"
+   }
+  ],
+  "unresolved": []
+ },
+ {
+  "id": 77,
+  "app": "ClickUp",
+  "one_liner": "Productivity and project management platform with a REST API (v2/v3).",
+  "auth": [
+   "token",
+   "oauth2"
+  ],
+  "auth_notes": "Personal API token (pk_, Authorization header) and OAuth 2.0 authorization code.",
+  "access": "self_serve_free",
+  "prod_gate": "none",
+  "access_notes": "Free Forever workspace has API at 100 req/min; OAuth apps created by workspace owners/admins in settings.",
+  "api_types": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": true,
+  "mcp": "official",
+  "mcp_url": "https://mcp.clickup.com/mcp",
+  "mcp_notes": "Hosted, OAuth only (no API tokens), all plans; Free Forever 100 calls/24h.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "Free plan fine.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://developer.clickup.com/docs/authentication.md",
+    "match": "Authenticate to the ClickUp API using a personal token or OAuth"
+   },
+   {
+    "field": "access",
+    "url": "https://developer.clickup.com/docs/rate-limits.md",
+    "match": "| FreeForever | 100 |"
+   },
+   {
+    "field": "api",
+    "url": "https://developer.clickup.com/docs/open-api-spec.md",
+    "match": "The raw OpenAPI specification for the ClickUp API"
+   },
+   {
+    "field": "mcp",
+    "url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server.md",
+    "match": "Our MCP server URL is"
+   }
+  ],
+  "confidence": {
+   "auth": 0.95,
+   "access": 0.8,
+   "api": 0.9,
+   "mcp": 0.9
+  },
+  "needs_browser": false,
+  "open_questions": [
+   "Review requirements for public OAuth apps not documented."
+  ],
+  "changes": [
+   {
+    "field": "api_types",
+    "from": [
+     "rest",
+     "sdk"
+    ],
+    "to": [
+     "rest"
+    ],
+    "why": "Only community SDKs found; vendor docs index lists none.",
+    "url": "https://developer.clickup.com/llms.txt"
+   },
+   {
+    "field": "mcp_notes",
+    "from": "Hosted MCP server with documented setup for Claude and others.",
+    "to": "Hosted, OAuth only (no API tokens), all plans; Free Forever 100 calls/24h.",
+    "why": "MCP page states auth and limits.",
+    "url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server.md"
+   },
+   {
+    "field": "evidence.mcp",
+    "from": {
+     "url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server-1.md",
+     "match": "Remote MCP Server URL"
+    },
+    "to": {
+     "url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server.md",
+     "match": "Our MCP server URL is"
+    },
+    "why": "Main MCP page carries URL, auth and plan limits.",
+    "url": "https://developer.clickup.com/docs/connect-an-ai-assistant-to-clickups-mcp-server.md"
+   },
+   {
+    "field": "evidence.access",
+    "from": {
+     "url": "https://developer.clickup.com/docs/rate-limits.md",
+     "match": "FreeForever"
+    },
+    "to": {
+     "url": "https://developer.clickup.com/docs/rate-limits.md",
+     "match": "| FreeForever | 100 |"
+    },
+    "why": "Old snippet was one word; row shows the Free quota.",
+    "url": "https://developer.clickup.com/docs/rate-limits.md"
+   }
+  ],
+  "unresolved": []
+ },
+ {
+  "id": 78,
+  "app": "Coda",
+  "one_liner": "Doc-and-table workspace now branded Superhuman Docs; public REST API.",
+  "auth": [
+   "token"
+  ],
+  "auth_notes": "API token as bearer (UUID), optionally restricted to docs or tables; OAuth not documented.",
+  "access": "self_serve_free",
+  "prod_gate": "none",
+  "access_notes": "API available free of charge in free and paid workspaces; token from account settings.",
+  "api_types": [
+   "rest",
+   "sdk"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": true,
+  "mcp": "official",
+  "mcp_url": "https://docs.superhuman.com/apis/mcp",
+  "mcp_notes": "Official Docs MCP, beta Apr 2026; paid plans full, free plan read-only 30 requests/week.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "Product rebranded Superhuman; some help pages Cloudflare-blocked.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://coda.io/apis/v1/openapi.json",
+    "match": "can be accessed using an API token"
+   },
+   {
+    "field": "access",
+    "url": "https://coda.io/developers/apis/v1",
+    "match": "available to all of our users free of charge"
+   },
+   {
+    "field": "api",
+    "url": "https://coda.io/apis/v1/openapi.json",
+    "match": "Superhuman Docs API"
+   },
+   {
+    "field": "mcp",
+    "url": "https://superhuman.com/docs/features/docs-mcp",
+    "match": "MCP is included on all paid plans"
+   },
+   {
+    "field": "mcp",
+    "url": "https://docs.superhuman.com/.well-known/oauth-protected-resource/apis/mcp",
+    "match": "Superhuman Docs MCP Server"
+   }
+  ],
+  "confidence": {
+   "auth": 0.9,
+   "access": 0.85,
+   "api": 0.9,
+   "mcp": 0.9
+  },
+  "needs_browser": false,
+  "open_questions": [
+   "Whether the MCP has left beta since April 2026.",
+   "SDK: vendor supports only a Google Apps Script client library, plus the Packs SDK."
+  ],
+  "changes": [
+   {
+    "field": "mcp_notes",
+    "from": "Official Superhuman Docs MCP (older coda.io/apis/mcp being phased out); URL from search, not fetched.",
+    "to": "Official Docs MCP, beta Apr 2026; paid plans full, free plan read-only 30 requests/week.",
+    "why": "Plan limits stated on vendor page; pass 1 missed them.",
+    "url": "https://superhuman.com/docs/features/docs-mcp"
+   },
+   {
+    "field": "evidence.mcp",
+    "from": {
+     "url": "https://coda.io/developers/apis/v1",
+     "match": "consider using the Superhuman Docs MCP server"
+    },
+    "to": {
+     "url": "https://superhuman.com/docs/features/docs-mcp",
+     "match": "MCP is included on all paid plans"
+    },
+    "why": "Direct vendor MCP page replaces passing mention.",
+    "url": "https://superhuman.com/docs/features/docs-mcp"
+   },
+   {
+    "field": "confidence.mcp",
+    "from": 0.7,
+    "to": 0.9,
+    "why": "Endpoint metadata and vendor page both confirm.",
+    "url": "https://docs.superhuman.com/.well-known/oauth-protected-resource/apis/mcp"
+   }
+  ],
+  "unresolved": [
+   "MCP beta/GA status today: help.superhuman.com is Cloudflare-blocked, a human should open it."
+  ]
+ },
+ {
+  "id": 79,
+  "app": "Smartsheet",
+  "one_liner": "Spreadsheet-style work management platform with REST API and MCP server.",
+  "auth": [
+   "token",
+   "oauth2"
+  ],
+  "auth_notes": "API access token (Bearer) and OAuth 2.0 3-legged flow via registered Developer Tools.",
+  "access": "paid_plan",
+  "prod_gate": "none",
+  "access_notes": "API token needs Business, Enterprise or Advanced Work Management; 30-day trial cannot generate API tokens. OAuth app registration is self-serve.",
+  "api_types": [
+   "rest",
+   "sdk"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": true,
+  "mcp": "official",
+  "mcp_url": "https://mcp.smartsheet.com",
+  "mcp_notes": "Regional hosted MCP (US/EU/AU); needs Business or higher plan; OAuth or API token.",
+  "verdict": "build_with_caveat",
+  "main_blocker": "paid_plan",
+  "blocker_notes": "Paid plan needed to generate API token.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://developers.smartsheet.com/api/smartsheet/guides/advanced-topics/oauth.md",
+    "match": "registering apps to use OAuth and implementing an OAuth flow"
+   },
+   {
+    "field": "access",
+    "url": "https://developers.smartsheet.com/api/smartsheet/guides/getting-started",
+    "match": "Required plan: Business, Enterprise, or Advanced Work Management"
+   },
+   {
+    "field": "api",
+    "url": "https://developers.smartsheet.com/api/smartsheet/openapi.md",
+    "match": "The Smartsheet API is restricted to users on Business"
+   },
+   {
+    "field": "mcp",
+    "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/install-the-smartsheet-mcp-server.md",
+    "match": "Region URLs"
+   },
+   {
+    "field": "access",
+    "url": "https://help.smartsheet.com/articles/529590-smartsheet-free-trial-faqs",
+    "match": "You can't generate API access tokens"
+   }
+  ],
+  "confidence": {
+   "auth": 0.9,
+   "access": 0.95,
+   "api": 0.9,
+   "mcp": 0.9
+  },
+  "needs_browser": false,
+  "open_questions": [],
+  "changes": [
+   {
+    "field": "access_notes",
+    "from": "API token requires Business, Enterprise or Advanced Work Management plan; Developer Tools registration for OAuth is self-serve.",
+    "to": "API token needs Business, Enterprise or Advanced Work Management; 30-day trial cannot generate API tokens. OAuth app registration is self-serve.",
+    "why": "Trial FAQ rules out trial access.",
+    "url": "https://help.smartsheet.com/articles/529590-smartsheet-free-trial-faqs"
+   },
+   {
+    "field": "evidence.api",
+    "from": {
+     "url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication",
+     "match": "Smartsheet implementation of OAuth 2.0 is a 3-legged process"
+    },
+    "to": {
+     "url": "https://developers.smartsheet.com/api/smartsheet/openapi.md",
+     "match": "The Smartsheet API is restricted to users on Business"
+    },
+    "why": "Old snippet was about OAuth, not API coverage.",
+    "url": "https://developers.smartsheet.com/api/smartsheet/openapi.md"
+   },
+   {
+    "field": "confidence.access",
+    "from": 0.85,
+    "to": 0.95,
+    "why": "Trial exclusion and plan list confirmed.",
+    "url": "https://help.smartsheet.com/articles/529590-smartsheet-free-trial-faqs"
+   },
+   {
+    "field": "confidence.api",
+    "from": 0.75,
+    "to": 0.9,
+    "why": "Raw OpenAPI file is linked and downloads.",
+    "url": "https://developers.smartsheet.com/api/smartsheet/openapi.md"
+   }
+  ],
+  "unresolved": []
+ },
+ {
+  "id": 80,
+  "app": "Harvest",
+  "one_liner": "Time tracking, invoicing and expense tracking tool with REST API v2.",
+  "auth": [
+   "token",
+   "oauth2"
+  ],
+  "auth_notes": "Personal access tokens (Bearer plus Harvest-Account-Id) from Harvest ID; OAuth2 applications for others.",
+  "access": "self_serve_free",
+  "prod_gate": "none",
+  "access_notes": "Free plan (1 seat, 2 projects, free forever) and Harvest ID developer section give tokens; OAuth app registered in Harvest ID.",
+  "api_types": [
+   "rest"
+  ],
+  "api_breadth": "broad",
+  "openapi_public": false,
+  "mcp": "official",
+  "mcp_url": "https://api.harvestapp.com/mcp",
+  "mcp_notes": "Hosted remote MCP on vendor domain, OAuth via Harvest ID; help article blocked to curl.",
+  "verdict": "build_now",
+  "main_blocker": "none",
+  "blocker_notes": "Rate limit 100 requests/15s.",
+  "evidence": [
+   {
+    "field": "auth",
+    "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+    "match": "Implementing a full OAuth2 Authentication flow which allows other people to use your Harvest integrations"
+   },
+   {
+    "field": "access",
+    "url": "https://www.getharvest.com/pricing",
+    "match": "1 seat 2 projects Time tracking Invoicing"
+   },
+   {
+    "field": "api",
+    "url": "https://help.getharvest.com/api-v2/introduction/overview/general/",
+    "match": "100 requests per 15 seconds"
+   },
+   {
+    "field": "mcp",
+    "url": "https://api.harvestapp.com/.well-known/oauth-protected-resource/mcp",
+    "match": "\"resource\":\"https://api.harvestapp.com/mcp\""
+   }
+  ],
+  "confidence": {
+   "auth": 0.9,
+   "access": 0.8,
+   "api": 0.8,
+   "mcp": 0.85
+  },
+  "needs_browser": true,
+  "open_questions": [
+   "Harvest help article says (search result only) API access is included for free and trial accounts.",
+   "No OpenAPI spec found.",
+   "Review requirement for public OAuth apps not documented."
+  ],
+  "changes": [
+   {
+    "field": "evidence.mcp",
+    "from": {
+     "url": "https://support.getharvest.com/hc/en-us/articles/46293697226381-Harvest-MCP",
+     "match": ""
+    },
+    "to": {
+     "url": "https://api.harvestapp.com/.well-known/oauth-protected-resource/mcp",
+     "match": "\"resource\":\"https://api.harvestapp.com/mcp\""
+    },
+    "why": "Support page blocked (403); vendor-hosted MCP OAuth metadata is machine-readable.",
+    "url": "https://api.harvestapp.com/.well-known/oauth-protected-resource/mcp"
+   },
+   {
+    "field": "confidence.mcp",
+    "from": 0.6,
+    "to": 0.85,
+    "why": "Vendor domain serves MCP OAuth metadata.",
+    "url": "https://api.harvestapp.com/.well-known/oauth-protected-resource/mcp"
+   },
+   {
+    "field": "mcp_notes",
+    "from": "Hosted remote MCP per support article (blocked to curl, found via search); OAuth sign-in.",
+    "to": "Hosted remote MCP on vendor domain, OAuth via Harvest ID; help article blocked to curl.",
+    "why": "OAuth server named in metadata.",
+    "url": "https://api.harvestapp.com/.well-known/oauth-protected-resource/mcp"
+   }
+  ],
+  "unresolved": [
+   "MCP plan scope and tool list, and the API-on-free statement: a human should open support.getharvest.com articles 46293697226381 and 360048180732."
+  ]
+ }
+]
