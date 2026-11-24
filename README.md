@@ -1,7 +1,7 @@
 # Keys to 100 Apps
 
 Research agent for the Composio AI Product Ops take-home: which of 100 apps can become agent toolkits, and what blocks the rest.
-Open `site/index.html` for the case study. `site/data.json` and `site/data.csv` hold every row with evidence.
+Live case study: https://shivansh488.github.io/keys-to-100-apps/ (source: `docs/index.html`). `site/data.json` and `site/data.csv` hold every row with evidence.
 
 ## Run
 Python 3.11+ and curl. Steps 1 to 4 need no keys.
@@ -24,4 +24,4 @@ Pass 0 rules -> pass 1 research -> quote check -> pass 2 adversarial verify -> s
 ## Honesty notes
 - Gold and holdout labels were read in a browser by the supervising AI, not by a person. `data/human_checks.csv` is the human queue: fill `status` (done), `result`, `checked_by`, then rebuild the page.
 - Some pass 2 gains come from rules clarified after the gold was written. See the page.
-- Pass 2 notes include short quoted snippets from vendor pages for machine checking.
+- Evidence entries include short quoted snippets from vendor pages for machine checking.

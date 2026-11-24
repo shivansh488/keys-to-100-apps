@@ -57,3 +57,10 @@ tpl=open("pipeline/page_template.html").read()
 for k,v in dict(BARS=bars,LEG=leg,ROWS=rows,GAP=gap,CAV=cav,OUT=out,ACC=acc,FLD=fld,MISS=miss,HITS=hits,HC=hcr,HCN=f"{done} of {len(hc)}",OVR=ovr,CATS=co,NB=str(P["verdict"]["build_now"]),NC=str(P["verdict"]["build_with_caveat"]),NO=str(P["verdict"]["needs_outreach"]),SS=str(P["self_serve"]),FREE=str(P["access"]["self_serve_free"]),TRIAL=str(P["access"]["self_serve_trial"]),SG=str(P["ss_second_gate"]),SU=str(P["ss_unknown"]),OAU=str(P["auth_oauth"]),STA=str(P["auth_static"]),BOTH=str(P["auth_both"]),OONLY=str(len(P["oauth_only"])),SNO=str(P["static_no_oauth"]),MCP=str(P["mcp"]["official"]),MCPG=str(len(P["mcp_prod_gated"])),NG=str(len(P["gap_build_now"])),NGT=str(len(P["gap_build_now"])+len(P["gap_other"])),EV1=f'{E1[True]} of {sum(E1.values())}',EV2=f'{E2[True]} of {sum(E2.values())}',UNR=str(sum(bool(r["unresolved"]) for r in F)),SETT=str(H["settled"])).items(): tpl=tpl.replace("{{"+k+"}}",v)
 assert "{{" not in tpl, tpl[tpl.index("{{"):][:40]
 open("site/index.html","w").write(tpl);print(len(tpl))
+# standalone copy for GitHub Pages: same content in a full HTML document
+import shutil
+pathlib.Path("docs").mkdir(exist_ok=True)
+head,body=tpl.split("</style>",1)
+open("docs/index.html","w").write('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n<style>img{max-width:100%}[hidden]{display:none!important}</style>\n'+head+"</style>\n</head>\n<body>"+body+"</body>\n</html>\n")
+for f in("data.json","data.csv"): shutil.copy("site/"+f,"docs/"+f)
+pathlib.Path("docs/.nojekyll").touch()
