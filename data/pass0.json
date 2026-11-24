@@ -1,0 +1,1916 @@
+[
+ {
+  "id": 1,
+  "app": "Salesforce",
+  "auth": [
+   "unknown"
+  ],
+  "access": "self_serve_trial",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "official",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://www.salesforce.com/in/?ir=1&bc=OTH",
+   "https://www.salesforce.com/in/agentforce/pricing/?bc=OTH",
+   "https://www.salesforce.com/in/sales/pricing/?bc=OTH",
+   "https://www.salesforce.com/in/service/pricing/?bc=OTH",
+   "https://www.salesforce.com/in/marketing/pricing/?bc=OTH"
+  ],
+  "http": 200
+ },
+ {
+  "id": 2,
+  "app": "HubSpot",
+  "auth": [
+   "unknown"
+  ],
+  "access": "self_serve_free",
+  "api_types": [],
+  "mcp": "none_found",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://www.hubspot.com/",
+   "https://developers.hubspot.com/",
+   "https://www.hubspot.com/pricing/marketing"
+  ],
+  "http": 200
+ },
+ {
+  "id": 3,
+  "app": "Pipedrive",
+  "auth": [
+   "unknown"
+  ],
+  "access": "self_serve_trial",
+  "api_types": [],
+  "mcp": "official",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://www.pipedrive.com/",
+   "https://developers.pipedrive.com/",
+   "https://app.pipedrive.com/auth/login"
+  ],
+  "http": 200
+ },
+ {
+  "id": 4,
+  "app": "Attio",
+  "auth": [
+   "oauth2"
+  ],
+  "access": "self_serve_trial",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "official",
+  "verdict": "build_now",
+  "pages": [
+   "https://attio.com/",
+   "https://attio.com/platform/developers",
+   "https://attio.com/pricing"
+  ],
+  "http": 200
+ },
+ {
+  "id": 5,
+  "app": "Twenty",
+  "auth": [
+   "oauth2"
+  ],
+  "access": "self_serve_trial",
+  "api_types": [
+   "rest",
+   "graphql"
+  ],
+  "mcp": "official",
+  "verdict": "build_now",
+  "pages": [
+   "https://twenty.com/",
+   "https://twenty.com/pricing",
+   "https://docs.twenty.com/developers/introduction",
+   "https://docs.twenty.com/getting-started/introduction"
+  ],
+  "http": 200
+ },
+ {
+  "id": 6,
+  "app": "Podio",
+  "auth": [
+   "unknown"
+  ],
+  "access": "self_serve_free",
+  "api_types": [],
+  "mcp": "official",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://podio.com/",
+   "https://www.progress.com/podio/pricing"
+  ],
+  "http": 200
+ },
+ {
+  "id": 7,
+  "app": "Zoho CRM",
+  "auth": [
+   "unknown"
+  ],
+  "access": "self_serve_trial",
+  "api_types": [],
+  "mcp": "none_found",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://www.zoho.com/en-in/crm/",
+   "https://www.zoho.com/crm/zohocrm-pricing.html?source_from=crm_home"
+  ],
+  "http": 200
+ },
+ {
+  "id": 8,
+  "app": "Close",
+  "auth": [
+   "oauth2",
+   "static_key"
+  ],
+  "access": "self_serve_trial",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "official",
+  "verdict": "build_now",
+  "pages": [
+   "https://close.com/",
+   "https://developer.close.com/mcp",
+   "https://close.com/pricing",
+   "https://developer.close.com/"
+  ],
+  "http": 200
+ },
+ {
+  "id": 9,
+  "app": "Copper",
+  "auth": [
+   "oauth2"
+  ],
+  "access": "self_serve_trial",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "none_found",
+  "verdict": "build_now",
+  "pages": [
+   "https://www.copper.com:443/",
+   "https://www.copper.com:443/pricing",
+   "https://developer.copper.com/",
+   "https://www.copper.com/pricing"
+  ],
+  "http": 200
+ },
+ {
+  "id": 10,
+  "app": "DealCloud",
+  "auth": [
+   "static_key"
+  ],
+  "access": "unknown",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "official",
+  "verdict": "build_with_caveat",
+  "pages": [
+   "https://api.docs.dealcloud.com/",
+   "https://api.docs.dealcloud.com/favicon.ico",
+   "https://api.docs.dealcloud.com/_next/static/css/75660a9d0f8e50cc.css",
+   "https://api.docs.dealcloud.com/docs",
+   "https://api.docs.dealcloud.com/docs/apikeys"
+  ],
+  "http": 200
+ },
+ {
+  "id": 11,
+  "app": "Zendesk",
+  "auth": [
+   "unknown"
+  ],
+  "access": "self_serve_trial",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "none_found",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://www.zendesk.com/in/#georedirect",
+   "https://www.zendesk.com/in/pricing/",
+   "https://developer.zendesk.com/documentation/"
+  ],
+  "http": 200
+ },
+ {
+  "id": 12,
+  "app": "Intercom",
+  "auth": [
+   "oauth2",
+   "static_key"
+  ],
+  "access": "self_serve_trial",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "official",
+  "verdict": "build_now",
+  "pages": [
+   "https://www.intercom.com/",
+   "https://www.intercom.com/pricing",
+   "https://fin.ai/pricing",
+   "https://developers.intercom.com/"
+  ],
+  "http": 200
+ },
+ {
+  "id": 13,
+  "app": "Freshdesk",
+  "auth": [
+   "unknown"
+  ],
+  "access": "self_serve_trial",
+  "api_types": [],
+  "mcp": "official",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://www.freshworks.com/freshdesk/",
+   "https://www.freshworks.com/freshdesk/pricing/",
+   "https://play.google.com/store/apps/developer?id=Freshworks+Inc",
+   "https://apps.apple.com/us/developer/freshworks-technologies-private-limited/id849713309"
+  ],
+  "http": 200
+ },
+ {
+  "id": 14,
+  "app": "Front",
+  "auth": [
+   "unknown"
+  ],
+  "access": "self_serve_trial",
+  "api_types": [],
+  "mcp": "official",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://front.com/",
+   "https://front.com/pricing"
+  ],
+  "http": 200
+ },
+ {
+  "id": 15,
+  "app": "Pylon",
+  "auth": [
+   "static_key"
+  ],
+  "access": "self_serve_trial",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "official",
+  "verdict": "build_now",
+  "pages": [
+   "https://www.usepylon.com/",
+   "https://www.usepylon.com/pricing",
+   "https://docs.usepylon.com/pylon-docs/developer/api/api-reference"
+  ],
+  "http": 200
+ },
+ {
+  "id": 16,
+  "app": "LiveAgent",
+  "auth": [
+   "static_key"
+  ],
+  "access": "self_serve_trial",
+  "api_types": [],
+  "mcp": "official",
+  "verdict": "build_now",
+  "pages": [
+   "https://www.liveagent.com/",
+   "https://www.liveagent.com/pricing/"
+  ],
+  "http": 200
+ },
+ {
+  "id": 17,
+  "app": "Plain",
+  "auth": [
+   "unknown"
+  ],
+  "access": "self_serve_trial",
+  "api_types": [],
+  "mcp": "official",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://www.plain.com/",
+   "https://www.plain.com/pricing"
+  ],
+  "http": 200
+ },
+ {
+  "id": 18,
+  "app": "Help Scout",
+  "auth": [
+   "oauth2"
+  ],
+  "access": "self_serve_trial",
+  "api_types": [],
+  "mcp": "none_found",
+  "verdict": "build_now",
+  "pages": [
+   "https://www.helpscout.com/",
+   "https://www.helpscout.com/pricing/",
+   "https://developer.helpscout.com/"
+  ],
+  "http": 200
+ },
+ {
+  "id": 19,
+  "app": "Gorgias",
+  "auth": [
+   "unknown"
+  ],
+  "access": "self_serve_trial",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "none_found",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://www.gorgias.com/",
+   "https://www.gorgias.com/pricing",
+   "https://developers.gorgias.com/",
+   "https://www.gorgias.com/pricing?ref=home&amp;ref-position=other"
+  ],
+  "http": 200
+ },
+ {
+  "id": 20,
+  "app": "Gladly",
+  "auth": [
+   "unknown"
+  ],
+  "access": "partner_or_sales",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "none_found",
+  "verdict": "needs_outreach",
+  "pages": [
+   "https://www.gladly.ai/",
+   "https://developer.gladly.com/"
+  ],
+  "http": 200
+ },
+ {
+  "id": 21,
+  "app": "Slack",
+  "auth": [
+   "oauth2"
+  ],
+  "access": "partner_or_sales",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "official",
+  "verdict": "needs_outreach",
+  "pages": [
+   "https://slack.com/intl/en-in/",
+   "https://docs.slack.dev/",
+   "https://slack.com/intl/en-in/pricing",
+   "https://slack.com/intl/en-in/pricing/paid-vs-free"
+  ],
+  "http": 200
+ },
+ {
+  "id": 22,
+  "app": "Twilio",
+  "auth": [
+   "unknown"
+  ],
+  "access": "self_serve_trial",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "none_found",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://www.twilio.com/en-us",
+   "https://www.twilio.com/en-us/user-authentication-identity",
+   "https://www.twilio.com/en-us/user-authentication-identity/verify",
+   "https://www.twilio.com/en-us/user-authentication-identity/lookup",
+   "https://www.twilio.com/en-us/developers"
+  ],
+  "http": 200
+ },
+ {
+  "id": 23,
+  "app": "Zoho Cliq",
+  "auth": [
+   "unknown"
+  ],
+  "access": "self_serve_trial",
+  "api_types": [],
+  "mcp": "none_found",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://www.zoho.com/cliq/"
+  ],
+  "http": 200
+ },
+ {
+  "id": 24,
+  "app": "Lark (Larksuite)",
+  "auth": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_types": [],
+  "mcp": "none_found",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://open.larksuite.com/"
+  ],
+  "http": 200
+ },
+ {
+  "id": 25,
+  "app": "Pumble",
+  "auth": [
+   "oauth2",
+   "static_key"
+  ],
+  "access": "self_serve_trial",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "official",
+  "verdict": "build_now",
+  "pages": [
+   "https://pumble.com/",
+   "https://pumble.com/pricing",
+   "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/"
+  ],
+  "http": 200
+ },
+ {
+  "id": 26,
+  "app": "Discord",
+  "auth": [
+   "oauth2"
+  ],
+  "access": "self_serve_free",
+  "api_types": [],
+  "mcp": "none_found",
+  "verdict": "build_now",
+  "pages": [
+   "https://discord.com/",
+   "https://discord.com/developers",
+   "https://discord.com/developers/social-sdk",
+   "https://discord.com/developers/social-commerce",
+   "https://discord.com/developers/build",
+   "https://discord.com/developers/developer-newsletter"
+  ],
+  "http": 200
+ },
+ {
+  "id": 27,
+  "app": "Telegram",
+  "auth": [
+   "unknown"
+  ],
+  "access": "self_serve_free",
+  "api_types": [],
+  "mcp": "none_found",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://core.telegram.org/",
+   "https://core.telegram.org/api",
+   "https://core.telegram.org/api/obtaining_api_id",
+   "https://core.telegram.org/api/auth",
+   "https://core.telegram.org/api/srp",
+   "https://core.telegram.org/api/qr-login"
+  ],
+  "http": 200
+ },
+ {
+  "id": 28,
+  "app": "WhatsApp Business",
+  "auth": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_types": [],
+  "mcp": "none_found",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://developers.facebook.com/docs/whatsapp"
+  ],
+  "http": 400
+ },
+ {
+  "id": 29,
+  "app": "Aircall",
+  "auth": [
+   "unknown"
+  ],
+  "access": "self_serve_trial",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "official",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://aircall.io/",
+   "https://aircall.io/pricing/",
+   "https://developer.aircall.io/"
+  ],
+  "http": 200
+ },
+ {
+  "id": 30,
+  "app": "Vonage",
+  "auth": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "none_found",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://developer.vonage.com/en/home",
+   "https://developer.vonage.com/assets/vivid-ssr/4.31.0/vivid-ssr.min.css",
+   "https://developer.vonage.com/vendor.css",
+   "https://developer.vonage.com/_nuxt/entry.wUzcNh51.css",
+   "https://developer.vonage.com/_nuxt/default.DclJFIsg.css",
+   "https://developer.vonage.com/_nuxt/SectionWithMaxWidth.DgScvmI4.css"
+  ],
+  "http": 200
+ },
+ {
+  "id": 31,
+  "app": "Google Ads",
+  "auth": [
+   "oauth2"
+  ],
+  "access": "unknown",
+  "api_types": [],
+  "mcp": "none_found",
+  "verdict": "build_with_caveat",
+  "pages": [
+   "https://developers.google.com/google-ads",
+   "https://developers.google.com/_pwa/developers/manifest.json",
+   "https://www.gstatic.com/devrel-devsite/prod/vc11e4c9d4c060345ba98585d538d4546e842f4a6ee5c5f9e85be4bd345767217/developers/css/app.css",
+   "https://www.gstatic.com/devrel-devsite/prod/vc11e4c9d4c060345ba98585d538d4546e842f4a6ee5c5f9e85be4bd345767217/developers/images/favicon-new.png",
+   "https://www.gstatic.com/devrel-devsite/prod/vc11e4c9d4c060345ba98585d538d4546e842f4a6ee5c5f9e85be4bd345767217/developers/images/touchicon-180-new.png"
+  ],
+  "http": 200
+ },
+ {
+  "id": 32,
+  "app": "Meta Ads",
+  "auth": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_types": [],
+  "mcp": "none_found",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://developers.facebook.com/docs/marketing-api"
+  ],
+  "http": 400
+ },
+ {
+  "id": 33,
+  "app": "LinkedIn Ads",
+  "auth": [
+   "oauth2",
+   "static_key"
+  ],
+  "access": "unknown",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "none_found",
+  "verdict": "build_with_caveat",
+  "pages": [
+   "https://learn.microsoft.com/en-us/linkedin/marketing/?view=li-lms-2026-11",
+   "https://learn.microsoft.com/en-us/linkedin/shared/authentication/authorization-code-flow?view=li-lms-2026-11&amp;toc=/linkedin/marketing/toc.json&amp;bc=/linkedin/breadcrumb/toc.json",
+   "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads/getting-started?view=li-lms-2026-11",
+   "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads-reporting/getting-started?view=li-lms-2026-11",
+   "https://developer.linkedin.com/product-catalog/marketing",
+   "https://www.linkedin.com/content/developers/news"
+  ],
+  "http": 200
+ },
+ {
+  "id": 34,
+  "app": "GoHighLevel",
+  "auth": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_types": [],
+  "mcp": "none_found",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://highlevel.stoplight.io/"
+  ],
+  "http": 200
+ },
+ {
+  "id": 35,
+  "app": "Mailchimp",
+  "auth": [
+   "unknown"
+  ],
+  "access": "self_serve_free",
+  "api_types": [],
+  "mcp": "none_found",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://mailchimp.com/developer",
+   "https://mailchimp.com/developer/_astro/inline.AdicP1VFXSdYZdzX.css",
+   "https://mailchimp.com/developer/_fern-files/_img/3306e6ddbdb1fe3204e6bfa742388219-v1.latin.woff2",
+   "https://mailchimp.com/developer/_fern-files/_img/e5d5102827cc3950d805a0b4d8fa8fb9-v1.latin.woff2",
+   "https://mailchimp.com/developer/api/fern-docs/favicon.ico?v=d6c9e3746e86"
+  ],
+  "http": 200
+ },
+ {
+  "id": 36,
+  "app": "Klaviyo",
+  "auth": [
+   "oauth2",
+   "static_key"
+  ],
+  "access": "self_serve_free",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "official",
+  "verdict": "build_now",
+  "pages": [
+   "https://developers.klaviyo.com/en",
+   "https://developers.klaviyo.com/manifest.webmanifest",
+   "https://developers.klaviyo.com/en.md",
+   "https://developers.klaviyo.com/llms.txt",
+   "https://developers.klaviyo.com/.well-known/api-catalog"
+  ],
+  "http": 200
+ },
+ {
+  "id": 37,
+  "app": "systeme.io",
+  "auth": [
+   "unknown"
+  ],
+  "access": "self_serve_free",
+  "api_types": [],
+  "mcp": "none_found",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://systeme.io/",
+   "https://systeme.io/pricing"
+  ],
+  "http": 200
+ },
+ {
+  "id": 38,
+  "app": "Pinterest",
+  "auth": [
+   "oauth2",
+   "static_key",
+   "basic"
+  ],
+  "access": "self_serve_trial",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "official",
+  "verdict": "build_now",
+  "pages": [
+   "https://developers.pinterest.com/",
+   "https://s.pinimg.com/webapp/developers/_client-6ac7f17f415ae81b.mjs",
+   "https://s.pinimg.com/webapp/developers/index-3a6d834b7e9e8044.mjs",
+   "https://s.pinimg.com/webapp/developers/_client-227503b4f7ce206f.css",
+   "https://s.pinimg.com/webapp/developers/index-428dd81a29ba9315.css"
+  ],
+  "http": 200
+ },
+ {
+  "id": 39,
+  "app": "Threads (Meta)",
+  "auth": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_types": [],
+  "mcp": "none_found",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://developers.facebook.com/docs/threads"
+  ],
+  "http": 400
+ },
+ {
+  "id": 40,
+  "app": "SendGrid",
+  "auth": [
+   "unknown"
+  ],
+  "access": "self_serve_trial",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "none_found",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://www.twilio.com/en-us/sendgrid",
+   "https://www.twilio.com/en-us/user-authentication-identity",
+   "https://www.twilio.com/en-us/user-authentication-identity/verify",
+   "https://www.twilio.com/en-us/user-authentication-identity/lookup",
+   "https://www.twilio.com/en-us/developers"
+  ],
+  "http": 200
+ },
+ {
+  "id": 41,
+  "app": "Shopify",
+  "auth": [
+   "unknown"
+  ],
+  "access": "self_serve_free",
+  "api_types": [
+   "graphql"
+  ],
+  "mcp": "official",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://shopify.dev/docs",
+   "https://shopify.dev/docs/api/shopify-cli/app",
+   "https://shopify.dev/docs/api/shopify-cli/theme",
+   "https://shopify.dev/docs/api/shopify-cli/hydrogen",
+   "https://www.shopify.com/legal/api-terms?shpxid=222dd762-CA08-48FF-E4D4-FF926B8FFCAD"
+  ],
+  "http": 200
+ },
+ {
+  "id": 42,
+  "app": "WooCommerce",
+  "auth": [
+   "static_key"
+  ],
+  "access": "unknown",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "official",
+  "verdict": "build_with_caveat",
+  "pages": [
+   "https://woocommerce.com/document/woocommerce-rest-api/",
+   "https://woocommerce.com/documentation/woocommerce/getting-started/",
+   "https://developer.woocommerce.com/2024/01/17/the-woocommerce-legacy-rest-api-extension-is-now-available-in-wordpress-org/",
+   "https://developer.woocommerce.com/",
+   "https://woocommerce.com/pricing/"
+  ],
+  "http": 200
+ },
+ {
+  "id": 43,
+  "app": "BigCommerce",
+  "auth": [
+   "oauth2",
+   "static_key"
+  ],
+  "access": "self_serve_free",
+  "api_types": [
+   "rest",
+   "graphql"
+  ],
+  "mcp": "official",
+  "verdict": "build_now",
+  "pages": [
+   "https://docs.bigcommerce.com/developer/docs/overview/quick-start",
+   "https://docs.bigcommerce.com/api/fern-docs/favicon.ico?v=a7e97db52f03",
+   "https://docs.bigcommerce.com/developer/docs/overview/quick-start.md",
+   "https://docs.bigcommerce.com/developer/docs/overview/llms.txt",
+   "https://docs.bigcommerce.com/developer/api-reference/about-our-apis"
+  ],
+  "http": 200
+ },
+ {
+  "id": 44,
+  "app": "Salesforce Commerce Cloud",
+  "auth": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_types": [],
+  "mcp": "none_found",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://developer.salesforce.com/docs/commerce"
+  ],
+  "http": 403
+ },
+ {
+  "id": 45,
+  "app": "Magento (Adobe Commerce)",
+  "auth": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_types": [
+   "rest",
+   "graphql"
+  ],
+  "mcp": "none_found",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://developer.adobe.com/commerce/",
+   "https://developer.adobe.com/hlx_statics/styles/styles.css",
+   "https://developer.adobe.com/commerce/docs/",
+   "https://developer.adobe.com/commerce/extensibility/developer-agent/",
+   "https://developer.adobe.com/commerce/extensibility/"
+  ],
+  "http": 200
+ },
+ {
+  "id": 46,
+  "app": "Squarespace",
+  "auth": [
+   "unknown"
+  ],
+  "access": "self_serve_free",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "official",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://developers.squarespace.com/",
+   "https://developers.squarespace.com/assets/entry-BGTL1JTq.css",
+   "https://developers.squarespace.com/assets/styles/custom-styles.css",
+   "https://developers.squarespace.com/assets/logos/sqsp-dev-logo-on-light.svg",
+   "https://developers.squarespace.com/assets/logos/sqsp-dev-logo-on-dark.svg",
+   "https://developers.squarespace.com/favicon.ico"
+  ],
+  "http": 200
+ },
+ {
+  "id": 47,
+  "app": "Ecwid",
+  "auth": [
+   "oauth2",
+   "static_key"
+  ],
+  "access": "unknown",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "official",
+  "verdict": "build_with_caveat",
+  "pages": [
+   "https://docs.ecwid.com/",
+   "https://docs.ecwid.com/api-reference",
+   "https://docs.ecwid.com/get-started/api-glossary",
+   "https://docs.ecwid.com/api-reference/advanced/js-api-calls",
+   "https://docs.ecwid.com/api-reference/rest-api/checkout-extra-fields"
+  ],
+  "http": 200
+ },
+ {
+  "id": 48,
+  "app": "Gumroad",
+  "auth": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_types": [],
+  "mcp": "none_found",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://gumroad.com/api"
+  ],
+  "http": 200
+ },
+ {
+  "id": 49,
+  "app": "Amazon Selling Partner",
+  "auth": [
+   "static_key"
+  ],
+  "access": "unknown",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "none_found",
+  "verdict": "build_with_caveat",
+  "pages": [
+   "https://developer-docs.amazon/sp-api",
+   "https://developer-docs.amazon/sp-api/favicon.ico",
+   "https://developer-docs.amazon/sp-api/lang-de_DE",
+   "https://developer-docs.amazon/sp-api/lang-es_ES",
+   "https://developer-docs.amazon/sp-api/lang-fr_FR"
+  ],
+  "http": 200
+ },
+ {
+  "id": 50,
+  "app": "fanbasis",
+  "auth": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_types": [],
+  "mcp": "official",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://commas.com/"
+  ],
+  "http": 200
+ },
+ {
+  "id": 51,
+  "app": "DataForSEO",
+  "auth": [
+   "static_key",
+   "basic"
+  ],
+  "access": "self_serve_free",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "official",
+  "verdict": "build_now",
+  "pages": [
+   "https://docs.dataforseo.com/v3/",
+   "https://dataforseo.com/pricing",
+   "https://docs.dataforseo.com/v3/auth/"
+  ],
+  "http": 200
+ },
+ {
+  "id": 52,
+  "app": "SE Ranking",
+  "auth": [
+   "static_key"
+  ],
+  "access": "self_serve_trial",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "official",
+  "verdict": "build_now",
+  "pages": [
+   "https://seranking.com/api",
+   "https://seranking.com/api-pricing.html",
+   "https://seranking.com/api.html"
+  ],
+  "http": 404
+ },
+ {
+  "id": 53,
+  "app": "Ahrefs",
+  "auth": [
+   "oauth2",
+   "static_key"
+  ],
+  "access": "unknown",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "official",
+  "verdict": "build_with_caveat",
+  "pages": [
+   "https://docs.ahrefs.com/",
+   "https://docs.ahrefs.com/en/api/docs/introduction",
+   "https://docs.ahrefs.com/en/api/docs/free-test-queries",
+   "https://docs.ahrefs.com/en/api/reference/site-explorer",
+   "https://docs.ahrefs.com/en/api/docs/api-keys-creation-and-management",
+   "https://docs.ahrefs.com/en/api/docs/changelog"
+  ],
+  "http": 200
+ },
+ {
+  "id": 54,
+  "app": "MrScraper",
+  "auth": [
+   "static_key"
+  ],
+  "access": "unknown",
+  "api_types": [],
+  "mcp": "official",
+  "verdict": "build_with_caveat",
+  "pages": [
+   "https://docs.mrscraper.com/docs/getting-started/overview",
+   "https://docs.mrscraper.com/docs/getting-started/quickstart",
+   "https://docs.mrscraper.com/docs/getting-started/web-search",
+   "https://docs.mrscraper.com/docs/getting-started/scraper-api",
+   "https://docs.mrscraper.com/docs/getting-started/api-token"
+  ],
+  "http": 200
+ },
+ {
+  "id": 55,
+  "app": "Apify",
+  "auth": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_types": [],
+  "mcp": "official",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://docs.apify.com/"
+  ],
+  "http": 200
+ },
+ {
+  "id": 56,
+  "app": "Firecrawl",
+  "auth": [
+   "oauth2",
+   "static_key"
+  ],
+  "access": "self_serve_free",
+  "api_types": [
+   "rest",
+   "graphql"
+  ],
+  "mcp": "official",
+  "verdict": "build_now",
+  "pages": [
+   "https://www.firecrawl.dev/",
+   "https://www.firecrawl.dev/pricing",
+   "https://www.firecrawl.dev/developer-index",
+   "https://docs.firecrawl.dev/api-reference/introduction"
+  ],
+  "http": 200
+ },
+ {
+  "id": 57,
+  "app": "Bright Data",
+  "auth": [
+   "static_key"
+  ],
+  "access": "self_serve_trial",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "official",
+  "verdict": "build_now",
+  "pages": [
+   "https://brightdata.com/",
+   "https://brightdata.com/pricing/web-unlocker",
+   "https://brightdata.com/pricing/serp",
+   "https://brightdata.com/pricing/scraping-browser",
+   "https://brightdata.com/pricing/web-scraper",
+   "https://brightdata.com/pricing/web-scraper/studio"
+  ],
+  "http": 200
+ },
+ {
+  "id": 58,
+  "app": "Sherlock",
+  "auth": [
+   "unknown"
+  ],
+  "access": "self_serve_trial",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "official",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://github.com/sherlock-project/sherlock",
+   "https://github.com/pricing"
+  ],
+  "http": 200
+ },
+ {
+  "id": 59,
+  "app": "Waterfall.io",
+  "auth": [
+   "static_key"
+  ],
+  "access": "unknown",
+  "api_types": [],
+  "mcp": "none_found",
+  "verdict": "build_with_caveat",
+  "pages": [
+   "https://www.waterfall.io/"
+  ],
+  "http": 200
+ },
+ {
+  "id": 60,
+  "app": "Clay",
+  "auth": [
+   "static_key"
+  ],
+  "access": "self_serve_trial",
+  "api_types": [],
+  "mcp": "official",
+  "verdict": "build_now",
+  "pages": [
+   "https://www.clay.com/",
+   "https://www.clay.com/pricing"
+  ],
+  "http": 200
+ },
+ {
+  "id": 61,
+  "app": "GitHub",
+  "auth": [
+   "oauth2",
+   "static_key",
+   "basic"
+  ],
+  "access": "unknown",
+  "api_types": [
+   "rest",
+   "graphql"
+  ],
+  "mcp": "none_found",
+  "verdict": "build_with_caveat",
+  "pages": [
+   "https://docs.github.com/en/rest",
+   "https://docs.github.com/api/article/body?pathname=/en/rest",
+   "https://docs.github.com/api/article?pathname=/en/rest",
+   "https://docs.github.com/en/rest/about-the-rest-api/api-versions",
+   "https://docs.github.com/en/rest/using-the-rest-api/getting-started-with-the-rest-api",
+   "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api"
+  ],
+  "http": 200
+ },
+ {
+  "id": 62,
+  "app": "Vercel",
+  "auth": [
+   "oauth2",
+   "static_key"
+  ],
+  "access": "self_serve_trial",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "official",
+  "verdict": "build_now",
+  "pages": [
+   "https://vercel.com/docs/rest-api",
+   "https://vercel.com/docs/getting-started-with-vercel",
+   "https://vercel.com/docs/rest-api/getting-started",
+   "https://vercel.com/docs/rest-api/authentication/sso-token-exchange",
+   "https://vercel.com/docs/rest-api/domains-registrar/get-domain-availability-and-pricing",
+   "https://vercel.com/pricing"
+  ],
+  "http": 200
+ },
+ {
+  "id": 63,
+  "app": "Netlify",
+  "auth": [
+   "oauth2",
+   "static_key"
+  ],
+  "access": "self_serve_free",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "none_found",
+  "verdict": "build_now",
+  "pages": [
+   "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api/",
+   "https://developers.netlify.com/sdk/",
+   "https://docs.netlify.com/build/data-and-storage/netlify-database/api/",
+   "https://docs.netlify.com/build/server/api/",
+   "https://docs.netlify.com/build/functions/api/"
+  ],
+  "http": 200
+ },
+ {
+  "id": 64,
+  "app": "Cloudflare",
+  "auth": [
+   "oauth2",
+   "static_key",
+   "basic"
+  ],
+  "access": "unknown",
+  "api_types": [],
+  "mcp": "official",
+  "verdict": "build_with_caveat",
+  "pages": [
+   "https://developers.cloudflare.com/api/",
+   "https://developers.cloudflare.com/api/sitemap-index.xml",
+   "https://developers.cloudflare.com/api/favicon.svg",
+   "https://developers.cloudflare.com/api/_astro/fonts/683bec9a380238e6.woff2",
+   "https://developers.cloudflare.com/api/_astro/fonts/a49b58055701181d.woff2"
+  ],
+  "http": 200
+ },
+ {
+  "id": 65,
+  "app": "Supabase",
+  "auth": [
+   "oauth2",
+   "static_key"
+  ],
+  "access": "self_serve_free",
+  "api_types": [
+   "rest",
+   "graphql"
+  ],
+  "mcp": "official",
+  "verdict": "build_now",
+  "pages": [
+   "https://supabase.com/docs",
+   "https://supabase.com/docs/guides/getting-started",
+   "https://supabase.com/docs/guides/auth",
+   "https://supabase.com/docs/guides/api",
+   "https://supabase.com/docs/reference/api/introduction",
+   "https://supabase.com/docs/guides/getting-started/the-supabase-way-to-build"
+  ],
+  "http": 200
+ },
+ {
+  "id": 66,
+  "app": "Neo4j",
+  "auth": [
+   "oauth2"
+  ],
+  "access": "self_serve_trial",
+  "api_types": [
+   "rest",
+   "graphql"
+  ],
+  "mcp": "official",
+  "verdict": "build_now",
+  "pages": [
+   "https://neo4j.com/docs/api/",
+   "https://neo4j.com/developer/",
+   "https://neo4j.com/blog/developer/",
+   "https://neo4j.com/developer/ai/",
+   "https://neo4j.com/developer/genai-ecosystem/model-context-protocol-mcp/",
+   "https://neo4j.com/pricing/"
+  ],
+  "http": 404
+ },
+ {
+  "id": 67,
+  "app": "Snowflake",
+  "auth": [
+   "oauth2"
+  ],
+  "access": "unknown",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "official",
+  "verdict": "build_with_caveat",
+  "pages": [
+   "https://docs.snowflake.com/en/",
+   "https://docs.snowflake.com/en/user-guide-getting-started",
+   "https://docs.snowflake.com/en/developer",
+   "https://docs.snowflake.com/en/user-guide/tutorials/snowflake-in-20minutes",
+   "https://docs.snowflake.com/en/developer-guide/native-apps/native-apps-about",
+   "https://docs.snowflake.com/en/developer-guide/snowpark/index"
+  ],
+  "http": 200
+ },
+ {
+  "id": 68,
+  "app": "MongoDB Atlas",
+  "auth": [
+   "static_key"
+  ],
+  "access": "self_serve_trial",
+  "api_types": [
+   "rest",
+   "graphql"
+  ],
+  "mcp": "none_found",
+  "verdict": "build_now",
+  "pages": [
+   "https://www.mongodb.com/docs/atlas/api/",
+   "https://www.mongodb.com/pricing",
+   "https://www.mongodb.com/docs/atlas/reference/api-resources-spec/v2/",
+   "https://www.mongodb.com/docs/voyageai/api-reference/overview/",
+   "https://www.mongodb.com/docs/api/doc/atlas-embedding-and-reranking-api/"
+  ],
+  "http": 200
+ },
+ {
+  "id": 69,
+  "app": "Datadog",
+  "auth": [
+   "oauth2",
+   "static_key"
+  ],
+  "access": "self_serve_trial",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "official",
+  "verdict": "build_now",
+  "pages": [
+   "https://docs.datadoghq.com/api",
+   "https://docs.datadoghq.com/api/latest/",
+   "https://docs.datadoghq.com/api/latest.md",
+   "https://docs.datadoghq.com/fr/api/latest/",
+   "https://docs.datadoghq.com/ja/api/latest/",
+   "https://docs.datadoghq.com/ko/api/latest/"
+  ],
+  "http": 200
+ },
+ {
+  "id": 70,
+  "app": "Sentry",
+  "auth": [
+   "oauth2",
+   "static_key",
+   "basic"
+  ],
+  "access": "unknown",
+  "api_types": [],
+  "mcp": "none_found",
+  "verdict": "build_with_caveat",
+  "pages": [
+   "https://docs.sentry.io/api/",
+   "https://docs.sentry.io/api/auth/",
+   "https://docs.sentry.io/api/pagination/",
+   "https://docs.sentry.io/api/permissions/",
+   "https://docs.sentry.io/api/ratelimits/"
+  ],
+  "http": 200
+ },
+ {
+  "id": 71,
+  "app": "Notion",
+  "auth": [
+   "oauth2",
+   "static_key"
+  ],
+  "access": "unknown",
+  "api_types": [],
+  "mcp": "official",
+  "verdict": "build_with_caveat",
+  "pages": [
+   "https://developers.notion.com/guides/notion-api/quick-start",
+   "https://developers.notion.com/mintlify-assets/_mintlify/favicons/notion-demo/1PaJq9z3waub4TpE/_generated/favicon/android-chrome-192x192.png",
+   "https://developers.notion.com/mintlify-assets/_mintlify/favicons/notion-demo/1PaJq9z3waub4TpE/_generated/favicon/apple-touch-icon.png",
+   "https://developers.notion.com/mintlify-assets/_mintlify/favicons/notion-demo/1PaJq9z3waub4TpE/_generated/favicon/favicon-16x16.png",
+   "https://developers.notion.com/mintlify-assets/_mintlify/favicons/notion-demo/1PaJq9z3waub4TpE/_generated/favicon/favicon-32x32.png",
+   "https://developers.notion.com/mintlify-assets/_mintlify/favicons/notion-demo/1PaJq9z3waub4TpE/_generated/favicon/favicon.ico"
+  ],
+  "http": 200
+ },
+ {
+  "id": 72,
+  "app": "Airtable",
+  "auth": [
+   "oauth2"
+  ],
+  "access": "unknown",
+  "api_types": [],
+  "mcp": "official",
+  "verdict": "build_with_caveat",
+  "pages": [
+   "https://airtable.com/developers/agents",
+   "https://airtable.com/developers/web",
+   "https://airtable.com/developers/interface-extensions"
+  ],
+  "http": 200
+ },
+ {
+  "id": 73,
+  "app": "Linear",
+  "auth": [
+   "oauth2",
+   "static_key"
+  ],
+  "access": "self_serve_free",
+  "api_types": [
+   "graphql"
+  ],
+  "mcp": "none_found",
+  "verdict": "build_now",
+  "pages": [
+   "https://linear.app/developers",
+   "https://linear.app/developers/graphql",
+   "https://linear.app/developers/pagination",
+   "https://linear.app/developers/filtering",
+   "https://linear.app/developers/rate-limiting"
+  ],
+  "http": 200
+ },
+ {
+  "id": 74,
+  "app": "Jira",
+  "auth": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_types": [
+   "rest",
+   "graphql"
+  ],
+  "mcp": "official",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://developer.atlassian.com/",
+   "https://dac-static.atlassian.com/_static/documentation-changelogs-docs-index-rest-docs-search-graphql-docs-graphql-sandbox-jsapi-connect-module-pages-analytics-and-cookie-preferences-errors-supportdesk-pricing-cal-home-page-v3-home-page-v4-lp.18de1baa641c00db741f.chunk.css",
+   "https://developer.atlassian.com/news-and-updates/",
+   "https://developer.atlassian.com/support"
+  ],
+  "http": 200
+ },
+ {
+  "id": 75,
+  "app": "Asana",
+  "auth": [
+   "oauth2",
+   "static_key"
+  ],
+  "access": "partner_or_sales",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "official",
+  "verdict": "needs_outreach",
+  "pages": [
+   "https://developers.asana.com/",
+   "https://developers.asana.com/favicon.ico?v=50e78d9a1f55",
+   "https://asana.com/developers",
+   "https://developers.asana.com/docs/overview",
+   "https://developers.asana.com/reference/rest-api-reference"
+  ],
+  "http": 200
+ },
+ {
+  "id": 76,
+  "app": "Monday.com",
+  "auth": [
+   "oauth2",
+   "static_key"
+  ],
+  "access": "self_serve_free",
+  "api_types": [
+   "rest",
+   "graphql"
+  ],
+  "mcp": "official",
+  "verdict": "build_now",
+  "pages": [
+   "https://developer.monday.com/",
+   "https://developer.monday.com/favicon.ico?v=a2e9ea037a34",
+   "https://developer.monday.com/api-reference/docs/basics",
+   "https://developer.monday.com/apps/docs/app-features",
+   "https://developer.monday.com/apps/docs/intro"
+  ],
+  "http": 200
+ },
+ {
+  "id": 77,
+  "app": "ClickUp",
+  "auth": [
+   "oauth2",
+   "static_key"
+  ],
+  "access": "unknown",
+  "api_types": [],
+  "mcp": "official",
+  "verdict": "build_with_caveat",
+  "pages": [
+   "https://developer.clickup.com/",
+   "https://developer.clickup.com/favicon.ico?v=f2324af7bbe0",
+   "https://developer.clickup.com/apple-touch-icon.png?v=f2324af7bbe0",
+   "https://developer.clickup.com/site.webmanifest?v=f2324af7bbe0",
+   "https://developer.clickup.com/docs/authentication"
+  ],
+  "http": 200
+ },
+ {
+  "id": 78,
+  "app": "Coda",
+  "auth": [
+   "static_key"
+  ],
+  "access": "partner_or_sales",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "official",
+  "verdict": "needs_outreach",
+  "pages": [
+   "https://docs.superhuman.com/developers/apis/v1",
+   "https://superhuman.com/developers",
+   "https://coda.io/trust/developer"
+  ],
+  "http": 200
+ },
+ {
+  "id": 79,
+  "app": "Smartsheet",
+  "auth": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_types": [],
+  "mcp": "official",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://developers.smartsheet.com/",
+   "https://developers.smartsheet.com/assets/smartsheet-favicon-16x16.bf0c47badf7cf30c36d31ccaa39dbae23262c622253f8f3dbbdfeb90cf8d1950.9c1bb791.svg",
+   "https://developers.smartsheet.com/app-data.json",
+   "https://developers.smartsheet.com/page-data/index/data.json",
+   "https://cdn.bfldr.com/F9HJESZB/at/gq9pwrnfmjvqpgvg4t59nbb/smartsheet-developer-and-API-logo.svg"
+  ],
+  "http": 200
+ },
+ {
+  "id": 80,
+  "app": "Harvest",
+  "auth": [
+   "oauth2",
+   "static_key"
+  ],
+  "access": "unknown",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "none_found",
+  "verdict": "build_with_caveat",
+  "pages": [
+   "https://help.getharvest.com/api-v2/",
+   "https://help.getharvest.com/api-v1/",
+   "https://help.getharvest.com/api-v2/introduction/",
+   "https://help.getharvest.com/api-v2/introduction/overview/general/",
+   "https://help.getharvest.com/api-v2/introduction/overview/postman-collection/"
+  ],
+  "http": 200
+ },
+ {
+  "id": 81,
+  "app": "Stripe",
+  "auth": [
+   "static_key",
+   "basic"
+  ],
+  "access": "partner_or_sales",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "none_found",
+  "verdict": "needs_outreach",
+  "pages": [
+   "https://docs.stripe.com/api",
+   "https://docs.stripe.com/api/authentication",
+   "https://docs.stripe.com/api/errors",
+   "https://docs.stripe.com/api/expanding_objects",
+   "https://docs.stripe.com/api/idempotent_requests"
+  ],
+  "http": 200
+ },
+ {
+  "id": 82,
+  "app": "Plaid",
+  "auth": [
+   "oauth2",
+   "static_key"
+  ],
+  "access": "partner_or_sales",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "official",
+  "verdict": "needs_outreach",
+  "pages": [
+   "https://plaid.com/docs/",
+   "https://plaid.com/docs/api/",
+   "https://plaid.com/docs/auth/"
+  ],
+  "http": 200
+ },
+ {
+  "id": 83,
+  "app": "Binance",
+  "auth": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_types": [],
+  "mcp": "none_found",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://binance-docs.github.io/"
+  ],
+  "http": 404
+ },
+ {
+  "id": 84,
+  "app": "Paygent Connect",
+  "auth": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_types": [],
+  "mcp": "none_found",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://paygent.com/"
+  ],
+  "http": 0
+ },
+ {
+  "id": 85,
+  "app": "iPayX",
+  "auth": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_types": [],
+  "mcp": "none_found",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://www.ipayx.ai/docs",
+   "https://www.ipayx.ai/pricing"
+  ],
+  "http": 200
+ },
+ {
+  "id": 86,
+  "app": "QuickBooks",
+  "auth": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_types": [],
+  "mcp": "none_found",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://developer.intuit.com/app/developer/homepage"
+  ],
+  "http": 200
+ },
+ {
+  "id": 87,
+  "app": "Xero",
+  "auth": [
+   "oauth2"
+  ],
+  "access": "self_serve_free",
+  "api_types": [],
+  "mcp": "official",
+  "verdict": "build_now",
+  "pages": [
+   "https://developer.xero.com/",
+   "https://developer.xero.com/_next/static/media/58db1e27231b47ed-s.p.woff2",
+   "https://developer.xero.com/_next/static/media/76ad85615b90d714-s.p.woff2",
+   "https://developer.xero.com/_next/static/media/de6bfe0c0b489bbf-s.p.woff2",
+   "https://developer.xero.com/_next/static/media/e4af272ccee01ff0-s.p.woff2",
+   "https://developer.xero.com/_next/static/css/f32d7adc0a30a5d3.css"
+  ],
+  "http": 200
+ },
+ {
+  "id": 88,
+  "app": "Brex",
+  "auth": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "official",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://developer.brex.com/",
+   "https://developer.brex.com/assets/favicon.bc4c103aea9a18cae3572270db0e01b898cee6747acd1741db61976503a50c5b.8a5edab2.png",
+   "https://developer.brex.com/app-data.json",
+   "https://developer.brex.com/page-data/index/data.json",
+   "https://developer.brex.com/assets/main.c631a249f2863610cbc8bdf43ae0a55664dbd6544ca5396e2c85a3e550bdf2a0.d64523b1.css"
+  ],
+  "http": 200
+ },
+ {
+  "id": 89,
+  "app": "Ramp",
+  "auth": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_types": [],
+  "mcp": "none_found",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://docs.ramp.com/"
+  ],
+  "http": 200
+ },
+ {
+  "id": 90,
+  "app": "PitchBook",
+  "auth": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_types": [],
+  "mcp": "none_found",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://pitchbook.com/"
+  ],
+  "http": 403
+ },
+ {
+  "id": 91,
+  "app": "NotebookLM",
+  "auth": [
+   "static_key"
+  ],
+  "access": "self_serve_trial",
+  "api_types": [],
+  "mcp": "none_found",
+  "verdict": "build_now",
+  "pages": [
+   "https://cloud.google.com/ai/gemini"
+  ],
+  "http": 200
+ },
+ {
+  "id": 92,
+  "app": "Otter AI",
+  "auth": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_types": [],
+  "mcp": "none_found",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://help.otter.ai/hc/en-us"
+  ],
+  "http": 403
+ },
+ {
+  "id": 93,
+  "app": "Fathom",
+  "auth": [
+   "oauth2",
+   "static_key"
+  ],
+  "access": "self_serve_trial",
+  "api_types": [],
+  "mcp": "official",
+  "verdict": "build_now",
+  "pages": [
+   "https://www.fathom.ai/",
+   "https://developers.fathom.ai/",
+   "https://www.fathom.ai/features/api",
+   "https://www.fathom.ai/pricing",
+   "https://www.fathom.ai/pricing?plan=teams",
+   "https://www.fathom.ai/pricing?plan=individuals"
+  ],
+  "http": 200
+ },
+ {
+  "id": 94,
+  "app": "Consensus",
+  "auth": [
+   "unknown"
+  ],
+  "access": "unknown",
+  "api_types": [],
+  "mcp": "none_found",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://consensus.app/"
+  ],
+  "http": 200
+ },
+ {
+  "id": 95,
+  "app": "Reducto",
+  "auth": [
+   "static_key"
+  ],
+  "access": "self_serve_free",
+  "api_types": [],
+  "mcp": "official",
+  "verdict": "build_now",
+  "pages": [
+   "https://reducto.ai/",
+   "https://reducto.ai/pricing",
+   "https://studio.reducto.ai/auth",
+   "https://reducto.ai/developers"
+  ],
+  "http": 200
+ },
+ {
+  "id": 96,
+  "app": "Devin",
+  "auth": [
+   "oauth2",
+   "static_key"
+  ],
+  "access": "self_serve_free",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "official",
+  "verdict": "build_now",
+  "pages": [
+   "https://docs.devin.ai/get-started/devin-intro",
+   "https://docs.devin.ai/enterprise/getting-started/get-started",
+   "https://docs.devin.ai/api-reference/overview"
+  ],
+  "http": 200
+ },
+ {
+  "id": 97,
+  "app": "higgsfield",
+  "auth": [
+   "static_key"
+  ],
+  "access": "self_serve_free",
+  "api_types": [],
+  "mcp": "official",
+  "verdict": "build_now",
+  "pages": [
+   "https://higgsfield.ai/cli",
+   "https://higgsfield.ai/pricing",
+   "https://higgsfield.ai/pricing.md"
+  ],
+  "http": 200
+ },
+ {
+  "id": 98,
+  "app": "Mermaid CLI",
+  "auth": [
+   "unknown"
+  ],
+  "access": "self_serve_trial",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "official",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://github.com/mermaid-js/mermaid-cli",
+   "https://github.com/pricing",
+   "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy"
+  ],
+  "http": 200
+ },
+ {
+  "id": 99,
+  "app": "YouTube Transcript",
+  "auth": [
+   "oauth2",
+   "static_key"
+  ],
+  "access": "self_serve_free",
+  "api_types": [
+   "rest"
+  ],
+  "mcp": "official",
+  "verdict": "build_now",
+  "pages": [
+   "https://transcriptapi.com/",
+   "https://transcriptapi.com/docs/api/",
+   "https://transcriptapi.com/docs/getting-started/python/",
+   "https://transcriptapi.com/docs/getting-started/javascript/",
+   "https://transcriptapi.com/docs/getting-started/curl/"
+  ],
+  "http": 200
+ },
+ {
+  "id": 100,
+  "app": "Grain",
+  "auth": [
+   "unknown"
+  ],
+  "access": "self_serve_trial",
+  "api_types": [],
+  "mcp": "official",
+  "verdict": "not_buildable",
+  "pages": [
+   "https://grain.com/",
+   "https://grain.com/pricing"
+  ],
+  "http": 200
+ }
+]

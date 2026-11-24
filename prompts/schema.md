@@ -1,0 +1,25 @@
+# Record schema (one JSON object per app)
+- id, app
+- one_liner: what the product does, <= 18 words
+- auth: list from [oauth2, api_key, token, basic, other, none]. The methods a third-party can use against the PUBLIC API today.
+  api_key = static secret issued by the vendor; token = personal access / bot / service token tied to a user or bot; other = JWT service account, HMAC signing, key-pair, mTLS etc. (explain in auth_notes). List every documented method that is current, exclude deprecated ones.
+- auth_notes: <= 25 words
+- access: the gate on getting a FIRST working credential to a live or sandbox environment, one of
+  - self_serve_free: a developer gets one alone, at no cost and with no time limit (free tier, free dev/sandbox org, open source self-host)
+  - self_serve_trial: alone, but only on a time- or credit-limited trial
+  - paid_plan: alone, but needs a paid subscription/plan
+  - admin_or_app_approval: needs vendor review/approval of the app or developer BEFORE any usable call
+  - partner_or_sales: needs a partnership, contract, existing enterprise customer status or a sales conversation
+  - no_api: no public remote API exists
+- prod_gate: extra gate to serve OTHER customers' accounts in production, one of [none, app_review, paid_plan, partner_program, security_review, unknown]
+- access_notes: <= 30 words, name the plan/price tier/review if documented
+- api_types: list from [rest, graphql, soap, grpc, sdk, cli, none]
+- api_breadth: narrow (<10 endpoints/operations), medium (10-50), broad (50+), none
+- openapi_public: true/false/null (null = could not tell)
+- mcp: official (vendor published) / community / none_found ; mcp_url ; mcp_notes <= 15 words
+- verdict: build_now (credential self-serve free/trial, usable API) / build_with_caveat (buildable but paid plan, app review or narrow surface) / needs_outreach (blocked until a vendor human says yes) / not_buildable (nothing remote to call; local CLI counts here unless wrapping it is realistic, then build_with_caveat)
+- main_blocker: one of [none, paid_plan, app_review, partner_or_sales, no_public_api, local_only, docs_gated, narrow_api, other]; blocker_notes <= 20 words
+- evidence: list of {field: auth|access|api|mcp, url, match}. One entry minimum for EACH of the four fields. `match` = 3-10 consecutive words copied exactly from that page's text, which support the answer (machine-checked). If mcp is none_found, cite the page you looked at and leave match "".
+- confidence: {auth, access, api, mcp} each 0-1, honest
+- needs_browser: true if key docs are JS-rendered / blocked to curl
+- open_questions: list of anything you could not settle
